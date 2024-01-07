@@ -1,0 +1,553 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Orange-Backend.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Orange-Backend.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\about.css",
+      "PackagePath": "staticwebassets\\assets\\css\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\about.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\about.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\about.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\about.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\account.css",
+      "PackagePath": "staticwebassets\\assets\\css\\account.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\account.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\account.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\account.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\account.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\blog.css",
+      "PackagePath": "staticwebassets\\assets\\css\\blog.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\blog.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\blog.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\blog.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\blogDetail.css",
+      "PackagePath": "staticwebassets\\assets\\css\\blogDetail.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\blogDetail.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\blogDetail.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\blogDetail.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\blogDetail.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\cart.css",
+      "PackagePath": "staticwebassets\\assets\\css\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\cart.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\cart.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\cart.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\cart.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\contact.css",
+      "PackagePath": "staticwebassets\\assets\\css\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\contact.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\contact.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\contact.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\forgetPassword.css",
+      "PackagePath": "staticwebassets\\assets\\css\\forgetPassword.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\forgetPassword.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\forgetPassword.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\forgetPassword.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\forgetPassword.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\home.css",
+      "PackagePath": "staticwebassets\\assets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\home.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\home.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\home.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\home.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\layout.css",
+      "PackagePath": "staticwebassets\\assets\\css\\layout.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\layout.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\layout.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\layout.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\layout.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\productDetail.css",
+      "PackagePath": "staticwebassets\\assets\\css\\productDetail.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\productDetail.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\productDetail.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\productDetail.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\productDetail.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\shop.css",
+      "PackagePath": "staticwebassets\\assets\\css\\shop.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\shop.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\shop.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\shop.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\wishlist.css",
+      "PackagePath": "staticwebassets\\assets\\css\\wishlist.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\wishlist.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\wishlist.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\css\\wishlist.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\wishlist.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\fonts\\Karla-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Karla-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\fonts\\Karla-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Karla-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\fonts\\Montaga-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Montaga-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\OrangeLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\OrangeLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Search.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\Search.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Subscribe.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\Subscribe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Wishlist.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\Wishlist.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\about.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\about2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\about3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\contact.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\contact.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\blog1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\blog2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\blog3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand1.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\brand1.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand2.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\brand2.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand3.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\brand3.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\brand4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand5.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\brand5.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand6.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\brand6.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\cards.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\cards.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\cart-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\category1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\category1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\category2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\category2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\category3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\category3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\category4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\category4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\category5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\category5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\hamburger.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\hamburger.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\heart-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\heart-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\hp2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\hp2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine1.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\magazine1.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine2.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\magazine2.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine3.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\magazine3.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine4.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\magazine4.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product1-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product1-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product1-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product2-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product2-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product3-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product3-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product3-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product3-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product4-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product4-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product4-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product4-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product5-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product5-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product5-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product5-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product6-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product6-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product6-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product6-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product7-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product7-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product7-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product7-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product8-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product8-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\shop-category1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-category1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\shop-category2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-category2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\shop-category3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-category3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\shop-category4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shop-category4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\slapen.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\slapen.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\small_render_ee.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\small_render_ee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\user-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\user-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\women.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\women.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\x3.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\x3.avif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\account.js",
+      "PackagePath": "staticwebassets\\assets\\js\\account.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\cart.js",
+      "PackagePath": "staticwebassets\\assets\\js\\cart.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\home.js",
+      "PackagePath": "staticwebassets\\assets\\js\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\layout.js",
+      "PackagePath": "staticwebassets\\assets\\js\\layout.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\productDetail.js",
+      "PackagePath": "staticwebassets\\assets\\js\\productDetail.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\shop.js",
+      "PackagePath": "staticwebassets\\assets\\js\\shop.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\swinger.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swinger.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\.gitignore",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\CONTRIBUTING.markdown",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\CONTRIBUTING.markdown"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\ISSUE_TEMPLATE.md",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\ISSUE_TEMPLATE.md"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\LICENSE",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\Makefile",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\README.markdown",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\README.markdown"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\bower.json",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\component.json",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\component.json"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\index.html",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\package.json",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick.jquery.json",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick.jquery.json"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\config.rb",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\config.rb"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick-theme.css.map",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick-theme.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick-theme.less",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick-theme.less"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick-theme.scss",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick-theme.scss"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick.css.map",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick.js",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick.less",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.less"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\slick-1.8.1\\slick\\slick.scss",
+      "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Orange-Backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Orange-Backend.props",
+      "PackagePath": "build\\Orange-Backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Orange-Backend.props",
+      "PackagePath": "buildMultiTargeting\\Orange-Backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Orange-Backend.props",
+      "PackagePath": "buildTransitive\\Orange-Backend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
