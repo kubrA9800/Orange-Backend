@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montaga&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/assets/css/layout.css">
-    @RenderSection("css", required: false);
+    @RenderSection("css", required: false)
 
     <title>Home</title>
 </head>
@@ -41,9 +41,9 @@
                         <nav>
                             <a asp-controller="Home" asp-action="Index">Home</a>
                             <a asp-controller="Shop" asp-action="Index">Shop</a>
-                            <a href="blog.html">Blog</a>
-                            <a href="about.html">About</a>
-                            <a href="contact.html">Contact us</a>
+                            <a asp-controller="Blog" asp-action="Index">Blog</a>
+                            <a asp-controller="About" asp-action="Index">About</a>
+                            <a asp-controller="Contact" asp-action="Index">Contact us</a>
                         </nav>
                     </div>
                     <div class="col-sm-6 col-lg-4 icon">
@@ -52,7 +52,7 @@
                                 <img src="~/assets/img/Search.svg" alt="">
 
                             </a>
-                            <a class="user-icon" href="account.html">
+                            <a class="user-icon" asp-controller="Account" asp-action="Login">
                                 <img src="~/assets/img/user-icon.svg" alt="">
                             </a>
                             <a class="wishlist" href="wishlist.html">
