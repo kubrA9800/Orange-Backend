@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@section css {
+    <link rel="stylesheet" href="~/assets/css/wishlist.css">
+}
+<main>
+    <section id="cart">
+        <div class="container">
+            <div class="empty-cart d-none">
+                <h1>Your Wishlist</h1>
+                <p>No products in the wishlist.</p>
+                <hr>
+                <a href="shop.html">Continue shopping</a>
+            </div>
+            <div class="full-cart">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <img src="./assets/img/product/product1-1.webp" alt="">
+
+                            </td>
+                            <td>
+                                <span>SkinCare crem</span>
+                                <a style="display: block;" href="">Remove</a>
+                            </td>
+
+                            <td>$39</td>
+
+                            <td>
+                                <a class="add-to-cart" href="">Add To Cart</a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+</main>
+

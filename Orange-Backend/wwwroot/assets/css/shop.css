@@ -534,6 +534,33 @@ a {
   border-radius: 50%;
 }
 
+#products-all .right .pagination-area {
+    margin: 60px 0;
+}
+
+    #products-all .right .pagination-area ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    #products-all .right .pagination-area a {
+        background-color: #f9f9f9;
+    }
+
+    #products-all .right .pagination-area .page-link {
+        color: #000;
+        box-shadow: none;
+    }
+
+    #products-all .right .pagination-area .pagination .page-item.active .page-link {
+        border-color: #000;
+    }
+
+    #products-all .right .pagination-area .pagination .page-item.disabled .page-link {
+        color: #999;
+    }
+
+
 footer {
   background-color: black;
   padding: 4rem 2rem;

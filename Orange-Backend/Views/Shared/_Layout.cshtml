@@ -55,7 +55,7 @@
                             <a class="user-icon" asp-controller="Account" asp-action="Login">
                                 <img src="~/assets/img/user-icon.svg" alt="">
                             </a>
-                            <a class="wishlist" href="wishlist.html">
+                            <a class="wishlist" asp-controller="Wishlist" asp-action="Index">
                                 <img src="~/assets/img/heart-icon.svg" alt="">
                                 <span class="count">0</span>
                             </a>
@@ -325,6 +325,9 @@
             
             
             <script src="~/assets/js/layout.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+
+            
     @RenderSection("script", required: false);
 
 </body>
