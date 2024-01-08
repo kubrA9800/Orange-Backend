@@ -12,5 +12,13 @@ namespace Orange_Backend.Controllers
         {
             return View();
         }
+        public IActionResult Register()
+        {
+            return View();
+        }
+        public IActionResult ForgetPassword()
+        {
+            return View();
+        }
     }
 }

@@ -8,5 +8,9 @@ namespace Orange_Backend.Controllers
         {
             return View();
         }
+        public IActionResult Detail()
+        {
+            return View();
+        }
     }
 }

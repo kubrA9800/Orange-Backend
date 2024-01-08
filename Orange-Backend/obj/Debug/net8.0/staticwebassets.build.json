@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PcjFZE3UqtW1YV38nSoaVaR89PpMA4t2d+kfiEhTkoc=",
+  "Hash": "595/KW6eFleHl81ARU+6ovA75mL8zzWvforeG8mN0hk=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -1290,6 +1290,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\hp2.webp"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Image.png",
+      "SourceId": "Orange-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
+      "BasePath": "_content/Orange-Backend",
+      "RelativePath": "assets/img/Image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Image.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine1.avif",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
@@ -1366,12 +1385,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\magazine4.avif"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\OrangeLogo.png",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\OrangeLogo.avif",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/OrangeLogo.png",
+      "RelativePath": "assets/img/OrangeLogo.avif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1382,15 +1401,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\OrangeLogo.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\OrangeLogo.avif"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-1.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/product/product1-1.webp",
+      "RelativePath": "assets/img/product/product1-1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1401,7 +1420,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product1-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product1-1.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-2.webp",
@@ -1442,12 +1461,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product1-3.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-1.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/product/product2-1.webp",
+      "RelativePath": "assets/img/product/product2-1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1458,7 +1477,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product2-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product2-1.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-2.webp",
@@ -1670,12 +1689,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product7-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-1.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/product/product8-1.webp",
+      "RelativePath": "assets/img/product/product8-1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1686,7 +1705,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product8-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\product8-1.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-2.webp",

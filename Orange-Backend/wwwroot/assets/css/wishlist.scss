@@ -66,6 +66,20 @@
         }
 
     }
+    #cart{
+        tbody{
+            tr{
+                img{
+                    width: 80px!important;
+                    height: 100px!important;
+                }
+                .add-to-cart{
+                    font-size: 10px!important;
+                    padding: 5px!important;
+                }
+            }
+        }
+    }
 }
 
 
@@ -119,6 +133,20 @@
             display: inline;
         }
 
+    }
+    #cart{
+        tbody{
+            tr{
+                img{
+                    width: 90px!important;
+                    height: 110px!important;
+                }
+                .add-to-cart{
+                    font-size: 10px!important;
+                    padding: 5px!important;
+                }
+            }
+        }
     }
 }
 

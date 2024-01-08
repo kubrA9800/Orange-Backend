@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewData["Title"] = "ProductDetail";
+}
+@section css {
+    <link rel="stylesheet" href="~/assets/css/productDetail.css">
+}
+<main>
+    <section id="product-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="wrapper">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="product__slider">
+                                    <div class="product__slider-main">
+                                        <div class="slide">
+                                            <img src="./assets/img/product/product1-1.webp" alt=""
+                                                 class="img-responsive">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="./assets/img/product/product1-2.webp" alt=""
+                                                 class="img-responsive">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="./assets/img/product/product1-3.webp" alt=""
+                                                 class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div style="margin-left:25px;" class="product__slider-thmb">
+                                        <div class="slide">
+                                            <img src="./assets/img/product/product1-1.webp" alt=""
+                                                 class="img-responsive">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="./assets/img/product/product1-2.webp" alt=""
+                                                 class="img-responsive">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="./assets/img/product/product1-3.webp" alt=""
+                                                 class="img-responsive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <div class="text">
+                        <h1>Super Pure</h1>
+                        <span>$29.00</span>
+                        <hr>
+
+                        <a href="#">
+                            <div class="add wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                                <h6>Add To Wishlist</h6>
+                            </div>
+                        </a>
+                        <a href="wishlist.html">
+                            <div class="goto wishlist d-none">
+                                <i class="fa-solid fa-heart"></i>
+                                <h6>Go To Wishlist</h6>
+                            </div>
+                        </a>
+
+                        <a href="">Add to Cart</a>
+                        <hr>
+                        <div class="info">
+                            <h1>Type:<span>Skincare</span></h1>
+                            <h1>Sku:<span>CLE-000-00-00</span></h1>
+
+                        </div>
+
+                        <div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Shipping information
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h3>-No EU import duties.</h3>
+                                        <h3>-Ships within 1-2 business days.</h3>
+                                        <h3>-Ships in our fully recyclable and biodegradable signature boxes.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Care Guide
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h3>
+                                            Regularcare. Use a slightly damp, soft and lint-free cloth for regular
+                                            dust removal. Always clean in the direction of the grain.
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="guarantee">
+                            <h1>Guarantee safe checkout</h1>
+                            <img src="./assets/img/cards.avif" alt="">
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="tab-menu">
+        <div class="container">
+            <div class=" tab-header  d-flex justify-content-evenly">
+                <div data-id="1" class="item active-tab">Description</div>
+                <div data-id="2" class="item">Reviews</div>
+            </div>
+            <div class=" tab-content">
+                <div data-id="1" class="item">
+                    <h3>Glossier Super Pure serum, Super Pure serum, serum, purifying serum, niacinamide and zinc, niacinamide serum, zinc serum, vitamin b3 serum, balancing serum, blemish treatment, stressed skin treatment</h3>
+                </div>
+                <div data-id="2" class="item d-none">
+                    <div class="review w-100">
+                        <h5>Write a review</h5>
+                        <div class="inputs d-flex">
+                            <input placeholder="Name" type="text">
+                            <input placeholder="Your email" type="email">
+                        </div>
+                        <input placeholder="Title" type="text">
+                        <textarea placeholder="Write your comment here"></textarea>
+                        <button>Submit review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+@section script {
+    <script src="~/assets/js/productDetail.js"></script>
+}
+

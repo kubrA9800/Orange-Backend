@@ -161,8 +161,12 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\Montaga-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\OrangeLogo.png",
-      "PackagePath": "staticwebassets\\assets\\img\\OrangeLogo.png"
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Image.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Image.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\OrangeLogo.avif",
+      "PackagePath": "staticwebassets\\assets\\img\\OrangeLogo.avif"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Search.svg",
@@ -289,8 +293,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\magazine4.avif"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-1.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\product\\product1-1.webp"
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product1-1.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-2.webp",
@@ -301,8 +305,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\product\\product1-3.webp"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-1.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\product\\product2-1.webp"
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product2-1.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product2-2.webp",
@@ -349,8 +353,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\product\\product7-2.webp"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-1.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\product\\product8-1.webp"
+      "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\product8-1.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product8-2.webp",

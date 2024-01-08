@@ -4,7 +4,7 @@ $(function () {
 
 
 
-  let products = document.querySelectorAll(".product")
+  let products = document.querySelectorAll(".slider-products .product")
 
   products.forEach(productImage => {
     productImage.addEventListener("mouseover", function () {
@@ -84,8 +84,8 @@ $(function () {
   })
 
   
-
-  let addBasketIcons = document.querySelectorAll(".product .icons .basket-icon")
+  
+  let addBasketIcons = document.querySelectorAll(".slider-products .product .icons .basket-icon")
   addBasketIcons.forEach(addBasketIcon => {
     addBasketIcon.addEventListener("click", function () {
       cartSidebar.classList.remove("move-sidebar")

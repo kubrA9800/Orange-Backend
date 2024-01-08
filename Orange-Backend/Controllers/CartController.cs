@@ -2,17 +2,11 @@
 
 namespace Orange_Backend.Controllers
 {
-    public class ShopController : Controller
+    public class CartController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult ProductDetail()
-        {
-            return View();
-        }
-
     }
 }

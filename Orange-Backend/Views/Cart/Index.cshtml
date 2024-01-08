@@ -1,153 +1,65 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Index";
 }
-@section css{
-    <link rel="stylesheet" href="~/assets/css/home.css">
+@section css {
+    <link rel="stylesheet" href="~/assets/css/cart.css">
 }
 <main>
-    <section id="slider">
+
+    <section id="cart">
         <div class="container">
-            <div class="slider-all">
-                <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active slide-image">
-                            <img src="~/assets/img/slapen.jpg" class="d-block w-100" alt="...">
-                            <div class="text">
-                                <h6>save 50% off</h6>
-                                <h1> Mother Nature's <br>Skincare</h1>
-                                <p>
-                                    Behind the Scenes With Our Favorite PM Skincare Brand
-                                </p>
-                                <a asp-controller="Shop" asp-action="Index">Shop Now</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item position slide-image">
-                            <img src="~/assets/img/small_render_ee.jpg" class="d-block w-100" alt="...">
-                            <div class="text">
-                                <h6>plant-based</h6>
-                                <h1>Glowing Skin <br>Naturally </h1>
-                                <p>Best with an all-natural, plant-based routine. ♡</p>
-                                <a href="">Shop Now</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+            <div class="empty-cart d-none">
+                <h1>Your Cart</h1>
+                <p>No products in the cart.</p>
+                <hr>
+                <a href="shop.html">Continue shopping</a>
             </div>
-        </div>
+            <div class="full-cart">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
 
-    </section>
+                            <td>
+                                <img src="~/assets/img/product/product1-1.webp" alt="">
 
+                            </td>
+                            <td>
+                                <span>SkinCare crem</span>
+                                <a href="">Remove</a>
+                            </td>
 
-    <section id="beauty-store">
-        <div class="container">
-            <div class="content-top">
-                <div class="img">
-                    <img src="~/assets/img/x3.avif" alt="">
-                </div>
-                <div class="text">
-                    <h5>1000+ TOP BEAUTY</h5>
-                    <p>Orange's Original Beauty Store. Curating the cool, the essential, and the unexpected.</p>
-                    <a asp-controller="Shop" asp-action="Index">Explore Our Store</a>
-                </div>
+                            <td><span>$39</span></td>
+                            <td>
+                                <i class="fa-solid fa-minus"></i>
+                                <span class="count">100</span>
+                                <i class="fa-solid fa-plus"></i>
+                            </td>
+                            <td><span>$39</span></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
-            <div class="content-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-7">
-                            <div class="left">
-                                <div class="img">
-                                    <img class="img-left" src="~/assets/img/hp2.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-5">
-                            <div class="right">
-                                <div class="img">
-                                    <img class="img-right" src="~/assets/img/women.webp" alt="">
-                                </div>
-                                <div class="text">
-                                    <h5>TREATMENTS</h5>
-                                    <h4>Organic Skin Care</h4>
-                                    <p>Keep your skin looks hydrated, fresh & glowy</p>
-                                    <a href="shop.html">Discover Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="categories">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="img">
-                        <a href=""><img src="~/assets/img/category2.webp" alt=""></a>
-                    </div>
-                    <div class="text">
-                        <h4>Skin care</h4>
-                        <h6>12 items</h6>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="img">
-                        <a href=""><img src="~/assets/img/category3.webp" alt=""></a>
-                    </div>
-                    <div class="text">
-                        <h4>Skin care</h4>
-                        <h6>3 items</h6>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="img">
-                        <a href=""><img src="~/assets/img/category4.webp" alt=""></a>
-                    </div>
-                    <div class="text">
-                        <h4>Skin care</h4>
-                        <h6>3 items</h6>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="img">
-                        <a href=""><img src="~/assets/img/category5.webp" alt=""></a>
-                    </div>
-                    <div class="text">
-                        <h4>Skin care</h4>
-                        <h6>3 items</h6>
-                    </div>
-                </div>
-            </div>
-            <hr>
         </div>
 
     </section>
 
     <section id="products">
-        <h1>New Arrivals</h1>
-        <p>Preorder now to receive exclusive deals & gifts</p>
+
+        <div class="head">
+            <h1>You May Also Like</h1>
+        </div>
         <div class="slider-products">
             <div class="slider-for">
             </div>
@@ -323,6 +235,7 @@
 
             </div>
         </div>
+
         <div class="mobile-products">
             <div class="slider-nav" data-slick='{"slidesToShow": 2, "slidesToScroll": 1}'>
 
@@ -440,16 +353,7 @@
 
         </div>
 
-      
-
-
-
-
-
     </section>
-
-
-
 
     <div class="overlay"></div>
 
@@ -458,7 +362,7 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-7">
                     <div class="img">
-                        <img src="~/assets/img/product/product1-1.webp" alt="">
+                        <img src="./assets/img/product/product1-1.webp" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-5">
@@ -466,10 +370,7 @@
                         <h1>Super Pure</h1>
                         <span>$29.00</span>
                         <hr>
-                        <p>
-                            Glossier Super Bounce, Super Bounce, serum, hydrating serum, hyaluronic acid serum,
-                            pro-vitamin b5 serum, hyaluronic...
-                        </p>
+                        <p>Glossier Super Bounce, Super Bounce, serum, hydrating serum, hyaluronic acid serum, pro-vitamin b5 serum, hyaluronic...</p>
                         <a href="#">
                             <div class="add wishlist">
                                 <i class="fa-regular fa-heart"></i>
@@ -501,190 +402,10 @@
         </div>
         <i class="fa-solid fa-xmark close"></i>
     </div>
-
-    <section id="magazines">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <div class="text">
-                            <h4>"Every bottle is quality-tested to the Nth degree."</h4>
-                        </div>
-                        <div class="img">
-                            <img src="~/assets/img/magazine1.avif" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <div class="text">
-                            <h4>"One of the most effective at calming my anxiety."</h4>
-                        </div>
-                        <div class="img">
-                            <img src="~/assets/img/magazine2.avif" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <div class="text">
-                            <h4>"This stuff definitely works."</h4>
-                        </div>
-                        <div class="img">
-                            <img src="~/assets/img/magazine3.avif" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <div class="text">
-                            <h4>"Designed to take the guesswork out of dosage."</h4>
-                        </div>
-                        <div class="img">
-                            <img src="~/assets/img/magazine4.avif" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="blogs">
-        <div class="container">
-            <h1>Latest From Blog</h1>
-            <h2>Subscribe for latest news and blog updates from our editor.</h2>
-            <div class="row">
-                <div class="col-sm-12 col-lg-4">
-                    <div class="blog">
-                        <h1>25.12.2023</h1>
-                        <div class="img">
-                            <a asp-controller="Blog" asp-action="Detail"><img src="~/assets/img/blog1.webp" alt=""></a>
-                        </div>
-                        <div class="text">
-                            <a asp-controller ="Blog" asp-action="Detail">Relax, it's bath time. 7 bath relaxation products</a>
-                            <hr>
-                            <p>
-                                Nobody ever said, “I wish I hadn’t taken that bath.” In fact, the bathtub has become
-                                such a destination point...
-                            </p>
-                            <a asp-controller="Blog" asp-action="Detail">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-4">
-                    <div class="blog">
-                        <h1>25.12.2023</h1>
-                        <div class="img">
-                            <a href=""><img src="~/assets/img/blog2.webp" alt=""></a>
-                        </div>
-                        <div class="text">
-                            <a href="">Relax, it's bath time. 7 bath relaxation products</a>
-                            <hr>
-                            <p>
-                                Nobody ever said, “I wish I hadn’t taken that bath.” In fact, the bathtub has become
-                                such a destination point...
-                            </p>
-                            <a href="">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-4">
-                    <div class="blog">
-                        <h1>25.12.2023</h1>
-                        <div class="img">
-                            <a href=""><img src="~/assets/img/blog3.webp" alt=""></a>
-                        </div>
-                        <div class="text">
-                            <a href="">Relax, it's bath time. 7 bath relaxation products</a>
-                            <hr>
-                            <p>
-                                Nobody ever said, “I wish I hadn’t taken that bath.” In fact, the bathtub has become
-                                such a destination point...
-                            </p>
-                            <a href="">More Details</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="subscribe">
-        <div style="background-image: url(./assets/img/Subscribe.jpg);" class="content d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="text">
-                            <h1>Subscrible & Get 10% Discount</h1>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="input">
-                            <i class="fa-regular fa-envelope"></i>
-
-                            <input placeholder="Your Email" type="text">
-                            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <section id="brands">
-        <div class="brand">
-            <div class="container">
-                <h1>BRANDS POPULAR</h1>
-                <div class="row align-items-center">
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <div class="img">
-                            <img src="~/assets/img/brand1.avif" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <div class="img">
-                            <img src="~/assets/img/brand2.avif" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <div class="img">
-                            <img src="~/assets/img/brand3.avif" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <div class="img">
-                            <img src="~/assets/img/brand4.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <div class="img">
-                            <img src="~/assets/img/brand5.avif" alt="">
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <div class="img">
-                            <img src="~/assets/img/brand6.avif" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 </main>
-
-@section script {
-    <script src="~/assets/js/home.js"></script>
+@section script{
     <script src="~/assets/js/plugins.js"></script>
+    <script src="~/assets/js/home.js"></script>
+
 }
+

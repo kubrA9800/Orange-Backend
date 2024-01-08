@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+@section css {
+    <link rel="stylesheet" href="~/assets/css/account.css">
+}
+<section id="login-register">
+    <div data-id="2" class="register-form box">
+        <div class="container">
+            <div class="head">
+                <h1>Register</h1>
+                <p>Please fill in the fields below</p>
+            </div>
+            <div class="form">
+                <div class="input">
+                    <span class=>First Name</span>
+                    <input type="text">
+                </div>
+                <div class="input">
+                    <span class=>Last Name</span>
+                    <input type="text">
+                </div>
+                <div class="input">
+                    <span class=>Email</span>
+                    <input type="text">
+                </div>
+                <div class="input">
+                    <span class=>Password</span>
+                    <input type="text">
+                </div>
+
+                <button>Create</button>
+            </div>
+            <div class="link d-flex">
+                <h5>Already a member?</h5>
+                <a data-id="1" asp-action="Login">Login</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@section script {
+    <script src="~/assets/js/account.js"></script>
+}

@@ -13,9 +13,107 @@
     src: url(../fonts/Montaga-Regular.ttf)
 }
 
+@media only screen and (max-width: 576px) {
+    #slider {
+        .carousel-inner {
+            height: 260px !important;
+        }
 
-@media only screen and (max-width: 768px) {
-   
+        .text {
+            top: 50px !important;
+            left: 50px !important;
+            width: 100% !important;
+
+            h6 {
+                font-size: 12px !important;
+            }
+
+            h1 {
+                font-size: 32px !important;
+                margin-bottom: 10px !important;
+            }
+
+            p {
+                font-size: 14px !important;
+                margin-bottom: 10px !important;
+                width: 80%;
+            }
+
+            a {
+                padding: 7px 10px !important;
+                font-size: 10px !important;
+            }
+        }
+    }
+
+    #beauty-store {
+        .text {
+            p {
+                width: 80% !important;
+            }
+        }
+
+        .content-bottom {
+
+
+            .img {
+                width: 100%;
+
+                .img-left {
+                    width: 90%;
+                    margin-left: 1rem !important;
+                }
+
+                .img-right {
+                    width: 70%;
+                }
+
+            }
+        }
+    }
+
+    #products {
+        .slider-products {
+            display: none !important;
+        }
+
+        .mobile-products {
+            .icons {
+                left: 30% !important;
+                //transform: translateX(-50%);
+
+                i {
+                    font-size: 14px !important;
+
+                    &:nth-of-type(3) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    #subscribe {
+        input {
+            width: 50% !important;
+        }
+    }
+
+    #brands {
+        .img {
+            margin-bottom: 60px !important;
+
+            img {
+                width: 45% !important;
+            }
+        }
+    }
+
+}
+
+@media all and (min-width: 576px) and (max-width: 768px) {
+
 
     #slider {
         .carousel-inner {
@@ -85,21 +183,31 @@
                 font-size: 14px !important;
             }
         }
-       
-                .hover-img{
-                    width: 80%!important;
-                    bottom: 133px!important;
+
+        .hover-img {
+            width: 80% !important;
+            bottom: 133px !important;
+        }
+
+        .icons {
+            left: 80% !important;
+            width: 80% !important;
+            transform: translateX(-50%);
+
+            i {
+                font-size: 14px !important;
+
+                &:nth-of-type(3) {
+                    display: none;
                 }
-                .icons {
-                    left: 16px!important;
-                    width: 80% !important;
-    
-                    i {
-                        font-size: 8px !important;
-                    }
-                }
-       
-        
+            }
+        }
+
+        .slider-products {
+            display: none !important;
+        }
+
+
     }
 
     #magazines {
@@ -115,10 +223,11 @@
         }
     }
 
-    .modals{
-        left: 105px!important;
+    .modals {
+        left: 105px !important;
         overflow-y: scroll;
-        .text{
+
+        .text {
             margin-top: 30px;
         }
 
@@ -127,12 +236,13 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color:#ff6f2e;
+            background-color: #ff6f2e;
         }
     }
-    #subscribe{
-        input{
-            width: 60%!important;
+
+    #subscribe {
+        input {
+            width: 60% !important;
         }
     }
 
@@ -140,6 +250,9 @@
 
 @media all and (min-width: 768px) and (max-width: 992px) {
 
+    .mobile-alert {
+        display: none;
+    }
 
     #slider {
         .carousel-inner {
@@ -207,12 +320,13 @@
 
     #products {
         .product {
-            .hover-img{
-                width: 82%!important;
-                bottom: 141px!important;
+            .hover-img {
+                width: 82% !important;
+                bottom: 141px !important;
             }
+
             .icons {
-                left: 33px!important;
+                left: 33px !important;
                 width: 80% !important;
 
                 i {
@@ -220,11 +334,17 @@
                 }
             }
         }
+
+        .mobile-products {
+            display: none;
+        }
     }
-    .modals{
-        left: 125px!important;
+
+    .modals {
+        left: 125px !important;
         overflow-y: scroll;
-        .text{
+
+        .text {
             margin-top: 30px;
         }
 
@@ -233,7 +353,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color:#ff6f2e;
+            background-color: #ff6f2e;
         }
     }
 
@@ -244,21 +364,22 @@
     }
 }
 
-@media all and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) {
+    #products {
+        .mobile-products {
+            display: none;
+        }
 
-    #subscribe{
-        input{
-            width: 70%!important;
+    }
+
+    #subscribe {
+        input {
+            width: 70% !important;
         }
     }
-}
 
-@media only screen and (min-width: 1200px) {
-  
-    #subscribe{
-        input{
-            width: 60%!important;
-        }
+    .mobile-alert {
+        display: none;
     }
 }
 
@@ -313,7 +434,8 @@
                 font-family: Karla400;
                 font-weight: bold;
                 transition: all .4s;
-                &:hover{
+
+                &:hover {
                     color: white;
                     background-color: #ff6f2e;
                 }
@@ -620,12 +742,28 @@
             font-family: Karla400;
         }
     }
+
+
 }
 
 
 
 
 .overlay {
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    cursor: pointer;
+}
+.overlay-cart {
     overflow: hidden;
     position: fixed;
     display: none;
@@ -943,16 +1081,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

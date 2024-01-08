@@ -76,21 +76,21 @@
             <div class="sidebar move-sidebar">
                 <i class="fa-solid fa-square-xmark close-icon"></i>
                 <div class="navigation mt-4">
-                    <a href="home.html">Home</a>
+                    <a asp-controller="Home" asp-action="Index">Home</a>
                     <hr>
-                    <a href="shop.html">Shop</a>
+                    <a asp-controller ="Shop" asp-action="Index">Shop</a>
                     <hr>
-                    <a href="blog.html">Blog</a>
+                    <a asp-controller="Blog" asp-action="Index">Blog</a>
                     <hr>
-                    <a href="about.html">About</a>
+                    <a asp-controller="About" asp-action="Index">About</a>
                     <hr>
-                    <a href="contact.html">Contact Us</a>
+                    <a asp-controller="Contact" asp-action="Index">Contact Us</a>
                     <hr>
-                    <a href="account.html">Login/Register</a>
+                    <a asp-controller="Account" asp-action="Login">Login/Register</a>
                     <hr>
-                    <a href="wishlist.html">Wishlist</a>
+                    <a asp-controller="Wishlist" asp-action="Index">Wishlist</a>
                     <hr>
-                    <a href="cart.html">Basket</a>
+                    <a asp-controller="Cart" asp-action="Index">Basket</a>
                 </div>
 
 
@@ -123,9 +123,9 @@
                             <h1>Crem</h1>
                             <h2>$20 x <span>1</span></h2>
                             <div class="count">
-                                <button><i class="fa-solid fa-minus"></i></button>
-                                <span><input type="text" value="1"></span>
-                                <button><i class="fa-solid fa-plus"></i></button>
+                                <i class="fa-solid fa-minus"></i>
+                                <span>100</span>
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                     </div>
@@ -143,9 +143,9 @@
                             <h1>Crem</h1>
                             <h2>$20 x <span>1</span></h2>
                             <div class="count">
-                                <button><i class="fa-solid fa-minus"></i></button>
-                                <span><input type="text" value="1"></span>
-                                <button><i class="fa-solid fa-plus"></i></button>
+                                <i class="fa-solid fa-minus"></i>
+                                <span>100</span>
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
                     <h1>Total:</h1>
                     <h1>$50</h1>
                 </div>
-                <a href="cart.html">View Cart</a>
+                <a asp-controller="Cart" asp-action="Index">View Cart</a>
             </div>
         </div>
     </header>

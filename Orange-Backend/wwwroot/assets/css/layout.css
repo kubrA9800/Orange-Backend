@@ -12,7 +12,7 @@
 }
 @media only screen and (max-width: 768px) {
   header .header-all .logo {
-    width: 70%;
+    width: 60% !important;
   }
   header .header-all .logo img {
     width: 60% !important;
@@ -22,13 +22,13 @@
     flex: auto;
   }
   header .sidebar {
-    width: 40% !important;
+    width: 50% !important;
   }
   header .search-sidebar {
-    width: 40% !important;
+    width: 50% !important;
   }
   header .cart-sidebar {
-    width: 40% !important;
+    display: none;
   }
   header nav {
     display: none;
@@ -122,7 +122,7 @@ header .cart-sidebar {
   position: fixed;
   top: 0px;
   right: 0px;
-  width: 22%;
+  width: 30%;
   height: 100vh;
   padding: 20px;
   z-index: 100;
@@ -186,19 +186,9 @@ header .cart-sidebar .cart-products .item .text h2 {
 header .cart-sidebar .cart-products .item .text .count {
   border: 1px solid #c7c4c4;
 }
-header .cart-sidebar .cart-products .item .text .count button {
-  border: none;
-  background-color: transparent;
-}
-header .cart-sidebar .cart-products .item .text .count button i {
+header .cart-sidebar .cart-products .item .text .count i {
   font-size: 12px;
-  color: #6a6c6d;
-}
-header .cart-sidebar .cart-products .item .text .count input {
-  border: none;
-  outline: none;
-  width: 15px;
-  font-size: 12px;
+  padding: 0 5px;
 }
 header .cart-sidebar .cart-products .item a {
   text-align: end;
@@ -298,7 +288,7 @@ header .sidebar {
   right: 0;
   transition: 0.5s;
   background-color: White;
-  width: 22%;
+  width: 30%;
   height: 100vh;
   padding: 15px 25px;
   z-index: 10;
@@ -341,13 +331,13 @@ header .sidebar hr {
   margin-left: 40px;
 }
 header .move-sidebar {
-  transform: translate(336px, 0);
+  transform: translateX(100%);
 }
 header .search-sidebar {
   position: fixed;
   top: 0px;
   right: 0px;
-  width: 22%;
+  width: 30%;
   height: 100vh;
   padding: 20px;
   z-index: 5;
