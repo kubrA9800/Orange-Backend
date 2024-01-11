@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VdboF5TcXlhZFVT5VpN9mWpJNxA+VPuSD+F5Aycerz0=",
+  "Hash": "TKBbI8cW1DQXHnPpIssNPMY2fBnn1rC9T1v4Q4jYwSs=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -35072,12 +35072,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\contact.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/blog1.webp",
+      "RelativePath": "assets/img/blog1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35088,15 +35088,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\blog1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog1.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog2.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog2.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/blog2.webp",
+      "RelativePath": "assets/img/blog2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35107,15 +35107,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\blog2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog3.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog3.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/blog3.webp",
+      "RelativePath": "assets/img/blog3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35126,15 +35126,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\blog3.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog3.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand1.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/brand1.avif",
+      "RelativePath": "assets/img/brand1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35145,15 +35145,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\brand1.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\brand1.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand2.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand2.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/brand2.avif",
+      "RelativePath": "assets/img/brand2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35164,15 +35164,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\brand2.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\brand2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand3.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand3.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/brand3.avif",
+      "RelativePath": "assets/img/brand3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35183,15 +35183,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\brand3.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\brand3.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand4.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand4.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/brand4.webp",
+      "RelativePath": "assets/img/brand4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35202,15 +35202,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\brand4.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\brand4.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand5.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand5.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/brand5.avif",
+      "RelativePath": "assets/img/brand5.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35221,15 +35221,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\brand5.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\brand5.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand6.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\brand6.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/brand6.avif",
+      "RelativePath": "assets/img/brand6.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35240,7 +35240,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\brand6.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\brand6.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\cards.avif",
@@ -35452,12 +35452,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\Image.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine1.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/magazine1.avif",
+      "RelativePath": "assets/img/magazine1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35468,15 +35468,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine1.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine1.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine2.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine2.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/magazine2.avif",
+      "RelativePath": "assets/img/magazine2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35487,15 +35487,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine2.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine3.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine3.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/magazine3.avif",
+      "RelativePath": "assets/img/magazine3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35506,15 +35506,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine3.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine3.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine4.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine4.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/magazine4.avif",
+      "RelativePath": "assets/img/magazine4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35525,7 +35525,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine4.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine4.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\OrangeLogo.png",

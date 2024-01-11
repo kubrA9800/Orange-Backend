@@ -30,6 +30,10 @@ builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<IInfoService, InfoService>();
 builder.Services.AddScoped<ITreatmentService, TreatmentService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IMagazineService, MagazineService>();
+builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
 
 
 
