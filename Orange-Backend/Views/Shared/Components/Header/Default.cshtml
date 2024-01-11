@@ -1,0 +1,208 @@
+﻿@model HeaderVM
+@{
+    ViewData["Title"] = "Default";
+}
+
+<header>
+    <div class="ticker d-flex">
+        <marquee behavior="" direction="left">
+            Clearance Sale: Our best prices ever <a href="">Shop now</a>
+        </marquee>
+    </div>
+    <div class="container">
+        <div class="header-all">
+            <div class="row align-items-center">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="logo">
+                        <a asp-controller="Home" asp-action="Index"><img src="~/assets/img/@Model.Logo" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <nav>
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                        <a asp-controller="Shop" asp-action="Index">Shop</a>
+                        <a asp-controller="Blog" asp-action="Index">Blog</a>
+                        <a asp-controller="About" asp-action="Index">About</a>
+                        <a asp-controller="Contact" asp-action="Index">Contact us</a>
+                    </nav>
+                </div>
+                <div class="col-sm-6 col-lg-4 icon">
+                    <div class="icons">
+                        <a class="search-icon" href="#">
+                            <img src="~/assets/img/Search.svg" alt="">
+
+                        </a>
+                        <a class="user-icon" asp-controller="Account" asp-action="Login">
+                            <img src="~/assets/img/user-icon.svg" alt="">
+                        </a>
+                        <a class="wishlist" asp-controller="Wishlist" asp-action="Index">
+                            <img src="~/assets/img/heart-icon.svg" alt="">
+                            <span class="count">0</span>
+                        </a>
+                        <a class="basket" href="#">
+                            <img src="~/assets/img/cart-icon.svg" alt="">
+                            <span class="count">0</span>
+                        </a>
+                        <i style="font-size: 26px;" class="fa-solid fa-bars hamburger-icon"></i>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="sidebar move-sidebar">
+            <i class="fa-solid fa-square-xmark close-icon"></i>
+            <div class="navigation mt-4">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <hr>
+                <a asp-controller="Shop" asp-action="Index">Shop</a>
+                <hr>
+                <a asp-controller="Blog" asp-action="Index">Blog</a>
+                <hr>
+                <a asp-controller="About" asp-action="Index">About</a>
+                <hr>
+                <a asp-controller="Contact" asp-action="Index">Contact Us</a>
+                <hr>
+                <a asp-controller="Account" asp-action="Login">Login/Register</a>
+                <hr>
+                <a asp-controller="Wishlist" asp-action="Index">Wishlist</a>
+                <hr>
+                <a asp-controller="Cart" asp-action="Index">Basket</a>
+            </div>
+
+
+        </div>
+        <div class="search-sidebar move-sidebar">
+            <div class="title">
+                <span>What are you looking for?</span>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="input d-flex">
+                <input type="text" placeholder="Search product...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="cart-sidebar move-sidebar">
+        <h1>Cart</h1>
+        <i class="fa-solid fa-xmark close-icon"></i>
+        <hr>
+        <div class="cart-products">
+            <div class="item">
+                <div class="content d-flex align-items-center">
+                    <div class="img">
+                        <img src="~/assets/img/product/product1-1.png" alt="">
+
+                    </div>
+                    <div class="text">
+                        <h1>Crem</h1>
+                        <h2>$20 x <span>1</span></h2>
+                        <div class="count">
+                            <i class="fa-solid fa-minus"></i>
+                            <span>100</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="">Remove</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content d-flex align-items-center">
+                    <div class="img">
+                        <img src="~/assets/img/product/product1-1.png" alt="">
+
+                    </div>
+                    <div class="text">
+                        <h1>Crem</h1>
+                        <h2>$20 x <span>1</span></h2>
+                        <div class="count">
+                            <i class="fa-solid fa-minus"></i>
+                            <span>100</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="">Remove</a>
+                </div>
+            </div>
+        </div>
+        <div class="recommended">
+            <div class="head">
+                <h1>You May Also Like</h1>
+            </div>
+            <div data-slick='{"slidesToShow": 2, "slidesToScroll": 2}'>
+                <div>
+                    <div class="item">
+                        <div class="col-6 img">
+                            <img src="~/assets/img/product/product2-1.png" alt="Slide 1">
+
+                        </div>
+                        <div class="col-6 text">
+                            <a href="">
+                                <h4>Super Bounce</h4>
+                            </a>
+                            <span>$29.90</span>
+                            <a href="">Add to Cart</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="item">
+                        <div class="col-6 img">
+                            <img src="~/assets/img/product/product8-1.png" alt="Slide 2">
+
+                        </div>
+                        <div class="col-6 text">
+                            <a href="productDetail.html">
+                                <h4>Super Bounce</h4>
+                            </a>
+                            <span>$29.90</span>
+                            <a href="">Add to Cart</a>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="item">
+                        <div class="col-6 img">
+                            <img src="~/assets/img/product/product3-1.png" alt="Slide 2">
+
+                        </div>
+                        <div class="col-6 text">
+                            <a href="productDetail.html">
+                                <h4>Super Bounce</h4>
+                            </a>
+                            <span>$29.90</span>
+                            <a href="">Add to Cart</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="bottom">
+            <div class="total">
+                <h1>Total:</h1>
+                <h1>$50</h1>
+            </div>
+            <a asp-controller="Cart" asp-action="Index">View Cart</a>
+        </div>
+    </div>
+</header>
+

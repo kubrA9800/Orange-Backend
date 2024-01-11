@@ -1,0 +1,88 @@
+﻿@model FooterVM
+
+@{
+    ViewData["Title"] = "Default";
+}
+ <footer>
+                <div class="footer-all">
+                    <div class="footer-top">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer-left">
+                                    <h1>newsletter</h1>
+                                    <h2>Get a 10% discount on your first order.</h2>
+                                    <form action="">
+                                        <div class="input">
+                                            <span>Your email</span>
+                                            <input type="text">
+                                        </div>
+                                        <button>Subscribe</button>
+                                    </form>
+                                    <div class="icons">
+                                        <a href="">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fa-brands fa-pinterest"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fa-brands fa-tiktok"></i>
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer-right">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="text">
+                                                <h1>quick order</h1>
+                                                <span>@Model.Phone</span>
+                                                <p>@Model.Email</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="text">
+                                                <h1>support</h1>
+                                                <a href="">About us</a>
+                                                <a href="">Contact us</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <div class="text">
+                                                <h1>information</h1>
+                                                <a href="">Search</a>
+                                                <a href="">Blog</a>
+                                                <a href="">My Account</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-bottom">
+
+                        <div class="rights">
+                            <h2>© 2022, Fashion&Style. Powered by Shopify</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+
