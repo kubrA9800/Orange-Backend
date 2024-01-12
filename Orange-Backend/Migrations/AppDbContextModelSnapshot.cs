@@ -279,7 +279,7 @@ namespace Orange_Backend.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("Orange_Backend.Models.Category", b =>
+            modelBuilder.Entity("Orange_Backend.Models.BrandCategory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -289,6 +289,32 @@ namespace Orange_Backend.Migrations
 
                     b.Property<int?>("BrandId")
                         .HasColumnType("int");
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("BrandCategory");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -303,8 +329,6 @@ namespace Orange_Backend.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BrandId");
 
                     b.ToTable("Categories");
                 });
@@ -367,6 +391,9 @@ namespace Orange_Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("BrandCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
@@ -386,6 +413,8 @@ namespace Orange_Backend.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BrandCategoryId");
 
                     b.HasIndex("CategoryId");
 
@@ -566,22 +595,32 @@ namespace Orange_Backend.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Orange_Backend.Models.Category", b =>
+            modelBuilder.Entity("Orange_Backend.Models.BrandCategory", b =>
                 {
                     b.HasOne("Orange_Backend.Models.Brand", "Brand")
-                        .WithMany("Category")
+                        .WithMany("BrandCategories")
                         .HasForeignKey("BrandId");
 
+                    b.HasOne("Orange_Backend.Models.Category", "Category")
+                        .WithMany("BrandCategories")
+                        .HasForeignKey("CategoryId");
+
                     b.Navigation("Brand");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.Product", b =>
                 {
-                    b.HasOne("Orange_Backend.Models.Category", "Category")
+                    b.HasOne("Orange_Backend.Models.BrandCategory", "BrandCategory")
+                        .WithMany()
+                        .HasForeignKey("BrandCategoryId");
+
+                    b.HasOne("Orange_Backend.Models.Category", null)
                         .WithMany("Products")
                         .HasForeignKey("CategoryId");
 
-                    b.Navigation("Category");
+                    b.Navigation("BrandCategory");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.ProductImage", b =>
@@ -595,11 +634,13 @@ namespace Orange_Backend.Migrations
 
             modelBuilder.Entity("Orange_Backend.Models.Brand", b =>
                 {
-                    b.Navigation("Category");
+                    b.Navigation("BrandCategories");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.Category", b =>
                 {
+                    b.Navigation("BrandCategories");
+
                     b.Navigation("Products");
                 });
 

@@ -19,7 +19,7 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Info, InfoVM>();
             CreateMap<Treatment, TreatmentVM>();
             CreateMap<Category, CategoryVM>();
-            CreateMap<Product, ProductVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
+            CreateMap<Product, ProductVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.BrandCategory.Category.Name));
             CreateMap<Magazine, MagazineVM>();
             CreateMap<Blog, BlogVM>();
             CreateMap<Brand, BrandVM>();
