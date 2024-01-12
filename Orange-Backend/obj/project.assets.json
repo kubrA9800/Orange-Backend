@@ -8234,11 +8234,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\Orange-Backend.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\Orange-Backend.csproj",
       "projectName": "Orange-Backend",
-      "projectPath": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\Orange-Backend.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\Orange-Backend.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Orange-Backend\\Orange-Backend\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

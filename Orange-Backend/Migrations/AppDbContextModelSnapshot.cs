@@ -268,6 +268,9 @@ namespace Orange_Backend.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("SoftDeleted")
                         .HasColumnType("bit");
 
@@ -284,6 +287,9 @@ namespace Orange_Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("BrandId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
@@ -297,6 +303,8 @@ namespace Orange_Backend.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
 
                     b.ToTable("Categories");
                 });
@@ -359,7 +367,7 @@ namespace Orange_Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
@@ -401,7 +409,7 @@ namespace Orange_Backend.Migrations
                     b.Property<bool>("IsMain")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<bool>("SoftDeleted")
@@ -558,13 +566,20 @@ namespace Orange_Backend.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Category", b =>
+                {
+                    b.HasOne("Orange_Backend.Models.Brand", "Brand")
+                        .WithMany("Category")
+                        .HasForeignKey("BrandId");
+
+                    b.Navigation("Brand");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Product", b =>
                 {
                     b.HasOne("Orange_Backend.Models.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
                 });
@@ -573,11 +588,14 @@ namespace Orange_Backend.Migrations
                 {
                     b.HasOne("Orange_Backend.Models.Product", "Product")
                         .WithMany("Images")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.Brand", b =>
+                {
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.Category", b =>

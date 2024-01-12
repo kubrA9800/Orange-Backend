@@ -121,75 +121,7 @@
 
     <section id="products">
         <h1>New Arrivals</h1>
-        <div class="slider-products">
-            <div class="slider-for">
-            </div>
-            <div class="slider-nav" data-slick='{"slidesToShow": 5, "slidesToScroll": 3}'>
-                @foreach (var product in Model.Products.Take(6))
-                {
-                    <div class="col-sm-4">
-                        <div class="product">
-                            <a asp-controller="Shop" asp-action="ProductDetail">
-                                <img src="./assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
-                                <img class="d-none hover-img" src="./assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image" alt="Slide 1">
-                            </a>
-                            <div class="d-none icons">
-                                <i class="fa-regular fa-heart heart-icon"></i>
-                                <i class="d-none fa-solid fa-heart "></i>
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-bag-shopping basket-icon"></i>
-                            </div>
-                            <div class="text">
-                                <h6>@product.CategoryName</h6>
-                                <a asp-controller="Shop" asp-action="ProductDetail">
-                                    <h4>@product.Name</h4>
-                                </a>
-                                <span>$@product.Price</span>
-                            </div>
-                        </div>
-                    </div>
-
-                }
-              
-
-            </div>
-        </div>
-        <div class="mobile-products">
-            <div class="slider-nav" data-slick='{"slidesToShow": 2, "slidesToScroll": 1}'>
-                @foreach (var product in Model.Products.Take(6))
-                {
-                    <div class="product">
-                        <a asp-controller="Shop" asp-action="ProductDetail">
-                            <img src="./assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
-                        </a>
-                        <div class="icons">
-                            <i class="fa-regular fa-heart heart-icon"></i>
-                            <i class="d-none fa-solid fa-heart "></i>
-                            <i class="fa-regular fa-eye"></i>
-                            <i class="fa-solid fa-bag-shopping basket-icon"></i>
-                        </div>
-                        <div class="text">
-                            <h6>@product.CategoryName</h6>
-                            <a asp-controller="Shop" asp-action="ProductDetail">
-                                <h4>@product.Name</h4>
-                            </a>
-                            <span>$@product.Price</span>
-                        </div>
-                    </div>
-
-                }
-               
-            </div>
-
-
-
-        </div>
-
-      
-
-
-
-
+        <partial name="_ProductPartial" model="@Model.Products.Take(6).ToList()" />
 
     </section>
 

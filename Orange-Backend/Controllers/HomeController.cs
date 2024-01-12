@@ -52,8 +52,9 @@ namespace Orange_Backend.Controllers
             List<SliderVM> sliders = await _sliderService.GetAllAsync();
             InfoVM infos= await _infoService.GetAllAsync();
             TreatmentVM treatments = await _treatmentService.GetAllAsync();
+            List<ProductVM> products = await _producrService.GetAllAsync();
+
             List<CategoryVM> categories= await _categoryService.GetAllAsync();
-            List<ProductVM> products=await _producrService.GetAllAsync();
             List<MagazineVM> magazines = await _magazineService.GetAllAsync();
             List<BlogVM> blogs = await _blogService.GetAllAsync();
             List<BrandVM> brands = await _brandService.GetAllAsync();
@@ -65,7 +66,7 @@ namespace Orange_Backend.Controllers
                 Infos = infos,
                 Treatments=treatments,
                 Categories=categories,
-                Products=products,
+                Products = products,
                 Magazines=magazines,
                 Blogs=blogs,
                 Brands=brands
