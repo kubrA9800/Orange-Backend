@@ -391,9 +391,6 @@ namespace Orange_Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("BrandCategoryId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
@@ -413,8 +410,6 @@ namespace Orange_Backend.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BrandCategoryId");
 
                     b.HasIndex("CategoryId");
 
@@ -612,15 +607,11 @@ namespace Orange_Backend.Migrations
 
             modelBuilder.Entity("Orange_Backend.Models.Product", b =>
                 {
-                    b.HasOne("Orange_Backend.Models.BrandCategory", "BrandCategory")
-                        .WithMany()
-                        .HasForeignKey("BrandCategoryId");
-
-                    b.HasOne("Orange_Backend.Models.Category", null)
+                    b.HasOne("Orange_Backend.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId");
 
-                    b.Navigation("BrandCategory");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.ProductImage", b =>

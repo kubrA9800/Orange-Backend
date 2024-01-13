@@ -19,7 +19,7 @@ namespace Orange_Backend.Services
         }
         public async Task<List<ProductVM>> GetAllAsync()
         {
-             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m=>m.BrandCategory.Category).Include(m=>m.Images).ToListAsync());
+             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m=>m.Category).Include(m=>m.Images).ToListAsync());
         }
 
         public async Task<int> GetCountAsync()
@@ -29,7 +29,7 @@ namespace Orange_Backend.Services
 
         public async Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take)
         {
-            List<Product> products = await _context.Products.Include(m => m.BrandCategory.Category)
+            List<Product> products = await _context.Products.Include(m => m.Category)
                                                              .Include(m => m.Images)
                                                              .Skip((page * take) - take)
                                                              .Take(take)
