@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Orange_Backend.Areas.Admin.ViewModels.Banner;
 using Orange_Backend.Areas.Admin.ViewModels.Blog;
 using Orange_Backend.Areas.Admin.ViewModels.Brand;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
@@ -8,6 +9,7 @@ using Orange_Backend.Areas.Admin.ViewModels.Magazine;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Areas.Admin.ViewModels.Slider;
 using Orange_Backend.Areas.Admin.ViewModels.Treatment;
+using Orange_Backend.Areas.Admin.ViewModels.Values;
 using Orange_Backend.Models;
 
 namespace Orange_Backend.Helpers.Mappings
@@ -24,6 +26,8 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Magazine, MagazineVM>();
             CreateMap<Blog, BlogVM>();
             CreateMap<Brand, BrandVM>();
+            CreateMap<Banner, BannerVM>();
+            CreateMap<Values, ValuesVM>();
             CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();
 
 

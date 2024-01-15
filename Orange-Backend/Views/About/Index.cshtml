@@ -1,4 +1,4 @@
-﻿
+﻿@model AboutVM
 @{
     ViewData["Title"] = "Index";
 }
@@ -9,14 +9,12 @@
     <section id="passionate">
         <div class="container">
             <div class="content">
-
                 <div class="img">
-                    <img src="~/assets/img/about/about.jpg" alt="">
+                    <img src="~/assets/img/about/@Model.Banner.Image" alt="">
                 </div>
                 <div class="text">
                     <p>
-                        Introduce your company with a broad vision statement. The viewer should come away with a
-                        strong sense of what your company stands for, and what it is trying to achieve.
+                        @Model.Banner.Text
                     </p>
                 </div>
             </div>
@@ -28,13 +26,10 @@
             <div class="content">
                 <h1>OUR VALUES</h1>
                 <p>
-                    Established in 2017, by husband and wife team Rob and Frankie, Hutch specialises in helping you
-                    bring the perfect houseplants home.
+                   @Model.Value.Head
                 </p>
                 <p>
-                    Born out of a passion for all things botanical and Frankie's love of planting up terrariums,
-                    Hutch began life as a short term pop up shop in Exeter's city centre. The aim was simple; create
-                    a jungle bursting with exotic foliage right in the centre of a bustling city.
+                    @Model.Value.Text
                 </p>
             </div>
 

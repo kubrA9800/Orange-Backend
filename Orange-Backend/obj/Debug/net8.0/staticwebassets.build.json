@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K38tgZbk3u4PCMmnLb19YJGt/mdTuG58V7FvYZPqllc=",
+  "Hash": "aQ+XhrxZJkvgNPj7hntvdueTI+I8wQf68SmcMw3UeTc=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -35982,6 +35982,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\product\\GlossierRefil2.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\GlossierRefil3.png",
+      "SourceId": "Orange-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\",
+      "BasePath": "_content/Orange-Backend",
+      "RelativePath": "assets/img/product/GlossierRefil3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\product\\GlossierRefil3.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\GlossierYouSolid1.png",

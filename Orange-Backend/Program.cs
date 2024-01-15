@@ -35,6 +35,8 @@ builder.Services.AddScoped<IMagazineService, MagazineService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IBannerService, BannerService>();
+builder.Services.AddScoped<IValuesService, ValuesService>();
 
 
 

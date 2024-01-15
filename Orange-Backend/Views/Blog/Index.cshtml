@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="text">
                                         <a href="">@blog.CreatedDate.ToString("dd/MM/yyyy")</a>
-                                        <a asp-action="Detail">@blog.Name</a>
+                                        <a asp-action="Detail" asp-route-id="@blog.Id">@blog.Name</a>
                                     </div>
                                 </div>
 
