@@ -8,8 +8,8 @@
         {
             <div class="col-sm-4">
                 <div class="product">
-                    <a asp-controller="Shop" asp-action="ProductDetail">
-                        <img src="./assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
+                    <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
+                        <img src="~/assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                         <img class="d-none hover-img" src="./assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                     </a>
                     <div class="d-none icons">

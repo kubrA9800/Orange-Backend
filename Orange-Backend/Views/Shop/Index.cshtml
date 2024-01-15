@@ -134,7 +134,7 @@
                                 {
                                     <div class="col-sm-6 col-lg-4">
                                         <div class="product">
-                                            <a asp-action="ProductDetail">
+                                            <a asp-action="ProductDetail" asp-route-id="@product.Id">
                                                 <img src="./assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 2">
                                                 <img class="d-none hover-img" src="./assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image"
                                                      alt="Slide 2">

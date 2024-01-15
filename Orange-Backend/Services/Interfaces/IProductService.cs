@@ -7,6 +7,8 @@ namespace Orange_Backend.Services.Interfaces
         Task<List<ProductVM>> GetAllAsync();
         Task<int> GetCountAsync();
         Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take);
+        Task<ProductVM> GetByIdWithIncludesAsync(int id);
+
 
     }
 }

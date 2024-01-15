@@ -36,5 +36,15 @@ namespace Orange_Backend.Services
                                                              .ToListAsync();
             return _mapper.Map<List<ProductVM>>(products);
         }
+
+        public async Task<ProductVM> GetByIdWithIncludesAsync(int id)
+        {
+            Product data = await _context.Products.Include(m => m.Category)
+                                                   .Include(m=>m.Brand)
+                                                   .Include(m => m.Images)
+                                                   .FirstOrDefaultAsync(m => m.Id == id);
+
+            return _mapper.Map<ProductVM>(data);
+        }
     }
 }

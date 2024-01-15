@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jAYbyKEZzbFJA0sM3Rd+uQtXuOfqcMaAIZTJ1XwaKPs=",
+  "Hash": "K38tgZbk3u4PCMmnLb19YJGt/mdTuG58V7FvYZPqllc=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -35224,12 +35224,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\brand6.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\cards.avif",
+      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\cards.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/cards.avif",
+      "RelativePath": "assets/img/cards.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35240,7 +35240,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\cards.avif"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\cards.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\cart-icon.svg",

@@ -1,4 +1,4 @@
-﻿
+﻿@model ProductVM
 @{
     ViewData["Title"] = "ProductDetail";
 }
@@ -15,32 +15,23 @@
                             <div class="col-xs-12">
                                 <div id="product__slider">
                                     <div class="product__slider-main">
-                                        <div class="slide">
-                                            <img src="./assets/img/product/product1-1.webp" alt=""
-                                                 class="img-responsive">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="./assets/img/product/product1-2.webp" alt=""
-                                                 class="img-responsive">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="./assets/img/product/product1-3.webp" alt=""
-                                                 class="img-responsive">
-                                        </div>
+                                        @foreach (var image in Model.Images)
+                                        {
+                                            <div class="slide">
+                                                <img src="@Url.Content($"~/assets/img/product/{image.Image}")" alt=""
+                                                     class="img-responsive">
+                                            </div>
+                                        }
+                                       
                                     </div>
-                                    <div style="margin-left:25px;" class="product__slider-thmb">
-                                        <div class="slide">
-                                            <img src="./assets/img/product/product1-1.webp" alt=""
-                                                 class="img-responsive">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="./assets/img/product/product1-2.webp" alt=""
-                                                 class="img-responsive">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="./assets/img/product/product1-3.webp" alt=""
-                                                 class="img-responsive">
-                                        </div>
+                                    <div style="@(Model.Images.Count==2 ?"margin-left:-80px":"margin-left:25px")" class="product__slider-thmb">
+                                        @foreach (var image in Model.Images)
+                                        {
+                                            <div class="slide">
+                                                <img src="@Url.Content($"~/assets/img/product/{image.Image}")" alt=""
+                                                     class="img-responsive">
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -49,8 +40,8 @@
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <div class="text">
-                        <h1>Super Pure</h1>
-                        <span>$29.00</span>
+                        <h1>@Model.Name</h1>
+                        <span>$@Model.Price</span>
                         <hr>
 
                         <a href="#">
@@ -114,7 +105,7 @@
                         </div>
                         <div class="guarantee">
                             <h1>Guarantee safe checkout</h1>
-                            <img src="./assets/img/cards.avif" alt="">
+                            <img src="~/assets/img/cards.png" alt="">
                         </div>
 
                     </div>
@@ -135,7 +126,7 @@
             </div>
             <div class=" tab-content">
                 <div data-id="1" class="item">
-                    <h3>Glossier Super Pure serum, Super Pure serum, serum, purifying serum, niacinamide and zinc, niacinamide serum, zinc serum, vitamin b3 serum, balancing serum, blemish treatment, stressed skin treatment</h3>
+                    <h3>@Model.Description</h3>
                 </div>
                 <div data-id="2" class="item d-none">
                     <div class="review w-100">
@@ -152,12 +143,15 @@
             </div>
         </div>
     </section>
-
+    
 
 
 </main>
 
 @section script {
+    <script src="~/assets/slick-1.8.1/slick/slick.min.js"></script> 
+    <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/productDetail.js"></script>
+    
 }
 

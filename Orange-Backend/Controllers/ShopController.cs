@@ -49,9 +49,24 @@ namespace Orange_Backend.Controllers
             return (int)Math.Ceiling((decimal)(productCount) / take);
         }
 
-        public IActionResult ProductDetail()
+        public async Task<IActionResult> ProductDetail(int? id)
         {
-            return View();
+            if (id is null)
+            {
+                return BadRequest();
+            }
+
+            ProductVM existProduct = await _productService.GetByIdWithIncludesAsync((int)id);
+
+            if (existProduct == null)
+            {
+                return NotFound();
+            }
+
+            ProductVM product = await _productService.GetByIdWithIncludesAsync((int)id);
+
+
+            return View(product);
         }
 
     }
