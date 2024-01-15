@@ -6,7 +6,7 @@ namespace Orange_Backend.Services.Interfaces
     public interface IContactService
     {
         Task<ContactContent> GetAllAsync();
-        //Task CreateAsync(ContactMessageCreateVM contact);
+        Task CreateAsync(ContactMessageCreateVM contact);
 
     }
 }

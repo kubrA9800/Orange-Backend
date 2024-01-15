@@ -22,12 +22,12 @@ namespace Orange_Backend.Services
             return await _context.ContactContents.FirstOrDefaultAsync();
         }
 
-        //public async Task CreateAsync(ContactMessageCreateVM contact)
-        //{
-        //    var data = _mapper.Map<ContactMessage>(contact);
-        //    await _context.ContactMessages.AddAsync(data);
-        //    await _context.SaveChangesAsync();
+        public async Task CreateAsync(ContactMessageCreateVM contact)
+        {
+            var data = _mapper.Map<ContactMessage>(contact);
+            await _context.ContactMessages.AddAsync(data);
+            await _context.SaveChangesAsync();
 
-        //}
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Orange_Backend.Areas.Admin.ViewModels.Blog;
 using Orange_Backend.Areas.Admin.ViewModels.Brand;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
+using Orange_Backend.Areas.Admin.ViewModels.Contact;
 using Orange_Backend.Areas.Admin.ViewModels.Info;
 using Orange_Backend.Areas.Admin.ViewModels.Magazine;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
@@ -23,6 +24,9 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Magazine, MagazineVM>();
             CreateMap<Blog, BlogVM>();
             CreateMap<Brand, BrandVM>();
+            CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();
+
+
 
 
 

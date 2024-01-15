@@ -1,4 +1,4 @@
-﻿@model ContactContent
+﻿@model ContactPageVM
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,14 +11,14 @@
             <div class="row align-items-center">
                 <div class="col-sm-12 col-lg-6">
                     <div class="img">
-                        <img src="~/assets/img/@Model.Image" alt="">
+                        <img src="~/assets/img/@Model.ContactContent.Image" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <div class="text">
-                        <h2>@Model.Head</h2>
-                        <h1>@Model.Text</h1>
-                        <h6>@Model.Info</h6>
+                        <h2>@Model.ContactContent.Head</h2>
+                        <h1>@Model.ContactContent.Text</h1>
+                        <h6>@Model.ContactContent.Info</h6>
                     </div>
                 </div>
             </div>
@@ -30,28 +30,31 @@
             <div class="content">
                 <h1>Got Any Questions?</h1>
                 <h6>Use the form below to get in touch with the sales team</h6>
-                <div class="inputs-top">
-                    <div class="input">
-                        <h4>Your name *</h4>
-                        <input class="inputs" type="text" name="" id="">
+                <form asp-action="CreateMessage" method="post">
+                    <div class="inputs-top">
+                        <div class="input">
+                            <h4>Your name *</h4>
+                            <input asp-for="@Model.NewContact.Name" type="text" name="name" required class="inputs" id="">
+                        </div>
+                        <div class="input">
+                            <h4>Your email *</h4>
+                            <input class="inputs" asp-for="@Model.NewContact.Email" type="email" name="email" required id="">
+                        </div>
                     </div>
                     <div class="input">
-                        <h4>Your email *</h4>
-                        <input class="inputs" type="text" name="" id="">
+                        <h4>Subject *</h4>
+                        <input class="inputs" asp-for="@Model.NewContact.Subject" type="text" name="subject" required id="">
                     </div>
-                </div>
-                <div class="input">
-                    <h4>Subject *</h4>
-                    <input class="inputs" type="text" name="" id="">
-                </div>
-                <div class="input">
-                    <h4>Your message *</h4>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="button text-center">
-                    <button>Send Message</button>
+                    <div class="input">
+                        <h4>Your message *</h4>
+                        <textarea asp-for="@Model.NewContact.Message" name="message" required id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="button text-center">
+                        <button type="submit">Send Message</button>
 
-                </div>
+                    </div>
+                </form>
+             
             </div>
 
         </div>
