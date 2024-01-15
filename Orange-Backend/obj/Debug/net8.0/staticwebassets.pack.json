@@ -7385,10 +7385,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\about\\about3.webp"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\contact.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\about\\contact.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",
       "PackagePath": "staticwebassets\\assets\\img\\blog1.png"
     },
@@ -7451,6 +7447,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\category5.png",
       "PackagePath": "staticwebassets\\assets\\img\\category5.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\contact.png",
+      "PackagePath": "staticwebassets\\assets\\img\\contact.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\hamburger.svg",

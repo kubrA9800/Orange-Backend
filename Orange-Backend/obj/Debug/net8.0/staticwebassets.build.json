@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xKa1GAR2Uxnw16V/wZrvjvkY+CHPlwosYngehJNLRP8=",
+  "Hash": "jAYbyKEZzbFJA0sM3Rd+uQtXuOfqcMaAIZTJ1XwaKPs=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -35053,25 +35053,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about3.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\contact.webp",
-      "SourceId": "Orange-Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\",
-      "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/about/contact.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\contact.webp"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
@@ -35374,6 +35355,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\category5.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\contact.png",
+      "SourceId": "Orange-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\",
+      "BasePath": "_content/Orange-Backend",
+      "RelativePath": "assets/img/contact.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\contact.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\hamburger.svg",

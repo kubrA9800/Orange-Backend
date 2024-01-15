@@ -1,4 +1,4 @@
-﻿
+﻿@model ContactContent
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,18 +11,17 @@
             <div class="row align-items-center">
                 <div class="col-sm-12 col-lg-6">
                     <div class="img">
-                        <img src="~/assets/img/about/contact.webp" alt="">
+                        <img src="~/assets/img/@Model.Image" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <div class="text">
-                        <h2>questions?</h2>
-                        <h1>We're here to help with sizing, stylingand anything else</h1>
-                        <h6>3 Year Warranty, Extended 90 Day Returns, Expedited Shipping</h6>
+                        <h2>@Model.Head</h2>
+                        <h1>@Model.Text</h1>
+                        <h6>@Model.Info</h6>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -56,9 +55,6 @@
             </div>
 
         </div>
-        </div>
-
-
     </section>
 </main>
 

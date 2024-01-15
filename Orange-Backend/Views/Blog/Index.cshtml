@@ -1,4 +1,4 @@
-﻿
+﻿@model List<BlogVM>
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,72 +11,31 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-9">
                     <div class="blog-left">
-                        <div class="blog-item">
-                            <div class="row">
-                                <div class="col-sm-12 col-lg-6">
-                                    <div class="img">
-                                        <a href="blogDetail.html"><img src="./assets/img/blog1.webp" alt=""></a>
+                        @foreach (var blog in Model.OrderBy(m=>m.CreatedDate))
+                        {
+                            <div class="blog-item">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-6">
+                                        <div class="img">
+                                            <a asp-action="Detail" asp-route-id="@blog.Id"><img src="~/assets/img/@blog.Image" alt=""></a>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-lg-6">
-                                    <div class="text">
-                                        <a href="">Relax, it's bath time. 7 bath relaxation products</a>
-                                        <hr>
-                                        <p>
-                                            Nobody ever said, “I wish I hadn’t taken that bath.” In fact, the bathtub
-                                            has become
-                                            such a destination point...
-                                        </p>
-                                        <a asp-action="Detail">More Details</a>
+                                    <div class="col-sm-12 col-lg-6">
+                                        <div class="text">
+                                            <a asp-action="Detail" asp-route-id="@blog.Id">@blog.Name</a>
+                                            <hr>
+                                            <p>
+                                               @blog.Head
+                                            </p>
+                                            <a asp-action="Detail" asp-route-id="@blog.Id">More Details</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="blog-item">
-                            <div class="row">
-                                <div class="col-sm-12 col-lg-6">
-                                    <div class="img">
-                                        <a href=""><img src="./assets/img/blog2.webp" alt=""></a>
 
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-lg-6">
-                                    <div class="text">
-                                        <a href="blogDetail.html">Relax, it's bath time. 7 bath relaxation products</a>
-                                        <hr>
-                                        <p>
-                                            Nobody ever said, “I wish I hadn’t taken that bath.” In fact, the bathtub
-                                            has become
-                                            such a destination point...
-                                        </p>
-                                        <a href="blogDetail.html">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-item">
-                            <div class="row">
-                                <div class="col-sm-12 col-lg-6">
-                                    <div class="img">
-                                        <a href="blogDetail.html"><img src="./assets/img/blog3.webp" alt=""></a>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-lg-6">
-                                    <div class="text">
-                                        <a href="">Relax, it's bath time. 7 bath relaxation products</a>
-                                        <hr>
-                                        <p>
-                                            Nobody ever said, “I wish I hadn’t taken that bath.” In fact, the bathtub
-                                            has become
-                                            such a destination point...
-                                        </p>
-                                        <a href="blogDetail.html">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        }
+                       
 
                     </div>
 
@@ -86,33 +45,20 @@
                         <div class="posts">
                             <h3>Popular Posts</h3>
                             <hr>
-                            <div class="item">
-                                <div class="image">
-                                    <img src="./assets/img/blog1.webp" alt="">
+                            @foreach (var blog in Model.Take(2).OrderBy(m=>m.CreatedDate))
+                            {
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="~/assets/img/@blog.Image" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <a href="">@blog.CreatedDate.ToString("dd/MM/yyyy")</a>
+                                        <a asp-action="Detail">@blog.Name</a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <a href="">April 25, 2022</a>
-                                    <a href="">New Finds From Tuckernuck</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="image">
-                                    <img src="./assets/img/blog2.webp" alt="">
-                                </div>
-                                <div class="text">
-                                    <a href="">April 25, 2022</a>
-                                    <a href="">The Best Products That Shape Fashion</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="image">
-                                    <img src="./assets/img/blog3.webp" alt="">
-                                </div>
-                                <div class="text">
-                                    <a href="">April 25, 2022</a>
-                                    <a href="">Sunset Sets From Saks</a>
-                                </div>
-                            </div>
+
+                            }
+                            
 
                         </div>
                     </div>

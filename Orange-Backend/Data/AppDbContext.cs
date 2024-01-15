@@ -19,6 +19,8 @@ namespace Orange_Backend.Data
         public DbSet<Blog> Blogs { get; set; }
         //public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<ContactContent> ContactContents { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
 
 
 

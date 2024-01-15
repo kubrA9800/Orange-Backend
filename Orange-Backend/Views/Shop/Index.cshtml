@@ -96,24 +96,17 @@
                                     <h6>Brand</h6>
                                     <div class="brand">
                                         <input id="All" type="checkbox">
-                                        <label for="All">All(20)</label>
+                                        <label for="All">All(@Model.ProductCount)</label>
                                     </div>
-                                    <div class="brand">
-                                        <input id="Goop" type="checkbox">
-                                        <label for="Goop">Goop(6)</label>
-                                    </div>
-                                    <div class="brand">
-                                        <input id="Lancome" type="checkbox">
-                                        <label for="Lancome">Lancome(2)</label>
-                                    </div>
-                                    <div class="brand">
-                                        <input id="Loreal" type="checkbox">
-                                        <label for="Loreal">L'Oréal(5)</label>
-                                    </div>
-                                    <div class="brand">
-                                        <input id="Revlon" type="checkbox">
-                                        <label for="Revlon">Revlon(4)</label>
-                                    </div>
+                                    @foreach (var brand in Model.Brand)
+                                    {
+                                        <div class="brand">
+                                            <input id="@brand.Name" type="checkbox">
+                                            <label for="@brand.Name">@brand.Name (@brand.Products.Count)</label>
+                                        </div>
+
+                                    }
+                                   
 
 
                                 </div>
@@ -219,7 +212,7 @@
                                    
 
                                     <li class="page-item @(Model.Product.HasNext ? "" : "disabled")">
-                                        <a class="page-link" asp-action="Index" asp-route-page="@(Model.Product.CurrentPage - 1)"><i class="fa-solid fa-angle-right"></i></a>
+                                        <a class="page-link" asp-action="Index" asp-route-page="@(Model.Product.CurrentPage + 1)"><i class="fa-solid fa-angle-right"></i></a>
                                     </li>
                                 </ul>
                             </nav>

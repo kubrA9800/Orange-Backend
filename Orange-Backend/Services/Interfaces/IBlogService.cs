@@ -5,7 +5,9 @@ namespace Orange_Backend.Services.Interfaces
     public interface IBlogService
     {
        Task<List<BlogVM>> GetAllAsync();
+        Task<BlogVM> GetByIdAsync(int id);
 
-         
+
+
     }
 }
