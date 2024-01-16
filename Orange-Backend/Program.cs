@@ -39,6 +39,7 @@ builder.Services.AddScoped<IBannerService, BannerService>();
 builder.Services.AddScoped<IValuesService, ValuesService>();
 builder.Services.AddScoped<IAchievmentService, AchievmentService>();
 builder.Services.AddScoped<IResultService, ResultService>();
+builder.Services.AddScoped<ISubscribeService, SubscribeService>();
 
 
 

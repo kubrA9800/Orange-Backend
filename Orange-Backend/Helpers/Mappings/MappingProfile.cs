@@ -10,6 +10,7 @@ using Orange_Backend.Areas.Admin.ViewModels.Magazine;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Areas.Admin.ViewModels.Result;
 using Orange_Backend.Areas.Admin.ViewModels.Slider;
+using Orange_Backend.Areas.Admin.ViewModels.Subscribe;
 using Orange_Backend.Areas.Admin.ViewModels.Treatment;
 using Orange_Backend.Areas.Admin.ViewModels.Values;
 using Orange_Backend.Models;
@@ -32,7 +33,8 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Values, ValuesVM>();
             CreateMap<Achievment, AchievmentVM>();
             CreateMap<Result, ResultVM>();
-           
+            CreateMap<SubscribeCreateVM, Subscribe>().ReverseMap();
+
             CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();
 
 

@@ -6,6 +6,7 @@ using Orange_Backend.Areas.Admin.ViewModels.Info;
 using Orange_Backend.Areas.Admin.ViewModels.Magazine;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Areas.Admin.ViewModels.Slider;
+using Orange_Backend.Areas.Admin.ViewModels.Subscribe;
 using Orange_Backend.Areas.Admin.ViewModels.Treatment;
 using Orange_Backend.Data;
 using Orange_Backend.Models;
@@ -27,6 +28,7 @@ namespace Orange_Backend.Controllers
         private readonly IMagazineService _magazineService;
         private readonly IBlogService _blogService;
         private readonly IBrandService _brandService;
+        private readonly ISubscribeService _subscribeService;
         public HomeController(AppDbContext context,
                               ISliderService sliderService,
                               IInfoService infoService,
@@ -35,7 +37,8 @@ namespace Orange_Backend.Controllers
                               IProductService productService,
                               IMagazineService magazineService,
                               IBlogService blogService,
-                              IBrandService brandService)
+                              IBrandService brandService,
+                              ISubscribeService subscribeService)
         {
             _context = context;
             _sliderService = sliderService;
@@ -46,6 +49,7 @@ namespace Orange_Backend.Controllers
             _magazineService= magazineService;
             _blogService= blogService; 
             _brandService= brandService;
+            _subscribeService= subscribeService;
 
         }
         public async Task<IActionResult> Index()
@@ -100,6 +104,15 @@ namespace Orange_Backend.Controllers
 
         }
 
-       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
+        {
+
+            await _subscribeService.CreateAsync(subscribe);
+            return RedirectToAction("Index", "Subscribe");
+        }
+
+
     }
 }

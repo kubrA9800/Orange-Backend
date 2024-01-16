@@ -5,6 +5,7 @@ using Orange_Backend.Areas.Admin.ViewModels.Info;
 using Orange_Backend.Areas.Admin.ViewModels.Magazine;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Areas.Admin.ViewModels.Slider;
+using Orange_Backend.Areas.Admin.ViewModels.Subscribe;
 using Orange_Backend.Areas.Admin.ViewModels.Treatment;
 using Orange_Backend.Models;
 
@@ -20,5 +21,6 @@ namespace Orange_Backend.ViewModels
         public List<MagazineVM> Magazines { get; set; }
         public List<BlogVM> Blogs { get; set; }
         public List<BrandVM> Brands { get; set; }
+        public SubscribeCreateVM Subscribe { get; set; }
     }
 }

@@ -698,6 +698,28 @@ namespace Orange_Backend.Migrations
                     b.ToTable("Sliders");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Subscribe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscribes");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Treatment", b =>
                 {
                     b.Property<int>("Id")

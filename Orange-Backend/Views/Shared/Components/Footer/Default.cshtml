@@ -11,12 +11,12 @@
                                 <div class="footer-left">
                                     <h1>newsletter</h1>
                                     <h2>Get a 10% discount on your first order.</h2>
-                                    <form action="">
+                                    <form asp-controller="Home" asp-action="CreateSubscribe" method="post">
                                         <div class="input">
                                             <span>Your email</span>
-                                            <input type="text">
+                                            <input asp-for="@Model.SubscribeEmail" name="Email" type="email">
                                         </div>
-                                        <button>Subscribe</button>
+                                        <button type="submit">Subscribe</button>
                                     </form>
                                     <div class="icons">
                                         <a href="">

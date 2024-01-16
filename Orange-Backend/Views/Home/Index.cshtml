@@ -243,13 +243,16 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-12">
-                        <div class="input">
-                            <i class="fa-regular fa-envelope"></i>
+                        <form asp-action="CreateSubscribe" method="post">
+                            <div class="input">
+                                <i class="fa-regular fa-envelope"></i>
 
-                            <input placeholder="Your Email" type="text">
-                            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                                <input asp-for="@Model.Subscribe.Email" name="Email" placeholder="Your Email" type="Email">
+                                <button style="background-color:transparent; border:none" type="submit"><i class="fa-solid fa-arrow-right"></i></button>
 
-                        </div>
+                            </div>
+                        </form>
+                        
                     </div>
 
                 </div>
