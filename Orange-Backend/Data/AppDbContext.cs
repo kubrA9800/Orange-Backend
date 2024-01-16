@@ -23,6 +23,10 @@ namespace Orange_Backend.Data
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Values> Values { get; set; }
+        public DbSet<Achievment> Achievments { get; set; }
+        public DbSet<Result> Results { get; set; }
+
+
 
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aQ+XhrxZJkvgNPj7hntvdueTI+I8wQf68SmcMw3UeTc=",
+  "Hash": "cVnqN0YSqfs3/XN03o1EKApJHB/y2DPUHFdBb2KRSOM=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -35015,12 +35015,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about2.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about2.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/about/about2.webp",
+      "RelativePath": "assets/img/about/about2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35031,15 +35031,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about3.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about3.png",
       "SourceId": "Orange-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\",
       "BasePath": "_content/Orange-Backend",
-      "RelativePath": "assets/img/about/about3.webp",
+      "RelativePath": "assets/img/about/about3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35050,7 +35050,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about3.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about3.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",
