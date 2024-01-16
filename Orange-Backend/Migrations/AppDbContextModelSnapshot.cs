@@ -603,6 +603,42 @@ namespace Orange_Backend.Migrations
                     b.ToTable("Results");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Setting", b =>
                 {
                     b.Property<int>("Id")
@@ -811,6 +847,15 @@ namespace Orange_Backend.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Review", b =>
+                {
+                    b.HasOne("Orange_Backend.Models.Product", "Product")
+                        .WithMany("Reviews")
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Brand", b =>
                 {
                     b.Navigation("BrandCategories");
@@ -828,6 +873,8 @@ namespace Orange_Backend.Migrations
             modelBuilder.Entity("Orange_Backend.Models.Product", b =>
                 {
                     b.Navigation("Images");
+
+                    b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
         }

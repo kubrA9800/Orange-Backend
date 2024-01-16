@@ -11,6 +11,7 @@
         public Category Category { get; set; }
         public int? BrandId { get; set; }
         public Brand Brand { get; set; }
+        public List<Review> Reviews  { get; set; }
 
     }
 }

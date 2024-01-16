@@ -9,6 +9,7 @@ using Orange_Backend.Areas.Admin.ViewModels.Slider;
 using Orange_Backend.Areas.Admin.ViewModels.Treatment;
 using Orange_Backend.Data;
 using Orange_Backend.Models;
+using Orange_Backend.Services;
 using Orange_Backend.Services.Interfaces;
 using Orange_Backend.ViewModels;
 using System.Diagnostics;
@@ -22,7 +23,7 @@ namespace Orange_Backend.Controllers
         private readonly IInfoService _infoService;
         private readonly ITreatmentService _treatmentService;
         private readonly ICategoryService _categoryService;
-        private readonly IProductService _producrService;
+        private readonly IProductService _productService;
         private readonly IMagazineService _magazineService;
         private readonly IBlogService _blogService;
         private readonly IBrandService _brandService;
@@ -41,7 +42,7 @@ namespace Orange_Backend.Controllers
             _infoService = infoService;
             _treatmentService = treatmentService;
             _categoryService = categoryService;
-            _producrService= productService;
+            _productService= productService;
             _magazineService= magazineService;
             _blogService= blogService; 
             _brandService= brandService;
@@ -52,7 +53,7 @@ namespace Orange_Backend.Controllers
             List<SliderVM> sliders = await _sliderService.GetAllAsync();
             InfoVM infos= await _infoService.GetAllAsync();
             TreatmentVM treatments = await _treatmentService.GetAllAsync();
-            List<ProductVM> products = await _producrService.GetAllAsync();
+            List<ProductVM> products = await _productService.GetAllAsync();
 
             List<CategoryVM> categories= await _categoryService.GetAllAsync();
             List<MagazineVM> magazines = await _magazineService.GetAllAsync();
@@ -75,6 +76,28 @@ namespace Orange_Backend.Controllers
             };
 
             return View(model);
+        }
+
+        public async Task<IActionResult> GetProductDatasModal(int? id)
+        {
+            if (id is null) return BadRequest();
+            var dbProduct = await _productService.GetProductDatasModalAsync((int)id);
+            if (dbProduct is null) return NotFound();
+            var categoryName=dbProduct.Category.Name;
+            var mainImage = dbProduct.Images.Where(p => p.IsMain).FirstOrDefault().Image;
+
+            ModalVM model = new()
+            {
+                Id = dbProduct.Id,
+                Name = dbProduct.Name,
+                Price = dbProduct.Price,
+                Description = dbProduct.Description,
+                CategoryName = categoryName,
+                Image = mainImage
+
+            };
+            return Ok(model);
+
         }
 
        

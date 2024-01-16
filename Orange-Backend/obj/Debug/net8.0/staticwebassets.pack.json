@@ -7797,6 +7797,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\plugins.js"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\product.js",
+      "PackagePath": "staticwebassets\\assets\\js\\product.js"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\productDetail.js",
       "PackagePath": "staticwebassets\\assets\\js\\productDetail.js"
     },

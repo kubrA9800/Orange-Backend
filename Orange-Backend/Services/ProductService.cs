@@ -46,5 +46,18 @@ namespace Orange_Backend.Services
 
             return _mapper.Map<ProductVM>(data);
         }
+
+        public async Task<Product> GetProductDatasModalAsync(int id)
+        {
+            var data = await _context.Products
+          .Include(m => m.Images)
+          .Include(m=>m.Category)
+          .Include(m => m.Brand)
+          .FirstOrDefaultAsync(m => m.Id == id);
+
+          return data;
+        }
+
+       
     }
 }

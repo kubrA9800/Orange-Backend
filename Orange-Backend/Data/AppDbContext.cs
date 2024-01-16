@@ -25,6 +25,7 @@ namespace Orange_Backend.Data
         public DbSet<Values> Values { get; set; }
         public DbSet<Achievment> Achievments { get; set; }
         public DbSet<Result> Results { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
 
 
