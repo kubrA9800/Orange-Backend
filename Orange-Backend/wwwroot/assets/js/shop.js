@@ -125,4 +125,39 @@ $(function () {
       overlayCart.style.display = "block";
     })
   })
+
+
+
+    function GetProductsById(clickedElem, url) {
+        $(document).on("change", clickedElem, function (e) {
+            e.preventDefault();
+            //debugger
+            let id = $(this).attr("data-id");
+            console.log(id)
+            let data = { id: id };
+            let parent = $(".product-list")
+           
+
+            $.ajax({
+                
+
+                url: url,
+                type: "Get",
+                data: data,
+                success: function (res) {
+                    console.log("sdasad");
+                    $(parent).html(res);
+                    $(parent).skip($(parent)).append(res)
+
+                }
+            })
+        })
+
+    }
+
+    GetProductsById(".product-category", "/Shop/GetProductsByCategory")
+
+
+
+
 })

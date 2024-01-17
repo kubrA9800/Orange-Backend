@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/9b3l7u8WFdTzgCWK0H4ic4Cj4s34BG2I96aV7ympyjh7jErIis63r4WhMV+8RYDj3I4wK/RC7DaJs5G3pCibg==",
+  "dgSpecHash": "y5ytMkXpi2TKRWLmkv6NFP/AyrYn1WV6BlqY1dmpWnfdD06wJaY/bk6tOauTyHLhZCVhLsP3cWWhXWd6YF3m1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Новая папка\\Orange-Backend\\Orange-Backend\\Orange-Backend.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\Orange-Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Areas.Admin.ViewModels.Blog;
 using Orange_Backend.Areas.Admin.ViewModels.Brand;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
@@ -104,14 +105,7 @@ namespace Orange_Backend.Controllers
 
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
-        {
-
-            await _subscribeService.CreateAsync(subscribe);
-            return RedirectToAction("Index", "Subscribe");
-        }
+        
 
 
     }

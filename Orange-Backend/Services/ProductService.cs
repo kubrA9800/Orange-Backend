@@ -58,6 +58,41 @@ namespace Orange_Backend.Services
           return data;
         }
 
-       
+
+        public async Task<List<ProductVM>> GetProductsByCategoryAsync(int? id, int page = 1, int take = 6)
+        {
+            List<ProductVM> model = new();
+
+            var products = await _context.Products
+                 .Where(m => m.CategoryId == id)
+                 .Include(m => m.Images)
+                 .Include(m => m.Category)
+                 .Skip((page * take) - take)
+                 .Take(take)
+                 .ToListAsync();
+
+            foreach (var item in products)
+            {
+                model.Add(new ProductVM
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Price = item.Price,
+                    Images = item.Images,
+                });
+            }
+            return model;
+
+        }
+
+        public async Task<int> GetCountByCategoryAsync(int id)
+        {
+            return await _context.Products.Include(m=>m.CategoryId == id)
+                                           .Include(m=>m.Category)
+                                           .Include(m => m.Images)
+                                           .CountAsync();
+        }
+
+        
     }
 }

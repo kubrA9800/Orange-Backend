@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
 using Orange_Backend.Data;
+using Orange_Backend.Models;
 using Orange_Backend.Services.Interfaces;
 
 namespace Orange_Backend.Services
@@ -19,6 +20,11 @@ namespace Orange_Backend.Services
         public async Task<List<CategoryVM>> GetAllAsync()
         {
             return _mapper.Map<List<CategoryVM>>(await _context.Categories.Include(m=>m.Products).ToListAsync());
+        }
+
+        public async Task<CategoryVM> GetByIdAsync(int id)
+        {
+            return _mapper.Map<CategoryVM>(await _context.Categories.FirstOrDefaultAsync(m => m.Id == id));
         }
     }
 }

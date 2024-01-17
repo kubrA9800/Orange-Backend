@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Areas.Admin.ViewModels.Subscribe;
 using Orange_Backend.Data;
 using Orange_Backend.Models;
@@ -20,6 +21,8 @@ namespace Orange_Backend.Services
 
         public async Task CreateAsync(SubscribeCreateVM subscribe)
         {
+            //var existEmail = await _context.Subscribes.FirstOrDefaultAsync(m => m.Email == subscribe.Email);
+
             var data = _mapper.Map<Subscribe>(subscribe);
 
             await _context.Subscribes.AddAsync(data);

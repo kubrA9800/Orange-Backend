@@ -43,11 +43,7 @@ namespace Orange_Backend.Controllers
             return View(model);
         }
 
-        private async Task<int> GetPageCountAsync(int take)
-        {
-            int productCount = await _productService.GetCountAsync();
-            return (int)Math.Ceiling((decimal)(productCount) / take);
-        }
+       
 
         public async Task<IActionResult> ProductDetail(int? id)
         {
@@ -68,6 +64,35 @@ namespace Orange_Backend.Controllers
 
             return View(product);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 6)
+        {
+            if (id is null) return BadRequest();
+            ViewBag.subCatId = id;
+
+            var products = await _productService.GetProductsByCategoryAsync(id, page, take);
+
+            int pageCount = await GetPageCountAsync((int)id);
+
+            Paginate<ProductVM> model = new(products, page, pageCount);
+
+            return PartialView("_ProductPartial", model);
+        }
+
+        private async Task<int> GetPageCountAsync(int take)
+        {
+            int productCount = await _productService.GetCountAsync();
+            return (int)Math.Ceiling((decimal)(productCount) / take);
+        }
+
+
+  //      private async Task<int> GetPageCountByCategoryAsync(int id,int take)
+		//{
+		//	int productCount = await _productService.GetCountByCategoryAsync(id);
+
+		//	return (int)Math.Ceiling((decimal)(productCount) / take);
+		//}
 
     }
 }

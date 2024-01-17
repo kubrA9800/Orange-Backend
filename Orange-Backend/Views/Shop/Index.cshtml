@@ -18,7 +18,7 @@
                         <div class="col-sm-6 col-lg-3">
                             <div class="item">
                                 <img src="~/assets/img/@category.Image" alt="">
-                                <div class="text">
+                                <div class="product-category text">
                                     <h5>@category.Name</h5>
                                     <h6>@category.Products.Count items</h6>
                                 </div>
@@ -78,13 +78,13 @@
                                 <div class="filter-category">
                                     <h6>Category</h6>
                                     <div class="category">
-                                        <input id="All" type="checkbox">
-                                        <label for="All">All(@Model.ProductCount)</label>
+                                            <input  id="All" type="checkbox">
+                                            <label for="All">All(@Model.ProductCount)</label>
                                     </div>
                                     @foreach (var category in Model.Category)
                                     {
-                                        <div class="category">
-                                            <input name="kkk" id="@category.Name" type="checkbox">
+                                        <div  class="category">
+                                            <input data-id="@category.Id" class="product-category" name="kkk" id="@category.Name" type="checkbox">
                                             <label name="kkk" for="@category.Name">@category.Name (@category.Products.Count)</label>
                                         </div>
 
@@ -128,70 +128,13 @@
                             </select>
                             <h1>@Model.Product.Datas.Count products</h1>
                         </div>
-                        <div class="products">
-                            <div class="row">
-                                @foreach (var product in Model.Product.Datas)
-                                {
-                                    <div class="col-sm-6 col-lg-4">
-                                        <div class="product">
-                                            <a asp-action="ProductDetail" asp-route-id="@product.Id">
-                                                <img src="./assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 2">
-                                                <img class="d-none hover-img" src="./assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image"
-                                                     alt="Slide 2">
-                                            </a>
-                                            <div class="d-none icons">
-                                                <i class="fa-regular fa-heart heart-icon"></i>
-                                                <i class="d-none fa-solid fa-heart "></i>
-                                                <i class="fa-regular fa-eye"></i>
-                                                <i class="fa-solid fa-bag-shopping"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h6>@product.CategoryName</h6>
-                                                <a asp-action="ProductDetail">
-                                                    <h4>@product.Name</h4>
-                                                </a>
-                                                <span>$@product.Price</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                }
-                            
+                        <div class="products ">
+                            <div class="row product-list">
+                                <partial name="_ProductPartial" model="@Model.Product" />
 
                             </div>
                         </div>
 
-                        <div class="mobile-products">
-                            <div class="row">
-                                @foreach (var product in Model.Product.Datas)
-                                {
-                                    <div class="col-6">
-                                        <div class="product">
-                                            <a asp-action="ProductDetail">
-                                                <img src="~/assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
-                                            </a>
-                                            <div class="icons">
-                                                <i class="fa-regular fa-heart heart-icon"></i>
-                                                <i class="d-none fa-solid fa-heart "></i>
-                                                <i class="fa-regular fa-eye"></i>
-                                                <i class="fa-solid fa-bag-shopping basket-icon"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h6>@product.CategoryName</h6>
-                                                <a asp-action="ProductDetail">
-                                                    <h4>@product.Name</h4>
-                                                </a>
-                                                <span>$@product.Price</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                }
-                               
-                            </div>
-
-
-                        </div>
 
                         <!-- Pagination -->
                         <div class="pagination-area">

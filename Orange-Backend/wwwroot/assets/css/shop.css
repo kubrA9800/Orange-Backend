@@ -353,6 +353,13 @@ a {
 #products-all .left .filtering .filter-all .category:hover, #products-all .left .filtering .filter-all .brand:hover {
   color: #ff6f2e;
 }
+    #products-all .left .filtering .filter-all .category a, #products-all .left .filtering .filter-all .brand a {
+        color: #000;
+        transition: all 0.4s;
+    }
+    #products-all .left .filtering .filter-all .category a:hover, #products-all .left .filtering .filter-all .brand a:hover {
+        color: #ff6f2e;
+    }
 #products-all .right {
   width: 97%;
 }

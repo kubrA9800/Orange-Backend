@@ -17,111 +17,115 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Orange_Backend
 build_property.RootNamespace = Orange_Backend
-build_property.ProjectDir = C:\Users\user\Desktop\Новая папка\Orange-Backend\Orange-Backend\
+build_property.ProjectDir = C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\Новая папка\Orange-Backend\Orange-Backend
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Areas/Admin/Views/Dashboard/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Areas/Admin/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/About/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Account/ForgetPassword.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Account/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Account/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Account/Login.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Account/Register.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Blog/Detail.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Blog/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Blog/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Cart/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Contact/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Home/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shared/Components/Footer/Default.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shared/Components/Footer/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shared/Components/Header/Default.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shared/Components/Header/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shared/_ProductPartial.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shared/_ProductPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shared/_ShopPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaG9wUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shop/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shop/ProductDetail.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shop/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Subscribe/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Subscribe/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaWJlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Wishlist/Index.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Wishlist/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaGxpc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/_ViewImports.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/_ViewStart.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Новая папка/Orange-Backend/Orange-Backend/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/Orange/Orange-Backend/Orange-Backend/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yikvnoiijc
