@@ -43,6 +43,16 @@ namespace Orange_Backend.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> GetProducts(int page = 1, int take = 6)
+        {
+            List<ProductVM> dbPaginatedDatas = await _productService.GetPaginatedDatasAsync(page, take);
+            int pageCount = await GetPageCountAsync(take);
+
+            Paginate<ProductVM> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
+
+            return PartialView("_ProductPartial", paginatedDatas);
+        }
+
        
 
         public async Task<IActionResult> ProductDetail(int? id)
@@ -66,18 +76,34 @@ namespace Orange_Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 6)
+        public async Task<IActionResult> GetProductsByCategory(int[] selectedCategoryIds, int page = 1, int take = 6)
         {
-            if (id is null) return BadRequest();
-            ViewBag.subCatId = id;
+            if (selectedCategoryIds is null)
+                return BadRequest();
 
-            var products = await _productService.GetProductsByCategoryAsync(id, page, take);
+            List<ProductVM> allProducts = new();
 
-            int pageCount = await GetPageCountAsync((int)id);
+            foreach (var id in selectedCategoryIds)
+            {
+                var products = await _productService.GetProductsByCategoryAsync(id, page, take);
+                allProducts.AddRange(products);
+            }
 
-            Paginate<ProductVM> model = new(products, page, pageCount);
+            int pageCount = await GetPageCountByCategoryAsync(selectedCategoryIds, take);
+
+            Paginate<ProductVM> model = new Paginate<ProductVM>(allProducts, page, pageCount);
 
             return PartialView("_ProductPartial", model);
+        }
+
+       
+
+
+        private async Task<int> GetPageCountByCategoryAsync(int[] id, int take)
+        {
+            int productCount = await _productService.GetCountByCategoryAsync(id);
+
+            return (int)Math.Ceiling((decimal)(productCount) / take);
         }
 
         private async Task<int> GetPageCountAsync(int take)
@@ -85,14 +111,6 @@ namespace Orange_Backend.Controllers
             int productCount = await _productService.GetCountAsync();
             return (int)Math.Ceiling((decimal)(productCount) / take);
         }
-
-
-  //      private async Task<int> GetPageCountByCategoryAsync(int id,int take)
-		//{
-		//	int productCount = await _productService.GetCountByCategoryAsync(id);
-
-		//	return (int)Math.Ceiling((decimal)(productCount) / take);
-		//}
 
     }
 }

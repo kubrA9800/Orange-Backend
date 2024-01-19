@@ -30,8 +30,11 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Blog, BlogVM>();
             CreateMap<Brand, BrandVM>();
             CreateMap<Banner, BannerVM>();
+            CreateMap<Banner, BannerEditVM>().ReverseMap();
+
             CreateMap<Values, ValuesVM>();
             CreateMap<Achievment, AchievmentVM>();
+            CreateMap<Achievment, AchievmentEditVM>().ReverseMap();
             CreateMap<Result, ResultVM>();
             CreateMap<SubscribeCreateVM, Subscribe>().ReverseMap();
 

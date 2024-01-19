@@ -133,9 +133,10 @@ $(function () {
             e.preventDefault();
             //debugger
             let id = $(this).attr("data-id");
-            console.log(id)
-            let data = { id: id };
+            let data = { selectedCategoryIds: id };
+
             let parent = $(".product-list")
+          
            
 
             $.ajax({
@@ -147,15 +148,35 @@ $(function () {
                 success: function (res) {
                     console.log("sdasad");
                     $(parent).html(res);
-                    $(parent).skip($(parent)).append(res)
+                    
 
                 }
             })
         })
 
     }
-
     GetProductsById(".product-category", "/Shop/GetProductsByCategory")
+
+    $(document).on("check",".all-products", function () {
+        debugger
+        let parent = $(".product-list")
+
+        $.ajax({
+
+
+            url: "/Shop/GetProducts" ,
+            type: "Get",
+            
+            success: function (res) {
+                $(parent).html(res);
+
+
+            }
+        })
+
+    })
+
+    
 
 
 

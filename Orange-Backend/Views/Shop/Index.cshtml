@@ -78,7 +78,7 @@
                                 <div class="filter-category">
                                     <h6>Category</h6>
                                     <div class="category">
-                                            <input  id="All" type="checkbox">
+                                            <input class="all-products"  id="All" type="checkbox">
                                             <label for="All">All(@Model.ProductCount)</label>
                                     </div>
                                     @foreach (var category in Model.Category)
@@ -95,7 +95,7 @@
                                 <div class="filter-brand">
                                     <h6>Brand</h6>
                                     <div class="brand">
-                                        <input id="All" type="checkbox">
+                                        <input class="all-products" id="All" type="checkbox">
                                         <label for="All">All(@Model.ProductCount)</label>
                                     </div>
                                     @foreach (var brand in Model.Brand)

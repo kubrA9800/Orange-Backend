@@ -59,35 +59,40 @@ namespace Orange_Backend.Services
         }
 
 
-        public async Task<List<ProductVM>> GetProductsByCategoryAsync(int? id, int page = 1, int take = 6)
+        public async Task<List<ProductVM>> GetProductsByCategoryAsync(int id, int page = 1, int take = 6)
         {
             List<ProductVM> model = new();
 
             var products = await _context.Products
-                 .Where(m => m.CategoryId == id)
-                 .Include(m => m.Images)
-                 .Include(m => m.Category)
-                 .Skip((page * take) - take)
-                 .Take(take)
-                 .ToListAsync();
+                         .Where(m => m.CategoryId==id)
+                         .Include(m => m.Images)
+                         .Include(m => m.Category)
+                         .Skip((page * take) - take)
+                         .Take(take)
+                         .ToListAsync();
 
-            foreach (var item in products)
-            {
-                model.Add(new ProductVM
+           
+
+
+                foreach (var product in products)
                 {
-                    Id = item.Id,
-                    Name = item.Name,
-                    Price = item.Price,
-                    Images = item.Images,
-                });
-            }
+                    model.Add(new ProductVM
+                    {
+                        Id = product.Id,
+                        Name = product.Name,
+                        Price = product.Price,
+                        Images = product.Images,
+                        
+                    });
+                }
+            
             return model;
 
         }
 
-        public async Task<int> GetCountByCategoryAsync(int id)
+        public async Task<int> GetCountByCategoryAsync(int[] id)
         {
-            return await _context.Products.Include(m=>m.CategoryId == id)
+            return await _context.Products.Where(m => id.Any(categoryId => categoryId == m.CategoryId))
                                            .Include(m=>m.Category)
                                            .Include(m => m.Images)
                                            .CountAsync();
