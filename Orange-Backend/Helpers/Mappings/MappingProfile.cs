@@ -33,9 +33,11 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Banner, BannerEditVM>().ReverseMap();
 
             CreateMap<Values, ValuesVM>();
+            CreateMap<Values, ValuesEditVM>().ReverseMap();
             CreateMap<Achievment, AchievmentVM>();
             CreateMap<Achievment, AchievmentEditVM>().ReverseMap();
             CreateMap<Result, ResultVM>();
+            CreateMap<Result, ResultEditVM>().ReverseMap();
             CreateMap<SubscribeCreateVM, Subscribe>().ReverseMap();
 
             CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();

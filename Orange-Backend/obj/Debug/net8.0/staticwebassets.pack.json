@@ -7373,16 +7373,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\about.webp"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\about\\about.jpg"
-    },
-    {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about2.png",
       "PackagePath": "staticwebassets\\assets\\img\\about\\about2.png"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\about3.png",
-      "PackagePath": "staticwebassets\\assets\\img\\about\\about3.png"
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\dcda37bb-46de-4658-bd5f-ba2479bc05af - about.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\dcda37bb-46de-4658-bd5f-ba2479bc05af - about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",
