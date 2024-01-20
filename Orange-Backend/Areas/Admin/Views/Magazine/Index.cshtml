@@ -1,0 +1,57 @@
+﻿@model List<MagazineVM>
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div class="container mt-5">
+	<h1 class="text-center mt-3 mb-3">Magazines</h1>
+	<a class="btn btn-success text-white" asp-action="Create">Create</a>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>
+						Image
+					</th>
+					<th>
+						Text
+					</th>
+					<th>
+						Created Date
+					</th>
+					<th>
+						Operations
+					</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var magazine in Model)
+				{
+					<tr>
+						<td style="white-space:normal">
+							<img style="width:200px; height:90px; border-radius:0" src="~/assets/img/@magazine.Image" alt="image" />
+
+						</td>
+						<td class="py-1">
+							@magazine.Text
+						</td>
+						<th>
+							@magazine.CreatedDate.ToString("dd/MM/yyyy")
+						</th>
+						<td>
+							<a class=" btn btn btn-outline-info" asp-action="Detail" asp-route-id="@magazine.Id">Detail</a>
+							<a class="btn btn btn-outline-primary" asp-action="Edit" asp-route-id="@magazine.Id">Edit</a>
+							<form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@magazine.Id">
+								<button type="submit" class="btn btn btn-outline-danger">Delete</button>
+							</form>
+
+					</tr>
+				}
+				
+
+
+			</tbody>
+		</table>
+	</div>
+</div>

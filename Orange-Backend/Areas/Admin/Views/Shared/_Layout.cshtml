@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Skydash Admin</title>
-    <!-- plugins:css -->
+    <!-- plugins:css banner
     <link rel="stylesheet" href="~/admin/vendors/feather/feather.css">
     <link rel="stylesheet" href="~/admin/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="~/admin/vendors/css/vendor.bundle.base.css">
@@ -316,10 +316,13 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Slider" asp-action="Index">Slider</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="SliderText" asp-action="Index">Slider Text</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Blog" asp-action="Index"> Blog</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Info" asp-action="Index"> Info</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Setting" asp-action="Index"> Settings</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Subscribes" asp-action="Index"> Subscribers</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Magazine" asp-action="Index"> Magazine</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Slider" asp-action="Index"> Slider</a></li>
+                                
                             </ul>
                         </div>
                     </li>
@@ -342,12 +345,14 @@
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
                             <i class="icon-bar-graph menu-icon"></i>
-                            <span class="menu-title">Charts</span>
+                            <span class="menu-title">Contact</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="charts">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Contact" asp-action="ContentIndex">Content</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Contact" asp-action="MessagesIndex">Messages</a></li>
+
                             </ul>
                         </div>
                     </li>
@@ -409,9 +414,9 @@
                     </li>
                 </ul>
             </nav>
-            <div style="width:100%"
+            
                 @RenderBody()
-            </div>
+         
             <!-- partial -->
             
             

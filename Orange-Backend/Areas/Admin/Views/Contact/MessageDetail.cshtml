@@ -1,0 +1,33 @@
+﻿@model ContactMessage
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div style="margin-right:100px" class="container mt-5">
+	<h1 class="text-center mt-3">Detail</h1>
+	
+	<div class="form-group mt-3">
+		<label for="formFile" class="form-label my-2">Name</label>
+		<input class="form-control" id="customFile" disabled asp-for="@Model.Name">
+	</div>
+	<div class="form-group mt-3">
+		<label for="formFile" class="form-label my-2">Email</label>
+		<input class="form-control" id="customFile" disabled asp-for="@Model.Email">
+	</div>
+	<div class="form-group mt-3">
+		<label for="formFile" class="form-label my-2">Subject</label>
+		<input class="form-control" id="customFile" disabled asp-for="@Model.Subject">
+	</div>
+	<div class="form-group mt-3">
+		<label for="formFile" class="form-label my-2">Message</label>
+		<textarea class="form-control" id="customFile" disabled asp-for="@Model.Message"></textarea>
+	</div>
+	<div class="mt-3">
+		<label for="formFile" class="form-label my-2">Created Date</label><br>
+		@Model.CreatedDate.ToString("dd/MM/yyyy")
+	</div>
+
+    <div class="back mt-2">
+        <a class="btn btn-dark text-white" asp-action="MessagesIndex">Back</a>
+    </div>
+</div>

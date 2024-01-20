@@ -1,0 +1,21 @@
+﻿@model MagazineCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div style="margin-right:100px" class="container mt-5">
+    <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Text">Text</label>
+            <input asp-for="Text" class="form-control" />
+            <span class="text-danger" asp-validation-for="Text"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Photo">Image</label>
+            <input asp-for="Photo" class="form-control">
+            <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a class="btn btn-dark text-white" asp-action="Index">Back</a>
+    </form>
+</div>

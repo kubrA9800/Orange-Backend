@@ -7349,6 +7349,14 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\Montaga-Regular.ttf"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\19a45192-0f94-4108-8e6d-03203cf95a46-blog1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\19a45192-0f94-4108-8e6d-03203cf95a46-blog1.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\680469e7-f0a6-49c6-ab55-323107368ef5-OrangeLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\680469e7-f0a6-49c6-ab55-323107368ef5-OrangeLogo.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Image.png",
       "PackagePath": "staticwebassets\\assets\\img\\Image.png"
     },
@@ -7383,10 +7391,6 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png",
       "PackagePath": "staticwebassets\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\b816e46f-3296-4a0e-8d17-593a55c5c362-about3.png",
-      "PackagePath": "staticwebassets\\assets\\img\\b816e46f-3296-4a0e-8d17-593a55c5c362-about3.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",

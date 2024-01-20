@@ -29,5 +29,19 @@ namespace Orange_Backend.Services
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<SubscribeVM>> GetAllAsync()
+        {
+            List<Subscribe> subscribes = await _context.Subscribes.ToListAsync();
+
+            return _mapper.Map<List<SubscribeVM>>(subscribes);
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            Subscribe subscribe = await _context.Subscribes.Where(m => m.Id == id).FirstOrDefaultAsync();
+            _context.Subscribes.Remove(subscribe);
+            await _context.SaveChangesAsync();
+        }
     }
 }

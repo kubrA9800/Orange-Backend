@@ -1,0 +1,73 @@
+﻿@model List<ContactMessage>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div class="container mt-5">
+	<h1 class="text-center mt-3 mb-3">Contact Messages</h1>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>
+						Name
+					</th>
+					<th>
+						Email
+					</th>
+					<th>
+						Subject
+					</th>
+
+					<th>
+						Message
+					</th>
+
+					<th>
+						Created Date
+					</th>
+					<th>
+						Operations
+					</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+
+						<td style="white-space:normal">
+							@item.Name
+						</td>
+
+						<th>
+							@item.Email
+						</th>
+
+						<td style="white-space:normal">
+							@item.Subject
+						</td>
+						<th>
+							@item.Message.Substring(0, (int)Math.Ceiling(item.Message.Length * 0.1))...
+						</th>
+
+						<th>
+							@item.CreatedDate.ToString("dd/MM/yyyy")
+						</th>
+						<td>
+							<a class="btn btn-outline-info" asp-action="MessageDetail" asp-route-id="@item.Id">Detail</a>
+							<form class="d-inline-block" method="post" asp-action="MessageDelete" asp-route-id="@item.Id">
+								<button type="submit" class="btn btn-outline-danger">Delete</button>
+							</form>
+						</td>
+					</tr>
+				}
+			
+
+
+			</tbody>
+		</table>
+	</div>
+</div>
