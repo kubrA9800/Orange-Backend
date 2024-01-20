@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xwevHKmCcHH3Z7SNIQGtDOlZsAZfMqWzi65MYS/msX8=",
+  "Hash": "plNDurIdgUocbZMBgf7qWIQmJ3e5XHhjt1zF+INs1F0=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -35051,6 +35051,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\b816e46f-3296-4a0e-8d17-593a55c5c362-about3.png",
+      "SourceId": "Orange-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\",
+      "BasePath": "_content/Orange-Backend",
+      "RelativePath": "assets/img/b816e46f-3296-4a0e-8d17-593a55c5c362-about3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\b816e46f-3296-4a0e-8d17-593a55c5c362-about3.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",

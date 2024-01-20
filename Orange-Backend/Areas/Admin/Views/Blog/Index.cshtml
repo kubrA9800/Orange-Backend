@@ -1,0 +1,66 @@
+﻿@model List<BlogVM>
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div  class="container">
+	<h1 class="text-center mt-3 mb-3">Blogs</h1>
+	<a class="btn btn-success text-white" asp-action="Create">Create</a>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>
+						Image
+					</th>
+					<th>
+						Name
+					</th>
+					<th>
+						Heading
+					</th>
+					<th>
+						Text
+					</th>
+					<th>
+						Created Date
+					</th>
+
+					<th>
+						Operations
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var blog in Model)
+				{
+					<tr>
+						<td class="py-1">
+							<img style="width:100px; height:100px" src="~/assets/img/@blog.Image" alt="image" />
+						</td>
+						<td>
+							@blog.Name.Substring(0, (int)Math.Ceiling(blog.Text.Length * 0.03))...
+						</td>
+						<td>
+							@blog.Head.Substring(0, (int)Math.Ceiling(blog.Text.Length * 0.03))...
+						</td>
+						<td>
+							@blog.Text.Substring(0,(int)Math.Ceiling(blog.Text.Length * 0.05))...
+						</td>
+						<td>
+							@blog.CreatedDate.ToString("dd/MM/yyyy")
+						</td>
+						<td>
+							<a class=" btn btn-sm btn-outline-info" asp-action="Detail" asp-route-id="@blog.Id">Detail</a>
+							<a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@blog.Id">Edit</a>
+							<form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@blog.Id">
+								<button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+							</form>
+						</td>
+					</tr>
+				}
+
+			</tbody>
+		</table>
+	</div>
+</div>

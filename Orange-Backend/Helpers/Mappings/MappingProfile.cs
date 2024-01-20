@@ -28,6 +28,9 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Product, ProductVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
             CreateMap<Magazine, MagazineVM>();
             CreateMap<Blog, BlogVM>();
+            CreateMap<BlogCreateVM, Blog>();
+            CreateMap<BlogEditVM, BlogVM>().ReverseMap();
+            CreateMap<BlogEditVM, Blog>();
             CreateMap<Brand, BrandVM>();
             CreateMap<Banner, BannerVM>();
             CreateMap<Banner, BannerEditVM>().ReverseMap();
