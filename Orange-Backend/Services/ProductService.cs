@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Data;
+using Orange_Backend.Helpers.Extensions;
 using Orange_Backend.Models;
 using Orange_Backend.Services.Interfaces;
 
@@ -11,11 +12,14 @@ namespace Orange_Backend.Services
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
         public ProductService(AppDbContext context,
-                              IMapper mapper)
+                              IMapper mapper,
+                              IWebHostEnvironment env)
         {
             _context = context;
             _mapper = mapper;
+            _env = env;
         }
         public async Task<List<ProductVM>> GetAllAsync()
         {
@@ -30,6 +34,7 @@ namespace Orange_Backend.Services
         public async Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take)
         {
             List<Product> products = await _context.Products.Include(m => m.Category)
+                                                             .Include(m=>m.Brand)
                                                              .Include(m => m.Images)
                                                              .Skip((page * take) - take)
                                                              .Take(take)
@@ -37,14 +42,14 @@ namespace Orange_Backend.Services
             return _mapper.Map<List<ProductVM>>(products);
         }
 
-        public async Task<ProductVM> GetByIdWithIncludesAsync(int id)
+        public async Task<Product> GetByIdWithIncludesAsync(int id)
         {
             Product data = await _context.Products.Include(m => m.Category)
                                                    .Include(m=>m.Brand)
                                                    .Include(m => m.Images)
                                                    .FirstOrDefaultAsync(m => m.Id == id);
 
-            return _mapper.Map<ProductVM>(data);
+            return data;
         }
 
         public async Task<Product> GetProductDatasModalAsync(int id)
@@ -98,6 +103,31 @@ namespace Orange_Backend.Services
                                            .CountAsync();
         }
 
-        
+
+        public async Task DeleteAsync(int id)
+        {
+            Product dbproduct = await _context.Products.Include(m => m.Images).FirstOrDefaultAsync(m => m.Id == id);
+
+
+            _context.Products.Remove(dbproduct);
+            await _context.SaveChangesAsync();
+
+
+            foreach (var photo in dbproduct.Images)
+            {
+
+                string path = _env.GetFilePath("assets/img/product", photo.Image);
+
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
+
+            }
+        }
+
+
+
     }
 }

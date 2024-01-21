@@ -10,6 +10,7 @@ namespace Orange_Backend.Areas.Admin.ViewModels.Product
         public string Description { get; set; }
         public List<ProductImage> Images { get; set; }
         public string CategoryName { get; set; }
+        public string BrandName { get; set; }
         public DateTime CreatedDate { get; set; }
 
     }

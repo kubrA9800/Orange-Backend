@@ -322,6 +322,7 @@
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Subscribes" asp-action="Index"> Subscribers</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Magazine" asp-action="Index"> Magazine</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Slider" asp-action="Index"> Slider</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Product" asp-action="Index"> Product</a></li>
                                 
                             </ul>
                         </div>
@@ -448,6 +449,7 @@
     <script src="~/admin/js/dashboard.js"></script>
     <script src="~/admin/js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
+    @RenderSection("script", required: false)
 </body>
 
 </html>

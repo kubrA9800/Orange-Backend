@@ -8,9 +8,10 @@ namespace Orange_Backend.Services.Interfaces
         Task<List<ProductVM>> GetAllAsync();
         Task<int> GetCountAsync();
         Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take);
-        Task<ProductVM> GetByIdWithIncludesAsync(int id);
+        Task<Product> GetByIdWithIncludesAsync(int id);
         Task<Product> GetProductDatasModalAsync(int id);
         Task<List<ProductVM>> GetProductsByCategoryAsync(int id, int page, int take);
+        Task DeleteAsync(int id);
 
         Task<int> GetCountByCategoryAsync(int[] id);
 

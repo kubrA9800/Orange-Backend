@@ -62,14 +62,14 @@ namespace Orange_Backend.Controllers
                 return BadRequest();
             }
 
-            ProductVM existProduct = await _productService.GetByIdWithIncludesAsync((int)id);
+            Product existProduct = await _productService.GetByIdWithIncludesAsync((int)id);
 
             if (existProduct == null)
             {
                 return NotFound();
             }
 
-            ProductVM product = await _productService.GetByIdWithIncludesAsync((int)id);
+            Product product = await _productService.GetByIdWithIncludesAsync((int)id);
 
 
             return View(product);
