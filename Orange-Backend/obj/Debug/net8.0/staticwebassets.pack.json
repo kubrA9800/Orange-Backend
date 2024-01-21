@@ -7361,6 +7361,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\680469e7-f0a6-49c6-ab55-323107368ef5-OrangeLogo.png"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\759e8c5c-9e76-4084-9944-4b9e3ca0ca1a-blog1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\759e8c5c-9e76-4084-9944-4b9e3ca0ca1a-blog1.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\Image.png",
       "PackagePath": "staticwebassets\\assets\\img\\Image.png"
     },
@@ -7395,6 +7399,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png",
       "PackagePath": "staticwebassets\\assets\\img\\about\\ed5d0472-9578-4a68-a701-18981ce77687 - about3.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\afa65c7e-7fe6-458e-8413-028c75386069-blog2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\afa65c7e-7fe6-458e-8413-028c75386069-blog2.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\blog1.png",
@@ -7465,6 +7473,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\contact.png"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\dd8b0437-1367-4462-91db-d123714dc641-blog3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dd8b0437-1367-4462-91db-d123714dc641-blog3.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\hamburger.svg",
       "PackagePath": "staticwebassets\\assets\\img\\hamburger.svg"
     },
@@ -7491,10 +7503,6 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\magazine4.png",
       "PackagePath": "staticwebassets\\assets\\img\\magazine4.png"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\8b262d5a-84bd-4564-9cb3-ed3b06bfd379-category2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\product\\8b262d5a-84bd-4564-9cb3-ed3b06bfd379-category2.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\AfterBaume1.png",
@@ -7687,10 +7695,6 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\UltraLip3.png",
       "PackagePath": "staticwebassets\\assets\\img\\product\\UltraLip3.png"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\c3f02684-0f8d-4a31-a592-b0e2013cb0a7-blog2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\product\\c3f02684-0f8d-4a31-a592-b0e2013cb0a7-blog2.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\img\\product\\product1-1.png",

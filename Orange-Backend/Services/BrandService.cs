@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Areas.Admin.ViewModels.Brand;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
@@ -29,6 +30,17 @@ namespace Orange_Backend.Services
 
 		}
 
-		
+
+		public List<SelectListItem> GetAllSelectedAsync()
+		{
+			return _context.Brands.Select(m => new SelectListItem()
+			{
+				Text = m.Name,
+				Value = m.Id.ToString(),
+
+			}).ToList();
+		}
+
+
 	}
 }

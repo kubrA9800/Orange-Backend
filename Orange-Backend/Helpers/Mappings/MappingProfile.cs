@@ -29,6 +29,9 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Info, InfoEditVM>().ReverseMap();
             CreateMap<Treatment, TreatmentVM>();
             CreateMap<Category, CategoryVM>();
+
+			CreateMap<BrandCategory, BrandVM>();
+            CreateMap<CategoryCreateVM, Category>();
             CreateMap<ProductCreateVM, ProductVM>();
             CreateMap<ProductVM, Product>();
 

@@ -1,4 +1,5 @@
-﻿using Orange_Backend.Areas.Admin.ViewModels.Brand;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Orange_Backend.Areas.Admin.ViewModels.Brand;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
 
 namespace Orange_Backend.Services.Interfaces
@@ -7,6 +8,8 @@ namespace Orange_Backend.Services.Interfaces
     {
         Task<List<BrandVM>> GetAllAsync();
 		Task<BrandVM> GetByNameAsync(string name);
+		List<SelectListItem> GetAllSelectedAsync();
+
 
 	}
 }
