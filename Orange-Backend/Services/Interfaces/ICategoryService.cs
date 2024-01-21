@@ -11,5 +11,6 @@ namespace Orange_Backend.Services.Interfaces
         Task<CategoryVM> GetByIdAsync(int id);
 		Task<CategoryVM> GetByNameWithoutTrackingAsync(string name);
         Task CreateAsync(CategoryCreateVM category);
+        Task EditAsync(CategoryEditVM category);
 	}
 }

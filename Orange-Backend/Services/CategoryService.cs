@@ -6,7 +6,8 @@ using Orange_Backend.Data;
 using Orange_Backend.Helpers.Extensions;
 using Orange_Backend.Models;
 using Orange_Backend.Services.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Linq;
+
 
 namespace Orange_Backend.Services
 {
@@ -56,7 +57,7 @@ namespace Orange_Backend.Services
 			{
 				Name = category.Name,
 				Image=fileName
-		};
+		    };
 
 			foreach (var item in selectedBrands)
 			{
@@ -71,5 +72,49 @@ namespace Orange_Backend.Services
 			await _context.Categories.AddAsync(dbCategory);
 			await _context.SaveChangesAsync();
 		}
-	}
+
+
+
+        public async Task EditAsync(CategoryEditVM category)
+        {
+            string fileName = $"{Guid.NewGuid()} - {category.Photo.FileName}";
+
+            string path = _env.GetFilePath("assets/img", fileName);
+
+            await category.Photo.SaveFileAsync(path);
+
+            var categoryById = await _context.Categories.Include(m => m.BrandCategories).FirstOrDefaultAsync(m => m.Id == category.Id);
+
+            var existingIds = categoryById.BrandCategories.Select(m => m.BrandId).ToList();
+
+            var selectedIds = category.Brands.Where(m => m.Selected).Select(m => m.Value).Select(int.Parse).ToList();
+            
+
+
+
+            var toAdd = selectedIds.Where(id => !existingIds.Contains(id)).ToList();
+
+            var toRemove = existingIds.Where(id => !selectedIds.Contains((int)id)).ToList();
+
+            categoryById.BrandCategories = categoryById.BrandCategories.Where(m => !toRemove.Contains(m.BrandId)).ToList();
+
+            foreach (var item in toAdd)
+            {
+                categoryById.BrandCategories.Add(new BrandCategory
+                {
+                    BrandId = item
+                });
+            }
+
+
+            category.Image = fileName;
+
+            _mapper.Map(category, categoryById);
+
+            _context.Categories.Update(categoryById);
+
+            await _context.SaveChangesAsync();
+        }
+
+    }
 }
