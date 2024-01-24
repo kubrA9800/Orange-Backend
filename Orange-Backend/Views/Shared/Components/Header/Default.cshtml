@@ -32,9 +32,26 @@
                             <img src="~/assets/img/Search.svg" alt="">
 
                         </a>
-                        <a class="user-icon" asp-controller="Account" asp-action="Login">
-                            <img src="~/assets/img/user-icon.svg" alt="">
-                        </a>
+                            @{
+                                if (!User.Identity.IsAuthenticated)
+                               {
+                                <a class="user-icon" asp-controller="Account" asp-action="Login">
+                                    <img src="~/assets/img/user-icon.svg" alt="">
+                                </a>
+                            }
+                            else
+                            {
+                                <form style="display:inline" method="post" asp-controller="Account" asp-action="Logout">
+                                    
+                                       <button style="border:none; background-color:transparent;">
+                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                       </button> 
+                                    
+                                </form>
+                              
+                            }
+                        }
+                       
                         <a class="wishlist" asp-controller="Wishlist" asp-action="Index">
                             <img src="~/assets/img/heart-icon.svg" alt="">
                             <span class="count">0</span>
@@ -81,8 +98,11 @@
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="input d-flex">
-                <input type="text" placeholder="Search product...">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <form class="search-box" action="#">
+                    <input class="search-input" type="text" placeholder="Search product...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+                
             </div>
         </div>
         <div class="overlay"></div>

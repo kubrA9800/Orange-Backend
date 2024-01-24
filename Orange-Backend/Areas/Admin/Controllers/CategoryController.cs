@@ -87,13 +87,13 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
 			if (!request.Photo.CheckFileType("image/"))
 			{
-				ModelState.AddModelError("Photos", "File can be only image format");
+				ModelState.AddModelError("Photo", "File can be only image format");
 				return View(request);
 			}
 
 			if (!request.Photo.CheckFilesize(200))
 			{
-				ModelState.AddModelError("Photos", "File size can be max 200 kb");
+				ModelState.AddModelError("Photo", "File size can be max 200 kb");
 				return View(request);
 			}
 
@@ -154,7 +154,7 @@ namespace Orange_Backend.Areas.Admin.Controllers
             if (dbCategory is null) return NotFound();
 
 
-            var sekectedBrands = dbCategory.BrandCategories.Select(m => m.BrandId).ToList();
+            var selectedBrands = dbCategory.BrandCategories.Select(m => m.BrandId).ToList();
 
             request.Image = dbCategory.Image;
 
@@ -186,12 +186,21 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
                 
             }
+            //else
+            //{
+            //    _mapper.Map(request, dbCategory);
+            //    _context.Categories.Update(dbCategory);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+
+            //}
 
 
             if (existCategory is not null)
             {
                 if (existCategory.Id == request.Id)
                 {
+
                     await _categoryService.EditAsync(request);
 
                     return RedirectToAction(nameof(Index));
@@ -202,6 +211,17 @@ namespace Orange_Backend.Areas.Admin.Controllers
             }
 
             await _categoryService.EditAsync(request);
+
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+
+            await _categoryService.DeleteAsync(id);
 
             return RedirectToAction(nameof(Index));
 

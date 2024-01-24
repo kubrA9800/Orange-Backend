@@ -31,7 +31,7 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Category, CategoryVM>();
             CreateMap<CategoryEditVM, CategoryVM>().ReverseMap();
 
-			CreateMap<BrandCategory, BrandVM>();
+			//CreateMap<BrandCategory, BrandVM>();
             CreateMap<CategoryCreateVM, Category>();
             CreateMap<CategoryEditVM, Category>();
             CreateMap<ProductCreateVM, ProductVM>();
@@ -50,7 +50,11 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<BlogEditVM, BlogVM>().ReverseMap();
             CreateMap<BlogEditVM, Blog>();
             CreateMap<Brand, BrandVM>();
-            CreateMap<Setting, SettingEditVM>().ReverseMap();
+            CreateMap<BrandEditVM, Brand>();
+            CreateMap<BrandEditVM, BrandVM>().ReverseMap();
+
+            CreateMap<BrandCreateVM, Brand>(); 
+			CreateMap<Setting, SettingEditVM>().ReverseMap();
             CreateMap<Banner, BannerVM>();
             CreateMap<Banner, BannerEditVM>().ReverseMap();
 

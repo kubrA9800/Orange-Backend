@@ -12,5 +12,8 @@ namespace Orange_Backend.Services.Interfaces
 		Task<CategoryVM> GetByNameWithoutTrackingAsync(string name);
         Task CreateAsync(CategoryCreateVM category);
         Task EditAsync(CategoryEditVM category);
-	}
+        Task DeleteAsync(int id);
+        List<SelectListItem> GetAllSelectedAsync();
+
+    }
 }

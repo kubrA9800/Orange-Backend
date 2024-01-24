@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Areas.Admin.ViewModels.Blog;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
@@ -67,8 +68,6 @@ namespace Orange_Backend.Services
 				});
 			}
 
-
-			
 			await _context.Categories.AddAsync(dbCategory);
 			await _context.SaveChangesAsync();
 		}
@@ -89,8 +88,6 @@ namespace Orange_Backend.Services
 
             var selectedIds = category.Brands.Where(m => m.Selected).Select(m => m.Value).Select(int.Parse).ToList();
             
-
-
 
             var toAdd = selectedIds.Where(id => !existingIds.Contains(id)).ToList();
 
@@ -114,6 +111,33 @@ namespace Orange_Backend.Services
             _context.Categories.Update(categoryById);
 
             await _context.SaveChangesAsync();
+        }
+
+
+        public async Task DeleteAsync(int id)
+        {
+            Category dbCategory = await _context.Categories.Include(m => m.BrandCategories).FirstOrDefaultAsync(m => m.Id == id);
+
+
+            _context.Categories.Remove(dbCategory);
+            await _context.SaveChangesAsync();
+
+            string path = _env.GetFilePath("assets/img", dbCategory.Image);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+
+        public List<SelectListItem> GetAllSelectedAsync()
+        {
+            return _context.Categories.Select(m => new SelectListItem()
+            {
+                Text = m.Name,
+                Value = m.Id.ToString(),
+
+            }).ToList();
         }
 
     }

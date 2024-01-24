@@ -1,4 +1,4 @@
-﻿
+﻿@model LoginVM
 @{
     ViewData["Title"] = "Login";
 }
@@ -13,16 +13,19 @@
                 <p>Please enter your e-mail and password:</p>
             </div>
             <div class="form">
-                <div class="input">
-                    <span>Email</span>
-                    <input type="text">
-                </div>
-                <div class="input">
-                    <span>Password</span>
-                    <input type="text">
-                </div>
-                <a asp-action="ForgetPassword">Forgot your password?</a>
-                <button>Login</button>
+                <form method="post" asp-controller="Account" asp-action="Login">
+                    <div class="input">
+                        <span>Email</span>
+                        <input asp-for="Email" type="text">
+                    </div>
+                    <div class="input">
+                        <span>Password</span>
+                        <input asp-for="Password" type="text">
+                    </div>
+                    <a asp-action="ForgetPassword">Forgot your password?</a>
+                    <button type="submit">Login</button>
+                </form>
+              
             </div>
             <div class="link d-flex">
                 <h5>New customer?</h5>
@@ -34,6 +37,7 @@
 
 </section>
 @section script{
+    <partial name="_ValidationScriptsPartial" />
     <script src="~/assets/js/account.js"></script>
 }
 
