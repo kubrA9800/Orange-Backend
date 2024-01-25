@@ -8,6 +8,7 @@ using Orange_Backend.Models;
 using Orange_Backend.Services;
 using Orange_Backend.Services.Interfaces;
 using Orange_Backend.ViewModels;
+using Orange_Backend.ViewModels.Cart;
 
 namespace Orange_Backend.Controllers
 {
@@ -16,13 +17,16 @@ namespace Orange_Backend.Controllers
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
         private readonly IBrandService _brandService;
+        private readonly ICartService _cartService;
         public ShopController(IProductService productService, 
                               ICategoryService categoryService,
-                              IBrandService brandService)
+                              IBrandService brandService,
+                              ICartService cartService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _brandService = brandService;
+            _cartService = cartService;
         }
         public async Task<IActionResult> Index(int page = 1, int take = 6)
         {
@@ -343,6 +347,27 @@ namespace Orange_Backend.Controllers
             int filterCount = await _productService.FilterCountAsync(value1, value2);
             return Ok(filterCount);
 
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> AddToBasket(int? id)
+        {
+
+
+            if (id is null) return BadRequest();
+
+            Product product = await _productService.GetByIdWithIncludesAsync((int)id);
+
+            if (product is null) return NotFound();
+
+            _cartService.AddToBasket((int)id, product);
+
+            //var data = _cartService.GetDatasFromCookie();
+
+
+            return Ok();
         }
 
 

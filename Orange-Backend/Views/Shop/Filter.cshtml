@@ -61,13 +61,13 @@
 
                                                 <input style="border: 1px solid #999;
                                                  width: 30%;
-                                                font-size: 14px;" type="number" value="0" min="0" max="120000" />
+                                                font-size: 14px;" class="min-price" type="number" value="0" min="0" max="120000" />
                                                 <span class="dollar">$</span>
 
                                                 <span>-</span>
                                                 <input style="border: 1px solid #999;
                                                 margin-left: 5px;width: 30%;
-                                                font-size: 14px;" type="number" value="200" min="0" max="120000" />
+                                                font-size: 14px;" class="max-price" type="number" value="200" min="0" max="120000" />
                                                 <span class="dollar">$</span>
                                             </span>
                                             <div class="filterBtn">
@@ -84,14 +84,14 @@
                                 <div class="filter-category">
                                     <h6>Category</h6>
                                     <div class="category">
-                                        <input class="all-products" id="All" type="checkbox">
-                                        <label for="All">All(@Model.ProductCount)</label>
+                                        @*  <input class="all-products"  id="All" type="checkbox"> *@
+                                        <a asp-action="Index"><label for="All">All(@Model.AllProductsCount)</label></a>
                                     </div>
                                     @foreach (var category in Model.Categories)
                                     {
                                         <div class="category">
-                                            <input data-id="@category.Id" class="product-category" name="kkk" id="@category.Name" type="checkbox">
-                                            <label name="kkk" for="@category.Name">@category.Name (@category.Products.Count)</label>
+                                            @* <input data-id="@category.Id" class="product-category" name="kkk" id="@category.Name" type="checkbox"> *@
+                                            <a asp-action="GetProductsByCategory" asp-route-id="@category.Id"><label name="kkk" for="@category.Name">@category.Name (@category.Products.Count)</label></a>
                                         </div>
 
                                     }
@@ -101,14 +101,14 @@
                                 <div class="filter-brand">
                                     <h6>Brand</h6>
                                     <div class="brand">
-                                        <input class="all-products" id="All" type="checkbox">
-                                        <label for="All">All(@Model.ProductCount)</label>
+                                        @* <input class="all-products" id="All" type="checkbox"> *@
+                                        <a asp-action="Index"><label for="All">All(@Model.AllProductsCount)</label></a>
                                     </div>
                                     @foreach (var brand in Model.Brands)
                                     {
                                         <div class="brand">
-                                            <input id="@brand.Name" type="checkbox">
-                                            <label for="@brand.Name">@brand.Name (@brand.Products.Count)</label>
+                                            @* <input id="@brand.Name" type="checkbox"> *@
+                                            <a asp-action="GetProductsByBrand" asp-route-id="@brand.Id"><label for="@brand.Name">@brand.Name (@brand.Products.Count)</label></a>
                                         </div>
 
                                     }

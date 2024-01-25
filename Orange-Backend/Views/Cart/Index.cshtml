@@ -1,6 +1,7 @@
-﻿@model List<ProductVM>
+﻿@model CartPageVM
 @{
     ViewData["Title"] = "Index";
+    decimal grandTotal = Model.CartDetails.Sum(m => m.Total);
 }
 @section css {
     <link rel="stylesheet" href="~/assets/css/cart.css">
@@ -9,48 +10,61 @@
 
     <section id="cart">
         <div class="container">
-            <div class="empty-cart d-none">
-                <h1>Your Cart</h1>
-                <p>No products in the cart.</p>
-                <hr>
-                <a href="shop.html">Continue shopping</a>
-            </div>
-            <div class="full-cart">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col"></th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
 
-                            <td>
-                                <img src="~/assets/img/product/product1-1.webp" alt="">
+            <div class="empty-cart @(Model.CartDetails.Count == 0 ? "":"d-none")">
+                    <h1>Your Cart</h1>
+                    <p>No products in the cart.</p>
+                    <hr>
+                    <a asp-controller="Shop" asp-action="Index">Continue shopping</a>
+                </div>
 
-                            </td>
-                            <td>
-                                <span>SkinCare crem</span>
-                                <a href="">Remove</a>
-                            </td>
 
-                            <td><span>$39</span></td>
-                            <td>
-                                <i class="fa-solid fa-minus"></i>
-                                <span class="count">100</span>
-                                <i class="fa-solid fa-plus"></i>
-                            </td>
-                            <td><span>$39</span></td>
+            <div class="full-cart @(Model.CartDetails.Count != 0 ? "":"d-none")">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in Model.CartDetails)
+                            {
+                                <tr>
 
-                        </tr>
+                                    <td>
+                                        <img src="~/assets/img/product/@product.Image" alt="">
 
-                    </tbody>
-                </table>
-            </div>
+                                    </td>
+                                    <td>
+                                        <span>@product.Name</span>
+                                        <a data-id="@product.Id" href="#" class="delete-product">Remove</a>
+                                    </td>
+
+                                    <td><span>$@product.Price</span></td>
+                                    <td>
+                                        <i data-id="@product.Id" class="fa-solid fa-minus minus-icon"></i>
+                                        <span class="count">@product.Count</span>
+                                    <i data-id="@product.Id" class="fa-solid fa-plus plus-icon"></i>
+                                    </td>
+                                    <td>$<span class="grand-total">@product.Total</span></td>
+
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                
+                    <h2 class="grand-total" style="text-align:end">Total: $ <span>@grandTotal</span></h2>
+
+                </div>
+            
+         
+            
         </div>
 
     </section>
@@ -60,7 +74,70 @@
         <div class="head">
             <h1>You May Also Like</h1>
         </div>
-        <partial name="_ProductPartial" model="@Model.Take(6).ToList()" />
+        <div class="slider-products">
+            <div class="slider-for">
+            </div>
+            <div class="slider-nav" data-slick='{"slidesToShow": 5, "slidesToScroll": 3}'>
+                @foreach (var item in Model.Products)
+                {
+                    <div class="col-sm-4">
+                        <div class="product" data-id="@item.Id">
+                            <a asp-controller="Shop" asp-action="ProductDetail">
+                                <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
+                                <img class="d-none hover-img" src="~/assets/img/product/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="Slide 1">
+                            </a>
+                            <div class="d-none icons">
+                                <i class="fa-regular fa-heart heart-icon"></i>
+                                <i class="d-none fa-solid fa-heart "></i>
+                                <i class="fa-regular fa-eye"></i>
+                                <i class="fa-solid fa-bag-shopping basket-icon"></i>
+                            </div>
+                            <div class="text">
+                                <h6>@item.CategoryName</h6>
+                                <a asp-controller="Shop" asp-action="ProductDetail">
+                                    <h4>@item.Name</h4>
+                                </a>
+                                <span>$@item.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+               
+               
+
+            </div>
+        </div>
+
+        <div class="mobile-products">
+            <div class="slider-nav" data-slick='{"slidesToShow": 2, "slidesToScroll": 1}'>
+                @foreach (var item in Model.Products)
+                {
+                    <div class="product">
+                        <a  asp-controller="Shop" asp-action="ProductDetail">
+                            <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain)" alt="Slide 1">
+                        </a>
+                        <div class="icons">
+                            <i class="fa-regular fa-heart heart-icon"></i>
+                            <i class="d-none fa-solid fa-heart "></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-bag-shopping basket-icon"></i>
+                        </div>
+                        <div class="text">
+                            <h6>@item.CategoryName</h6>
+                            <a asp-controller="Shop" asp-action="ProductDetail">
+                                <h4>@item.Name</h4>
+                            </a>
+                            <span>$@item.Price</span>
+                        </div>
+                    </div>
+                }
+               
+               
+            </div>
+
+
+
+        </div>
 
     </section>
 
@@ -71,7 +148,7 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-7">
                     <div class="img">
-                        <img src="./assets/img/product/product1-1.webp" alt="">
+                        <img src="~/assets/img/product/product1-1.webp" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-5">
@@ -114,7 +191,10 @@
 </main>
 @section script{
     <script src="~/assets/js/plugins.js"></script>
-    <script src="~/assets/js/home.js"></script>
+    <script src="~/assets/js/cart.js"></script>
+    <script src="~/assets/js/productDetail.js"></script>
+    <script src="~/assets/js/basket.js"></script>
+
 
 }
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orange-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8c8501f9b5f9d22db6f1c4bcc0688d9fe166b4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b880281ff125f7189d34816ad6dd08686c9c0107")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orange-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orange-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

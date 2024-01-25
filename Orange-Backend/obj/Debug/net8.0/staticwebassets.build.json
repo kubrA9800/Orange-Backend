@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qTqZMzSfSjChbO8ZeJ23da1sOOtH5hokCLh4Zri0gFY=",
+  "Hash": "EEVPX0SWSn4KxY539LksjucXDz9M95RWZ8YJex09L2U=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -37464,6 +37464,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\account.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\basket.js",
+      "SourceId": "Orange-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\",
+      "BasePath": "_content/Orange-Backend",
+      "RelativePath": "assets/js/basket.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\basket.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\cart.js",

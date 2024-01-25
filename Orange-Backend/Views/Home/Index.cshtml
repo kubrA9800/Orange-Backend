@@ -130,7 +130,7 @@
                 @foreach (var product in Model.Products.Take(6))
                 {
                     <div class="col-sm-4">
-                        <div class="product">
+                        <div class="product item" data-id="@product.Id">
                             <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
                                 <img src="~/assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                                 <img class="d-none hover-img" src="./assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image" alt="Slide 1">
@@ -162,12 +162,12 @@
                 {
                     <div class="product">
                         <a asp-controller="Shop" asp-action="ProductDetail">
-                            <img src="./assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
+                            <img src="~/assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                         </a>
                         <div class="icons">
                             <i class="fa-regular fa-heart heart-icon"></i>
                             <i class="d-none fa-solid fa-heart "></i>
-                            <i class="fa-regular fa-eye open-modal" data-id="@product.Id></i>
+                            <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
                             <i class="fa-solid fa-bag-shopping basket-icon"></i>
                         </div>
                         <div class="text">
@@ -355,4 +355,5 @@
     <script src="~/assets/js/home.js"></script>
     <script src="~/assets/js/plugins.js"></script>
     <script src="~/assets/js/product.js"></script>
+    <script src="~/assets/js/basket.js"></script>
 }

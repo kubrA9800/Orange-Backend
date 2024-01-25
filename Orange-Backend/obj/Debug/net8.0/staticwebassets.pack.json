@@ -7873,6 +7873,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\account.js"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\basket.js",
+      "PackagePath": "staticwebassets\\assets\\js\\basket.js"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\cart.js",
       "PackagePath": "staticwebassets\\assets\\js\\cart.js"
     },
