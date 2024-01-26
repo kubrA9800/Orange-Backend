@@ -56,7 +56,7 @@
                 $(".basket .count").text(res.count);
                 $(e.target).closest("#cart tr").remove();
                 $(e.target).closest(".item").remove();
-                $(".grand-total").text(res.grandTotal);
+                $(".grand-total span").text(res.grandTotal.toFixed(2));
 
                 if (res.count === 0) {
                     $(".empty-cart").removeClass("d-none");

@@ -1,4 +1,4 @@
-﻿
+﻿@model List<WishlistDetailVM>
 @{
     ViewData["Title"] = "Index";
 }
@@ -8,13 +8,13 @@
 <main>
     <section id="cart">
         <div class="container">
-            <div class="empty-cart d-none">
+            <div class="empty-cart @(Model.Count == 0 ? "":"d-none")">
                 <h1>Your Wishlist</h1>
                 <p>No products in the wishlist.</p>
                 <hr>
-                <a href="shop.html">Continue shopping</a>
+                <a asp-controller="Shop" asp-action="Index">Continue shopping</a>
             </div>
-            <div class="full-cart">
+            <div class="full-cart @(Model.Count != 0 ? "":"d-none")">
                 <table class="table">
                     <thead>
                         <tr>
@@ -25,24 +25,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr >
 
-                            <td>
-                                <img src="./assets/img/product/product1-1.webp" alt="">
+                                <td>
+                                    <img src="~/assets/img/product/@item.Image" alt="">
 
-                            </td>
-                            <td>
-                                <span>SkinCare crem</span>
-                                <a style="display: block;" href="">Remove</a>
-                            </td>
+                                </td>
+                                <td>
+                                    <span>@item.Name</span>
+                                    <a data-id="@item.Id" class="delete-product-from-wishlist" style="display: block;" href="#">Remove</a>
+                                </td>
 
-                            <td>$39</td>
+                                <td>$@item.Price</td>
 
-                            <td>
-                                <a class="add-to-cart" href="">Add To Cart</a>
-                            </td>
+                                <td>
+                                    <a data-id="@item.Id" class="add-to-cart basket-icon item" href="#">Add To Cart</a>
+                                </td>
 
-                        </tr>
+                            </tr>
+                        }
+                        
 
                     </tbody>
                 </table>
@@ -51,4 +55,9 @@
 
     </section>
 </main>
+
+@section script {
+    <script src="~/assets/js/wishlist.js"></script>
+    <script src="~/assets/js/basket.js"></script>
+}
 

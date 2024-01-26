@@ -18,15 +18,18 @@ namespace Orange_Backend.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IBrandService _brandService;
         private readonly ICartService _cartService;
+        private readonly IWishlistService _wishlistService;
         public ShopController(IProductService productService, 
                               ICategoryService categoryService,
                               IBrandService brandService,
-                              ICartService cartService)
+                              ICartService cartService,
+                              IWishlistService wishlistService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _brandService = brandService;
             _cartService = cartService;
+            _wishlistService = wishlistService;
         }
         public async Task<IActionResult> Index(int page = 1, int take = 6)
         {
@@ -368,6 +371,24 @@ namespace Orange_Backend.Controllers
 
 
             return Ok();
+        }
+
+
+        [HttpPost]
+
+        public async Task<IActionResult> AddToWishlist(int? id)
+        {
+
+
+            if (id is null) return RedirectToAction("Index", "Error"); ;
+
+            Product product = await _productService.GetByIdWithIncludesAsync((int)id);
+
+            if (product is null) return RedirectToAction("Index", "Error"); ;
+
+            int data = _wishlistService.AddToWishlist((int)id, product);
+
+            return Ok(data);
         }
 
 

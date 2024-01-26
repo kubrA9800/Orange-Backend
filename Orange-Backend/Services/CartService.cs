@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using NuGet.ContentModel;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Data;
 using Orange_Backend.Helpers.Responses;
@@ -236,5 +238,33 @@ namespace Orange_Backend.Services
             };
         }
 
+
+        public async Task<Cart> GetByUserIdAsync(string userId)
+        {
+            var data= await _context.Carts.Include(m => m.CartProducts).FirstOrDefaultAsync(m => m.AppUserId == userId);
+            return data;
+        }
+
+        public async Task<List<CartProduct>> GetAllByBasketIdAsync(int? basketId)
+        {
+            return await _context.CartProducts.Where(m=>m.CartId==basketId).ToListAsync();
+        }
+
+
+        public List<CartVM> GetDatasFromCookies()
+        {
+            var data = _httpContextAccessor.HttpContext.Request.Cookies["basket"];
+
+            if (data is not null)
+            {
+                var basket = JsonConvert.DeserializeObject<List<CartVM>>(data);
+                return basket;
+            }
+            else
+            {
+                return new List<CartVM>();
+            }
+
+        }
     }
 }

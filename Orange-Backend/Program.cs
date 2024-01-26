@@ -41,6 +41,7 @@ builder.Services.AddScoped<IAchievmentService, AchievmentService>();
 builder.Services.AddScoped<IResultService, ResultService>();
 builder.Services.AddScoped<ISubscribeService, SubscribeService>();
 builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 
 

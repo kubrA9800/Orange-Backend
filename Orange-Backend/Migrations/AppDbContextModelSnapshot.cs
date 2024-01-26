@@ -364,6 +364,62 @@ namespace Orange_Backend.Migrations
                     b.ToTable("BrandCategory");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.CartProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartProducts");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -779,6 +835,59 @@ namespace Orange_Backend.Migrations
                     b.ToTable("Values");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Wishlist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Wishlists");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.WishlistProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("WishlistId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("WishlistId");
+
+                    b.ToTable("WishlistProducts");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -845,6 +954,34 @@ namespace Orange_Backend.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Cart", b =>
+                {
+                    b.HasOne("Orange_Backend.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.CartProduct", b =>
+                {
+                    b.HasOne("Orange_Backend.Models.Cart", "Cart")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Orange_Backend.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Product", b =>
                 {
                     b.HasOne("Orange_Backend.Models.Brand", "Brand")
@@ -878,11 +1015,44 @@ namespace Orange_Backend.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Orange_Backend.Models.Wishlist", b =>
+                {
+                    b.HasOne("Orange_Backend.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.WishlistProduct", b =>
+                {
+                    b.HasOne("Orange_Backend.Models.Product", "Product")
+                        .WithMany("WishlistProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Orange_Backend.Models.Wishlist", "Wishlist")
+                        .WithMany("WishlistProducts")
+                        .HasForeignKey("WishlistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Wishlist");
+                });
+
             modelBuilder.Entity("Orange_Backend.Models.Brand", b =>
                 {
                     b.Navigation("BrandCategories");
 
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.Cart", b =>
+                {
+                    b.Navigation("CartProducts");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.Category", b =>
@@ -897,6 +1067,13 @@ namespace Orange_Backend.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("Reviews");
+
+                    b.Navigation("WishlistProducts");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.Wishlist", b =>
+                {
+                    b.Navigation("WishlistProducts");
                 });
 #pragma warning restore 612, 618
         }

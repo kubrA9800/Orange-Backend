@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EEVPX0SWSn4KxY539LksjucXDz9M95RWZ8YJex09L2U=",
+  "Hash": "4H2ixbbE5HnhwWwrGBwAbFiU7/Eihmlc1Yz5nbzYQSo=",
   "Source": "Orange-Backend",
   "BasePath": "_content/Orange-Backend",
   "Mode": "Default",
@@ -37635,6 +37635,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\swinger.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\wishlist.js",
+      "SourceId": "Orange-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\",
+      "BasePath": "_content/Orange-Backend",
+      "RelativePath": "assets/js/wishlist.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\wishlist.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\lib\\bootstrap\\dist\\css\\bootstrap.css",

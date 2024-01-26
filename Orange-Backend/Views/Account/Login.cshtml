@@ -18,10 +18,12 @@
                         <span>Email</span>
                         <input asp-for="Email">
                     </div>
+                    <span style="color:red; margin-bottom:20px" asp-validation-for="Email"></span>
                     <div class="input">
                         <span>Password</span>
                         <input asp-for="Password">
                     </div>
+                    <span style="color:red; margin-bottom:20px" asp-validation-for="Password"></span>
                     <a asp-action="ForgetPassword">Forgot your password?</a>
                     <button type="submit">Login</button>
                 </form>

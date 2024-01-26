@@ -26,6 +26,10 @@ namespace Orange_Backend.Data
         public DbSet<Achievment> Achievments { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<WishlistProduct> WishlistProducts { get; set; }
+        public DbSet<CartProduct> CartProducts { get; set; }
         //public DbSet<BrandCategory> BrandCategories { get; set; }
 
 

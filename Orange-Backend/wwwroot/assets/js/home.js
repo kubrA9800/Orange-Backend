@@ -45,7 +45,8 @@ $(function () {
       this.nextElementSibling.classList.remove("d-none")
 
       this.nextElementSibling.addEventListener("click", function () {
-        this.classList.add("d-none")
+          this.classList.add("d-none")
+
       })
 
     })

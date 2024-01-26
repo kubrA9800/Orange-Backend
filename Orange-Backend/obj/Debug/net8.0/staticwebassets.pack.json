@@ -7909,6 +7909,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\swinger.js"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\js\\wishlist.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wishlist.js"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\assets\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\assets\\lib\\bootstrap"
     },

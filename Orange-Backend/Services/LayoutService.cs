@@ -10,28 +10,33 @@ namespace Orange_Backend.Services
         private readonly ISettingService _settingService;
         private readonly ICartService _cartService;
         private readonly IProductService _productService;
+        private readonly IWishlistService _wishlistService;
         public LayoutService(ISettingService settingService,
                              ICartService cartService,
-                             IProductService productService)
+                             IProductService productService,
+                             IWishlistService wishlistService)
         {
             _settingService = settingService;
             _cartService = cartService;
             _productService = productService;
+            _wishlistService = wishlistService;
         }
 
         public async Task<HeaderVM> GetHeaderDatas()
         {
 
             Dictionary<string, string> settingDatas = _settingService.GetSettings();
-            int basketCount = _cartService.GetCount();
             List<CartDetailVM> basketProducts = await   _cartService.GetBasketDatasAsync();
             List<ProductVM> recommendedProducts = await _productService.GetAllAsync();
+            int basketCount = _cartService.GetCount();
+            int wishlistCount= _wishlistService.GetCount();
             return new HeaderVM
             {
                 BasketCount = basketCount,
                 Logo = settingDatas["Logo"],
                 SidebarCartProducts = basketProducts,
-                Products= recommendedProducts
+                Products= recommendedProducts,
+                WishlistCount= wishlistCount
 
             };
         }

@@ -61,7 +61,7 @@
                        
                         <a class="wishlist" asp-controller="Wishlist" asp-action="Index">
                             <img src="~/assets/img/heart-icon.svg" alt="">
-                            <span class="count">0</span>
+                            <span class="count">@Model.WishlistCount</span>
                         </a>
                         <a class="basket" href="#">
                             <img src="~/assets/img/cart-icon.svg" alt="">
