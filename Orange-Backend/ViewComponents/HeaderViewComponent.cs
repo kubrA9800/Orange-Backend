@@ -29,6 +29,7 @@ namespace Orange_Backend.ViewComponents
             {
                 AppUser currentUser = await _userManager.FindByIdAsync(userId);
                 model.UserFullName = currentUser.FullName;
+                model.UserId = currentUser.Id;
             }
 
             return await Task.FromResult(View(model));

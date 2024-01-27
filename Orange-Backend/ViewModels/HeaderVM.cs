@@ -8,6 +8,7 @@ namespace Orange_Backend.ViewModels
         public string Logo { get; set; }
         public string UserFullName { get; set; }
         public int BasketCount { get; set; }
+        public string UserId { get; set; }
         public int WishlistCount { get; set; }
         public List<ProductVM> Products { get; set; }
         public List<CartDetailVM> SidebarCartProducts { get; set; }

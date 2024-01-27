@@ -128,9 +128,9 @@ namespace Orange_Backend.Services
 
         public async Task<Wishlist> GetByUserIdAsync(string userId)
         {
-            return await _context.Wishlists.Include(m => m.WishlistProducts).FirstOrDefaultAsync(m => m.AppUserId == userId);
+            var data= await _context.Wishlists.Include(m => m.WishlistProducts).FirstOrDefaultAsync(m => m.AppUserId == userId);
+            return data;
         }
-
         public async Task<List<WishlistProduct>> GetAllByWishlistIdAsync(int? basketId)
         {
             return await _context.WishlistProducts.Where(m => m.WishlistId == basketId).ToListAsync();

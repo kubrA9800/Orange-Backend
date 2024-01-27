@@ -21,7 +21,7 @@ $(function () {
             success: function (res) {
                 description.text(res.description)
                 name.text(res.name)
-                price.text(res.price)
+                price.text(res.price.toFixed(2))
                 category.text(res.categoryName)
                 let src = "/assets/img/product/" + res.image;
                 console.log(src);

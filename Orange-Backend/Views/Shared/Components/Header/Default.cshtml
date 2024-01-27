@@ -48,7 +48,7 @@
                             }
                             else
                             {
-                                <form style="display:inline" method="post" asp-controller="Account" asp-action="Logout">
+                                <form style="display:inline" method="post" asp-controller="Account" asp-action="Logout" asp-route-userId="@Model.UserId">
                                     
                                        <button style="border:none; background-color:transparent;">
                                             <i class="fa-solid fa-arrow-right-from-bracket"></i>

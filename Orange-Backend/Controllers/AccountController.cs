@@ -6,6 +6,7 @@ using NuGet.Configuration;
 using NuGet.ContentModel;
 using Orange_Backend.Data;
 using Orange_Backend.Models;
+using Orange_Backend.Services;
 using Orange_Backend.Services.Interfaces;
 using Orange_Backend.ViewModels.Account;
 using Orange_Backend.ViewModels.Cart;
@@ -50,36 +51,39 @@ namespace Orange_Backend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVM request)
         {
+
             if (!ModelState.IsValid)
             {
-                return View(request);
-
+                return View();
             }
 
-            AppUser user = await _userManager.FindByEmailAsync(request.Email);
+            AppUser dbUser = await _userManager.FindByEmailAsync(request.Email);
 
-
-            if (user is null)
+            if (dbUser is null)
             {
-                ModelState.AddModelError(string.Empty, "Email or password is wrong");
-                return View(request);
+                dbUser = await _userManager.FindByNameAsync(request.Email);
             }
 
-            var result = await _signInManager.PasswordSignInAsync(user, request.Password, false, false);
+            if (dbUser is null)
+            {
+                ModelState.AddModelError(string.Empty, "Login informations is wrong");
+                return View();
+            }
 
+            var result = await _signInManager.PasswordSignInAsync(dbUser, request.Password, false, false);
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, "Email or password is wrong");
-                return View(request);
+                ModelState.AddModelError(string.Empty, "Login informations is wrong");
+                return View();
+
             }
 
-
             List<WishlistVM> wishlist = new();
-            Wishlist dbWishlist = await _wishlistService.GetByUserIdAsync(user.Id);
+            Wishlist dbWishlist = await _wishlistService.GetByUserIdAsync(dbUser.Id);
 
             List<CartVM> basket = new();
-            Cart dbBasket = await _cartService.GetByUserIdAsync(user.Id);
+            Cart dbBasket = await _cartService.GetByUserIdAsync(dbUser.Id);
 
             if (dbBasket is not null)
             {
@@ -158,6 +162,8 @@ namespace Orange_Backend.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -281,9 +287,19 @@ namespace Orange_Backend.Controllers
 
             }
 
-
             return RedirectToAction("Index", "Home");
         }
+
+
+
+
+
+
+
+
+
+
+
 
         public IActionResult ForgetPassword()
         {

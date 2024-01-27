@@ -89,7 +89,7 @@
                             <div class="d-none icons">
                                 <i class="fa-regular fa-heart heart-icon"></i>
                                 <i class="d-none fa-solid fa-heart "></i>
-                                <i class="fa-regular fa-eye"></i>
+                                <i class="fa-regular fa-eye open-modal" data-id="@item.Id"></i>
                                 <i class="fa-solid fa-bag-shopping basket-icon"></i>
                             </div>
                             <div class="text">
@@ -153,10 +153,13 @@
                 </div>
                 <div class="col-sm-12 col-lg-5">
                     <div class="text">
-                        <h1>Super Pure</h1>
-                        <span>$29.00</span>
+                        <h1 class="product-name">Super Pure</h1>
+                        <span>$<span class="product-price">20</span></span>
                         <hr>
-                        <p>Glossier Super Bounce, Super Bounce, serum, hydrating serum, hyaluronic acid serum, pro-vitamin b5 serum, hyaluronic...</p>
+                        <p class="product-desc">
+                            Glossier Super Bounce, Super Bounce, serum, hydrating serum, hyaluronic acid serum,
+                            pro-vitamin b5 serum, hyaluronic...
+                        </p>
                         <a href="#">
                             <div class="add wishlist">
                                 <i class="fa-regular fa-heart"></i>
@@ -194,6 +197,8 @@
     <script src="~/assets/js/cart.js"></script>
     <script src="~/assets/js/productDetail.js"></script>
     <script src="~/assets/js/basket.js"></script>
+    <script src="~/assets/js/product.js"></script>
+    <script src="~/assets/js/home.js"></script>
 
 
 }
