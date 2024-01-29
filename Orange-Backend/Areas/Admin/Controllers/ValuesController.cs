@@ -7,7 +7,7 @@ using Orange_Backend.Services.Interfaces;
 namespace Orange_Backend.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ValuesController : Controller
+    public class ValuesController : MainController
     {
         private readonly IValuesService _valueService;
         public ValuesController(IValuesService valuesService)

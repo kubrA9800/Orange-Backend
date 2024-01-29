@@ -11,7 +11,7 @@ using Orange_Backend.Services.Interfaces;
 namespace Orange_Backend.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class BlogController : Controller
+    public class BlogController : MainController
     {
         private readonly AppDbContext _context;
         private readonly IBlogService _blogService;

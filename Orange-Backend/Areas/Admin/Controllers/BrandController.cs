@@ -12,7 +12,7 @@ using Orange_Backend.Services.Interfaces;
 namespace Orange_Backend.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class BrandController : Controller
+    public class BrandController : MainController
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;

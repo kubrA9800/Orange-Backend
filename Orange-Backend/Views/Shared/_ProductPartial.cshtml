@@ -44,12 +44,24 @@
                 <img class="d-none hover-img" src="~/assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image"
                      alt="Slide 2">
             </a>
-            <div class="d-none icons">
-                <i class="fa-regular fa-heart heart-icon"></i>
-                <i class="d-none fa-solid fa-heart "></i>
-                <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
-                <i class="fa-solid fa-bag-shopping"></i>
-            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="d-none icons">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i>
+                    <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
+                    <i class="fa-solid fa-bag-shopping basket-icon"></i>
+                </div>
+            }
+            else
+            {
+                <div class="d-none icons">
+                    <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-regular fa-heart heart-icon"></i></a>
+                    <a asp-controller="Account" asp-action="Login"><i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i></a>
+                    <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
+                    <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping basket-icon"></i></a>
+                </div>
+            }
             <div class="text">
                 <h6>@product.CategoryName</h6>
                 <a asp-action="ProductDetail">

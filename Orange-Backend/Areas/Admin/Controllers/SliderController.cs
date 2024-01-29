@@ -7,7 +7,7 @@ using Orange_Backend.Services.Interfaces;
 namespace Orange_Backend.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class SliderController : Controller
+    public class SliderController : MainController
     {
         private readonly AppDbContext _context;
         private readonly ISliderService _sliderService;
