@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using NuGet.Configuration;
 using NuGet.ContentModel;
 using Orange_Backend.Data;
+using Orange_Backend.Helpers.Enums;
 using Orange_Backend.Models;
 using Orange_Backend.Services;
 using Orange_Backend.Services.Interfaces;
@@ -21,17 +22,23 @@ namespace Orange_Backend.Controllers
         private readonly IWishlistService _wishlistService;
         private readonly ICartService _cartService;
         private readonly AppDbContext _context;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IEmailService _emailService;
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  IWishlistService wishlistService,
                                  ICartService cartService,
-                                 AppDbContext context)
+                                 AppDbContext context,
+                                 RoleManager<IdentityRole> roleManager,
+                                 IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _wishlistService = wishlistService;
             _cartService = cartService;
             _context = context;
+            _roleManager = roleManager;
+            _emailService = emailService;
         }
 
 
@@ -160,7 +167,35 @@ namespace Orange_Backend.Controllers
                 return View(request);
             }
 
-            return RedirectToAction("Index", "Home");
+
+            var createdUser = await _userManager.FindByNameAsync(user.UserName);
+
+            await _userManager.AddToRoleAsync(createdUser, Roles.Member.ToString());
+
+            //qnhx hrab svdh vsgc
+            //nxit ofmc bkco mghs
+
+
+
+            string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            var url = Url.Action(nameof(VerifyEmail), "Account", new { userId = user.Id, token }, Request.Scheme, Request.Host.ToString());
+
+            string subject = "Welcome to Orange";
+            string emailHtml = string.Empty;
+
+            using (StreamReader reader = new("wwwroot/templates/register-confirm.html"))
+            {
+                emailHtml = reader.ReadToEnd();
+            }
+
+            emailHtml = emailHtml.Replace("{{link}}", url);
+            emailHtml = emailHtml.Replace("{{fullName}}", user.FullName);
+
+            _emailService.Send(user.Email, subject, emailHtml);
+
+
+            return RedirectToAction("ConfirmEmail", "Account");
         }
 
 
@@ -290,21 +325,128 @@ namespace Orange_Backend.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        public IActionResult ForgetPassword()
+        [HttpGet]
+        public IActionResult ForgotPassword()
         {
             return View();
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+        {
+
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            AppUser existUser = await _userManager.FindByEmailAsync(model.Email);
+
+            if (existUser is null || !existUser.EmailConfirmed)
+            {
+                ModelState.AddModelError("Email", "User is not found");
+
+                return View();
+            }
+
+            TempData["Email"] = existUser.Email;
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
+            string link = Url.Action(nameof(ResetPassword), "Account", new { userId = existUser.Id, token }, Request.Scheme, Request.Host.ToString());
+            string subject = "Reset Password";
+            string html;
+
+            using (StreamReader reader = new StreamReader("wwwroot/templates/reset-password.html"))
+            {
+                html = reader.ReadToEnd();
+            }
+
+            string fullName = existUser.FullName;
+
+            html = html.Replace("{{fullName}}", fullName);
+            html = html.Replace("{{link}}", link);
+
+            _emailService.Send(existUser.Email, subject, html);
+
+            return RedirectToAction(nameof(VerifyResetPassword));
+        }
+
+
+        [HttpGet]
+        public IActionResult VerifyResetPassword()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult ResetPassword(string userId, string token)
+        {
+            return View(new ResetPasswordVM { Token = token, UserId = userId });
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
+        {
+
+            if (!ModelState.IsValid) return View(resetPassword);
+            AppUser existUser = await _userManager.FindByIdAsync(resetPassword.UserId);
+            if (existUser == null) return RedirectToAction("Index", "Error");
+
+            if (await _userManager.CheckPasswordAsync(existUser, resetPassword.Password))
+            {
+                ModelState.AddModelError("", "New password can't be same as old password");
+                return View(resetPassword);
+            }
+            await _userManager.ResetPasswordAsync(existUser, resetPassword.Token, resetPassword.Password);
+            return RedirectToAction(nameof(Login));
+
+        }
+
+
+
+        public IActionResult ConfirmEmail()
+        {
+            return View();
+        }
+
+
+        public async Task<IActionResult> VerifyEmail(string userId, string token)
+        {
+            if (userId is null || token is null) return RedirectToAction("Index", "Error"); ;
+
+            AppUser user = await _userManager.FindByIdAsync(userId);
+
+            if (user is null) return RedirectToAction("Index", "Error"); ;
+
+            await _userManager.ConfirmEmailAsync(user, token);
+
+            await _signInManager.SignInAsync(user, false);
+
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+        //Create Roles Method
+
+        //[HttpGet]
+        //public async Task<IActionResult> CreateRoles()
+        //{
+        //    foreach (var role in Enum.GetValues(typeof(Roles)))
+        //    {
+        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
+        //        {
+        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+        //        }
+        //    }
+        //    return Ok();
+        //}
 
     }
 

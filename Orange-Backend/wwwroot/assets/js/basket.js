@@ -5,9 +5,7 @@
 
         let id = parseInt($(this).closest(".item").attr("data-id"))
         let basketCount = $(".basket .count").text();
-        console.log("fghj");
-        //let cartSidebar = $(".cart-products")
-        //console.log(cartSidebar);
+        let cartSidebar = $(".cart-products")
         $.ajax({
 
             url: `/shop/addtobasket?id=${id}`,
@@ -16,33 +14,54 @@
                 basketCount++;
                 $(".basket .count").text(basketCount)
 
-                //$(cartSidebar).append(
-                //    `<div class="item" >
-                //    <div class="content d-flex align-items-center">
-                //        <div class="img">
-                //            <img src="~/assets/img/product/${res.Image}" alt="">
-
-                //        </div>
-                //        <div class="text">
-                //            <h1>${res.Name}</h1>
-                //            <h2>$ ${res.Price}x <span>${res.Count}</span></h2>
-                //            <div class="count">
-                //                <i class="fa-solid fa-minus"></i>
-                //                <span>${res.Count}</span>
-                //                <i class="fa-solid fa-plus"></i>
-                //            </div>
-                //        </div>
-                //    </div>
-                //    <div class="button">
-                //        <a asp-controller="Cart" asp-action="DeleteProduct">Remove</a>
-                //    </div>
-                //</div >`
-                //)
+               
 
 
 
             }
         })
+
+        $.ajax({
+            url: "/cart/GetSidebarProducts",
+            type: "POST",
+            success: function (res) {
+
+                var $cartSidebar = $('.cart-products');
+
+                $cartSidebar.html("");
+                $.each(res, function (index,product) {
+                    let src = "/assets/img/product/" + product.image;
+                    
+                    $(cartSidebar).append(`
+                <div class="item">
+                    <div class="content d-flex align-items-center">
+                        <div class="img">
+                            <img src="${src}" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>${product.name}</h1>
+                            <h2>$ ${product.price}x <span>${product.count}</span></h2>
+                            <div class="count">
+                                <i class="fa-solid fa-minus"></i>
+                                <span>${product.count}</span>
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="#" data-id="${product.id}" class="remove-product">Remove</a>
+                    </div>
+                </div>
+            `);
+                      
+                });
+                $('#grand-total').text(res.total.toFixed(2));
+
+            }
+        });
+
+
+        
     })
 
 

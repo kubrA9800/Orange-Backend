@@ -64,8 +64,6 @@ namespace Orange_Backend.Controllers
             List<MagazineVM> magazines = await _magazineService.GetAllAsync();
             List<BlogVM> blogs = await _blogService.GetAllAsync();
             List<BrandVM> brands = await _brandService.GetAllAsync();
-            
-
             HomeVM model = new()
             {
                 Sliders = sliders,

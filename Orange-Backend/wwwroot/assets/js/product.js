@@ -13,7 +13,6 @@ $(function () {
         let description = $(".modals .product-desc")
         let price = $(".modals .product-price")
         let category = $(".modals .product-category")
-      
 
         $.ajax({
             type: "Get",
@@ -26,7 +25,10 @@ $(function () {
                 let src = "/assets/img/product/" + res.image;
                 console.log(src);
                 $(".modals .img img").attr("src", src);
-                
+                $(".text").attr("data-id", res.id);
+                $(".item").attr("data-id", res.id);
+                $(".info a").attr("href", `/Shop/ProductDetail/${res.id}`);
+
 
             }
         })

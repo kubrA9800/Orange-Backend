@@ -39,13 +39,13 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                    <div class="text">
+                    <div data-id="@Model.Id" class="text">
                         <h1>@Model.Name</h1>
                         <span>$@Model.Price</span>
                         <hr>
 
                         <a href="#">
-                            <div class="add wishlist">
+                            <div class="add wishlist heart-icon">
                                 <i class="fa-regular fa-heart"></i>
                                 <h6>Add To Wishlist</h6>
                             </div>
@@ -57,7 +57,7 @@
                             </div>
                         </a>
 
-                        <a href="">Add to Cart</a>
+                        <a data-id="@Model.Id" class="basket-icon item" href="#">Add to Cart</a>
                         <hr>
                         <div class="info">
                             <h1>Type:<span>@Model.Category.Name</span></h1>
@@ -152,6 +152,9 @@
     <script src="~/assets/slick-1.8.1/slick/slick.min.js"></script> 
     <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/productDetail.js"></script>
+    <script src="~/assets/js/basket.js"></script>
+    <script src="~/assets/js/wishlist.js"></script>
+
     
 }
 

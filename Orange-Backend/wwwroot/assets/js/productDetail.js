@@ -133,7 +133,7 @@ centerMode     : true
   
 })
 
-let addToWishlistIcon=document.querySelector("#product-detail .text .add")
+let addToWishlistIcon=document.querySelector(".add")
 
 addToWishlistIcon.onclick=function(){
     this.parentElement.nextElementSibling.children[0].classList.remove("d-none")

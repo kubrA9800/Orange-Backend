@@ -16,9 +16,14 @@ inputs.forEach(input => {
 })
 
 inputs.forEach(input => {
+   
     input.onblur = function () {
-        this.previousElementSibling.style.top = "5px"
-        this.previousElementSibling.style.fontSize = "16px"
+        
+        if (this.value == "") {
+            this.previousElementSibling.style.top = "5px"
+            this.previousElementSibling.style.fontSize = "16px"
+        } 
+        
     }
 
 })

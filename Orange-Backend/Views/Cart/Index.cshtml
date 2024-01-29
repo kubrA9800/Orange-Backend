@@ -31,7 +31,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var product in Model.CartDetails)
+                            @foreach (var product in Model.CartDetails.OrderByDescending(m=>m.Id))
                             {
                                 <tr>
 
@@ -82,7 +82,7 @@
                 {
                     <div class="col-sm-4">
                         <div class="product" data-id="@item.Id">
-                            <a asp-controller="Shop" asp-action="ProductDetail">
+                            <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
                                 <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                                 <img class="d-none hover-img" src="~/assets/img/product/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="Slide 1">
                             </a>
@@ -94,7 +94,7 @@
                             </div>
                             <div class="text">
                                 <h6>@item.CategoryName</h6>
-                                <a asp-controller="Shop" asp-action="ProductDetail">
+                                <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
                                     <h4>@item.Name</h4>
                                 </a>
                                 <span>$@item.Price</span>
@@ -113,7 +113,7 @@
                 @foreach (var item in Model.Products)
                 {
                     <div class="product">
-                        <a  asp-controller="Shop" asp-action="ProductDetail">
+                        <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
                             <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain)" alt="Slide 1">
                         </a>
                         <div class="icons">
@@ -124,7 +124,7 @@
                         </div>
                         <div class="text">
                             <h6>@item.CategoryName</h6>
-                            <a asp-controller="Shop" asp-action="ProductDetail">
+                            <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
                                 <h4>@item.Name</h4>
                             </a>
                             <span>$@item.Price</span>
@@ -148,11 +148,11 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-7">
                     <div class="img">
-                        <img src="~/assets/img/product/product1-1.webp" alt="">
+                        <img src="~/assets/img/product" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-5">
-                    <div class="text">
+                    <div data-id="" class="text">
                         <h1 class="product-name">Super Pure</h1>
                         <span>$<span class="product-price">20</span></span>
                         <hr>
@@ -161,24 +161,24 @@
                             pro-vitamin b5 serum, hyaluronic...
                         </p>
                         <a href="#">
-                            <div class="add wishlist">
+                            <div class="add wishlist heart-icon">
                                 <i class="fa-regular fa-heart"></i>
                                 <h6>Add To Wishlist</h6>
                             </div>
                         </a>
-                        <a href="#">
+                        <a asp-controller="Wishlist" asp-action="Index">
                             <div class="goto wishlist d-none">
                                 <i class="fa-solid fa-heart"></i>
                                 <h6>Go To Wishlist</h6>
                             </div>
                         </a>
 
-                        <a href="">Add to Cart</a>
+                        <a data-id="" class="basket-icon item" href="#">Add to Cart</a>
                         <hr>
                         <div class="info">
-                            <h1>Type:<span>Skincare</span></h1>
+                            <h1>Type:<span class="product-category">Skincare</span></h1>
                             <h1>Sku:<span>CLE-000-00-00</span></h1>
-                            <a href="productDetail.html">View Details</a>
+                            <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="">View Details</a>
 
                         </div>
 
@@ -199,6 +199,7 @@
     <script src="~/assets/js/basket.js"></script>
     <script src="~/assets/js/product.js"></script>
     <script src="~/assets/js/home.js"></script>
+    <script src="~/assets/js/wishlist.js"></script>
 
 
 }

@@ -13,6 +13,7 @@
                 <p>Please enter your e-mail and password:</p>
             </div>
             <div class="form">
+                <div style="color:red" ; asp-validation-summary="All"></div>
                 <form method="post" asp-controller="Account" asp-action="Login">
                     <div class="input">
                         <span>Email</span>
@@ -24,7 +25,7 @@
                         <input asp-for="Password">
                     </div>
                     <span style="color:red; margin-bottom:20px" asp-validation-for="Password"></span>
-                    <a asp-action="ForgetPassword">Forgot your password?</a>
+                    <a asp-action="ForgotPassword">Forgot your password?</a>
                     <button type="submit">Login</button>
                 </form>
               

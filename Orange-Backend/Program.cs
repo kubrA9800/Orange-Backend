@@ -4,6 +4,7 @@ using Orange_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Orange_Backend.Services.Interfaces;
 using Orange_Backend.Services;
+using Orange_Backend.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
+// map emailconfig to emailsettings
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailConfig"));
 
 
 
@@ -22,6 +24,27 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddIdentity<AppUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+
+builder.Services.Configure<IdentityOptions>(option =>
+{
+    option.Password.RequireNonAlphanumeric = true; //simvol olab biler
+    option.Password.RequireDigit = true; //reqem olmalidir
+    option.Password.RequireLowercase = true; //balaca herf olmalidir
+    option.Password.RequireUppercase = true; //boyuk olmalidir
+    option.Password.RequiredLength = 6; //minimum 6 
+
+    option.User.RequireUniqueEmail = true;
+
+    option.SignIn.RequireConfirmedEmail = true;
+    //Default lockout  settings
+
+    option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    option.Lockout.MaxFailedAccessAttempts = 5;
+    option.Lockout.AllowedForNewUsers = true;
+
+});
+
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
@@ -42,6 +65,8 @@ builder.Services.AddScoped<IResultService, ResultService>();
 builder.Services.AddScoped<ISubscribeService, SubscribeService>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IWishlistService, WishlistService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
 

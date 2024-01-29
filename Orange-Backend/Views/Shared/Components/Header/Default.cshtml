@@ -125,7 +125,7 @@
                 <p>No products in the cart.</p>
                 
             </div>
-            @foreach (var item in Model.SidebarCartProducts.OrderByDescending(m=>m.Id))
+            @* @foreach (var item in Model.SidebarCartProducts.OrderByDescending(m=>m.Id))
             {
                 <div class="item">
                     <div class="content d-flex align-items-center">
@@ -147,7 +147,7 @@
                         <a data-id="@item.Id" href="#" class="delete-product">Remove</a>
                     </div>
                 </div>
-            }
+            } *@
             
         </div>
         <div class="recommended">
@@ -185,7 +185,7 @@
             <div class="total">
                 <h1>Total:</h1>
                 
-                    <h1 class="grand-total">$<span>@grandTotal</span></h1>
+                    <h1 class="grand-total">$<span id="grand-total">@grandTotal</span></h1>
 
                 
             </div>

@@ -772,3 +772,6 @@ C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\obj\Debug\net8.0\refi
 C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\obj\Debug\net8.0\Orange-Backend.pdb
 C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\obj\Debug\net8.0\Orange-Backend.genruntimeconfig.cache
 C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\obj\Debug\net8.0\ref\Orange-Backend.dll
+C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\bin\Debug\net8.0\MailKit.dll
+C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\bin\Debug\net8.0\MimeKit.dll

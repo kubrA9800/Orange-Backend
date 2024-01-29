@@ -8249,6 +8249,14 @@
       "PackagePath": "staticwebassets\\assets\\slick-1.8.1\\slick\\slick.scss"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\templates\\register-confirm.html",
+      "PackagePath": "staticwebassets\\templates\\register-confirm.html"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Orange\\Orange-Backend\\Orange-Backend\\wwwroot\\templates\\reset-password.html",
+      "PackagePath": "staticwebassets\\templates\\reset-password.html"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Orange-Backend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
