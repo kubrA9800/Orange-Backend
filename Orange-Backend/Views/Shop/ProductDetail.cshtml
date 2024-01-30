@@ -1,10 +1,39 @@
-﻿@model Product
+﻿
+@model ProductDetailPageVM
+@inject UserManager<AppUser> userManager
 @{
     ViewData["Title"] = "ProductDetail";
 }
 @section css {
     <link rel="stylesheet" href="~/assets/css/productDetail.css">
 }
+
+<style>
+    .review a{
+        background-color: #102B26;
+        color:#fff;
+        padding:10px 22px;
+        transition:all .5s; 
+    }
+    .review a:hover{
+            background-color: #FF6F2E;
+           
+    }
+    .review h6{
+        color: gray;
+        font-size:12px;
+    }
+    .review-item{
+        background-color: #E6E8EA;
+        padding:20px 50px;
+        margin:2rem;
+    }
+
+     .item .review-item h4 {
+        font-size:22px;
+        font-weight:bold;
+    }
+</style>
 <main>
     <section id="product-detail">
         <div class="container">
@@ -15,7 +44,7 @@
                             <div class="col-xs-12">
                                 <div id="product__slider">
                                     <div class="product__slider-main">
-                                        @foreach (var image in Model.Images)
+                                        @foreach (var image in Model.Product.Images)
                                         {
                                             <div class="slide">
                                                 <img src="@Url.Content($"~/assets/img/product/{image.Image}")" alt=""
@@ -24,8 +53,8 @@
                                         }
                                        
                                     </div>
-                                    <div style="@(Model.Images.Count==2 ?"margin-left:-80px":"margin-left:25px")" class="product__slider-thmb">
-                                        @foreach (var image in Model.Images)
+                                    <div style="@(Model.Product.Images.Count==2 ?"margin-left:-80px":"margin-left:25px")" class="product__slider-thmb">
+                                        @foreach (var image in Model.Product.Images)
                                         {
                                             <div class="slide">
                                                 <img src="@Url.Content($"~/assets/img/product/{image.Image}")" alt=""
@@ -39,9 +68,9 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                    <div data-id="@Model.Id" class="text">
-                        <h1>@Model.Name</h1>
-                        <span>$@Model.Price</span>
+                    <div data-id="@Model.Product.Id" class="text">
+                        <h1>@Model.Product.Name</h1>
+                        <span>$@Model.Product.Price</span>
                         <hr>
 
                         <a href="#">
@@ -57,10 +86,10 @@
                             </div>
                         </a>
 
-                        <a data-id="@Model.Id" class="basket-icon item" href="#">Add to Cart</a>
+                        <a data-id="@Model.Product.Id" class="basket-icon item" href="#">Add to Cart</a>
                         <hr>
                         <div class="info">
-                            <h1>Type:<span>@Model.Category.Name</span></h1>
+                            <h1>Type:<span>@Model.Product.Category.Name</span></h1>
                             <h1>Sku:<span>CLE-000-00-00</span></h1>
 
                         </div>
@@ -126,18 +155,49 @@
             </div>
             <div class=" tab-content">
                 <div data-id="1" class="item">
-                    <h3>@Model.Description</h3>
+                    <h3>@Model.Product.Description</h3>
                 </div>
                 <div data-id="2" class="item d-none">
                     <div class="review w-100">
-                        <h5>Write a review</h5>
-                        <div class="inputs d-flex">
-                            <input placeholder="Name" type="text">
-                            <input placeholder="Your email" type="email">
-                        </div>
-                        <input placeholder="Title" type="text">
-                        <textarea placeholder="Write your comment here"></textarea>
-                        <button>Submit review</button>
+                        @* <h5>Write review</h5> *@
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a style="margin-bottom:50px!important" asp-controller="Account" asp-action="Login">Write review</a>
+                        }
+                        @foreach (var item in Model.Reviews)
+                        {
+                            <div class="review-item">
+                                <h4>@item.Name</h4>
+                                <h5>@item.Message</h5>
+                                <h6>@item.CreatedDate.ToString("dd/MM/yyyy")</h6>
+                            </div>
+                           
+                        }
+                         @if (User.Identity.IsAuthenticated)
+                        {
+                            <form method="post" asp-controller="Shop" asp-action="CreateReview" asp-route-id="@Model.Id" asp-route-userId="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).Id">
+                                <div class="inputs d-flex">
+                                    <input asp-for="@Model.NewReview.Name" placeholder="Name" required type="text" name="name">
+                                    <input asp-for="@Model.NewReview.Email" placeholder="Your email" required type="email" name="email">
+                                </div>
+                                <span style="color:red; margin-bottom:20px" asp-validation-for="@Model.NewReview.Name"></span>
+                                <span style="color:red; margin-bottom:20px" asp-validation-for="@Model.NewReview.Email"></span>
+
+                                <input asp-for="@Model.NewReview.Title" placeholder="Title" required type="text" name="title">
+                                <span style="color:red; margin-bottom:20px" asp-validation-for="@Model.NewReview.Title"></span>
+
+                                <textarea asp-for="@Model.NewReview.Message" placeholder="Write your comment here" required name="message"></textarea>
+                                <span style="color:red; margin-bottom:20px" asp-validation-for="@Model.NewReview.Message"></span>
+
+                                <button type="submit">Submit review</button>
+                            </form>
+
+                        }
+                       
+                       
+
+                        
+
                     </div>
                 </div>
             </div>

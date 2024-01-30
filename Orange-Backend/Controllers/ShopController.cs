@@ -1,8 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MimeKit.Cryptography;
 using Newtonsoft.Json.Linq;
 using Orange_Backend.Areas.Admin.ViewModels.Brand;
 using Orange_Backend.Areas.Admin.ViewModels.Category;
+using Orange_Backend.Areas.Admin.ViewModels.Contact;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
+using Orange_Backend.Areas.Admin.ViewModels.Review;
+using Orange_Backend.Data;
 using Orange_Backend.Helpers;
 using Orange_Backend.Models;
 using Orange_Backend.Services;
@@ -19,17 +24,23 @@ namespace Orange_Backend.Controllers
         private readonly IBrandService _brandService;
         private readonly ICartService _cartService;
         private readonly IWishlistService _wishlistService;
+        private readonly IReviewService _reviewService;
+        private readonly AppDbContext _context;
         public ShopController(IProductService productService, 
                               ICategoryService categoryService,
                               IBrandService brandService,
                               ICartService cartService,
-                              IWishlistService wishlistService)
+                              IWishlistService wishlistService,
+                              IReviewService reviewService,
+                              AppDbContext context)
         {
             _productService = productService;
             _categoryService = categoryService;
             _brandService = brandService;
             _cartService = cartService;
             _wishlistService = wishlistService;
+            _reviewService = reviewService;
+            _context = context;
         }
         public async Task<IActionResult> Index(int page = 1, int take = 6)
         {
@@ -78,9 +89,15 @@ namespace Orange_Backend.Controllers
             }
 
             Product product = await _productService.GetByIdWithIncludesAsync((int)id);
+            List<ReviewVM> reviews = await _reviewService.GetReviewsByProductAsync((int)id);
+            ProductDetailPageVM model = new()
+            {
+                Product = product,
+                Id=product.Id,
+                Reviews = reviews
+            };
 
-
-            return View(product);
+            return View(model);
         }
 
         //[HttpGet]
@@ -389,6 +406,33 @@ namespace Orange_Backend.Controllers
             int data = _wishlistService.AddToWishlist((int)id, product);
 
             return Ok(data);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> CreateReview(ReviewCreateVM request, int? id, string userId)
+        {
+            if (id is null || userId == null) return BadRequest();
+            if (!ModelState.IsValid) return RedirectToAction(nameof(ReviewCreateVM), new { id });
+
+            Review review = new()
+            {
+                Name = request.Name,
+                Email = request.Email,
+                Title= request.Title,
+                Message = request.Message,
+                ProductId =(int)id,
+                AppUserId= userId
+
+
+            };
+            await _context.Reviews.AddAsync(review);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ProductDetail), new { id });
+
         }
 
 

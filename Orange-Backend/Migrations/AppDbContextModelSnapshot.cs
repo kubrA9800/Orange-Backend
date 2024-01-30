@@ -667,6 +667,9 @@ namespace Orange_Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
@@ -689,6 +692,8 @@ namespace Orange_Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("ProductId");
 
@@ -1008,9 +1013,15 @@ namespace Orange_Backend.Migrations
 
             modelBuilder.Entity("Orange_Backend.Models.Review", b =>
                 {
+                    b.HasOne("Orange_Backend.Models.AppUser", "AppUser")
+                        .WithMany("Reviews")
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("Orange_Backend.Models.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductId");
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Product");
                 });
@@ -1041,6 +1052,11 @@ namespace Orange_Backend.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Wishlist");
+                });
+
+            modelBuilder.Entity("Orange_Backend.Models.AppUser", b =>
+                {
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.Brand", b =>

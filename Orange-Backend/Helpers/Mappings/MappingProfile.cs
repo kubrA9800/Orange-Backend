@@ -9,6 +9,7 @@ using Orange_Backend.Areas.Admin.ViewModels.Info;
 using Orange_Backend.Areas.Admin.ViewModels.Magazine;
 using Orange_Backend.Areas.Admin.ViewModels.Product;
 using Orange_Backend.Areas.Admin.ViewModels.Result;
+using Orange_Backend.Areas.Admin.ViewModels.Review;
 using Orange_Backend.Areas.Admin.ViewModels.Setting;
 using Orange_Backend.Areas.Admin.ViewModels.Slider;
 using Orange_Backend.Areas.Admin.ViewModels.Subscribe;
@@ -69,6 +70,8 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Subscribe, SubscribeVM>();
 
             CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();
+            CreateMap<ReviewCreateVM, Review>().ReverseMap();
+            CreateMap<Review, ReviewVM>();
 
 
 

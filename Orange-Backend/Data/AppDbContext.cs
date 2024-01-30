@@ -43,6 +43,9 @@ namespace Orange_Backend.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().HasQueryFilter(p => !p.SoftDeleted);
 
+
+      
+
         }
     }
 }
