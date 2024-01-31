@@ -20,16 +20,25 @@ namespace Orange_Backend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
         {
-            //if (!ModelState.IsValid) return RedirectToAction("Index", subscribe);
-            //var data= _subscribeService.CreateAsync(subscribe);
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
-            //if (data != null)
-            //{
-            //    ModelState.AddModelError("Email", "Email already exist");
-            //    return RedirectToAction("Index","Home");
-            //}
+            var existEmail = await _subscribeService.GetByEmailAsync(subscribe.Email);
+
+            if (existEmail is not null)
+            {
+                return RedirectToAction(nameof(ExistEmail));
+            }
+
             await _subscribeService.CreateAsync(subscribe);
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult ExistEmail()
+        {
+            return View();
         }
     }
 }

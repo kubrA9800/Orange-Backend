@@ -1,7 +1,6 @@
 ﻿$(function () {
 
     $(document).on("click", ".heart-icon", function () {
-        console.log("hgvjb");
 
         let id = $(this).parent().parent().attr("data-id");;
         let count = $(".wishlist .count").text();
@@ -42,5 +41,12 @@
         })
 
 
+    })
+
+
+    $(document).on("click", ".basket-icon.wishlist", function (e) {
+        console.log(this);
+        $(this).addClass("d-none");
+        $(this).next().removeClass("d-none");
     })
 })

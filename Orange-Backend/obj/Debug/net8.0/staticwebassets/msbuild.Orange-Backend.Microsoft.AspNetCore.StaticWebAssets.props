@@ -29488,6 +29488,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\4924fec6-da83-4c7a-9ed7-197307f85447 - 89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\51050c36-a0c1-4977-a33e-67d8099cc62b-89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Orange-Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Orange-Backend</BasePath>
+      <RelativePath>assets/img/51050c36-a0c1-4977-a33e-67d8099cc62b-89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\51050c36-a0c1-4977-a33e-67d8099cc62b-89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5c73a29f-9182-4b63-a806-35d7364b5581-759e8c5c-9e76-4084-9944-4b9e3ca0ca1a-blog1.png))">
       <SourceType>Package</SourceType>
       <SourceId>Orange-Backend</SourceId>
@@ -29503,22 +29519,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5c73a29f-9182-4b63-a806-35d7364b5581-759e8c5c-9e76-4084-9944-4b9e3ca0ca1a-blog1.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5fc6b909-bd24-4768-93da-e6fb0d492c78 - 89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>Orange-Backend</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Orange-Backend</BasePath>
-      <RelativePath>assets/img/5fc6b909-bd24-4768-93da-e6fb0d492c78 - 89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5fc6b909-bd24-4768-93da-e6fb0d492c78 - 89a7de10-a51a-4732-b161-cdaf0055cbff-about.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\680469e7-f0a6-49c6-ab55-323107368ef5-OrangeLogo.png))">
       <SourceType>Package</SourceType>
@@ -30015,6 +30015,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\d2dee482-eebb-49eb-bb05-279485013084-category2.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\d576f55c-9d65-425f-a13c-01e1cc7ec08b-category1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Orange-Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Orange-Backend</BasePath>
+      <RelativePath>assets/img/d576f55c-9d65-425f-a13c-01e1cc7ec08b-category1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\d576f55c-9d65-425f-a13c-01e1cc7ec08b-category1.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\dd8b0437-1367-4462-91db-d123714dc641-blog3.png))">
       <SourceType>Package</SourceType>

@@ -51,7 +51,7 @@
     width: 30% !important;
   }
   #products-all .products {
-    display: none;
+    /*display: none;*/
   }
   #products-all .mobile-products .icons {
     left: 30% !important;
@@ -104,7 +104,7 @@
     width: 30% !important;
   }
   #products-all .products {
-    display: none;
+    /*display: none;*/
   }
   #products-all .mobile-products .icons {
     left: 30% !important;

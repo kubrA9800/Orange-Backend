@@ -182,8 +182,10 @@ namespace Orange_Backend.Areas.Admin.Controllers
                     return View(request);
                 }
 
-
-
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
             }
            
 

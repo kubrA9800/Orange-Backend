@@ -105,7 +105,6 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
 
 		[HttpGet]
-
 		public async Task<IActionResult> Edit(int? id)
 		{
 			if (id is null) return BadRequest();
@@ -132,14 +131,11 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
 			});
 
-
-
 		}
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public async Task<IActionResult> Edit(int? id, CategoryEditVM request)
         {
             if (id is null) return BadRequest();
@@ -182,18 +178,13 @@ namespace Orange_Backend.Areas.Admin.Controllers
                         ModelState.AddModelError("Photos", "File size can be max 200 kb");
                         return View(request);
                     }
-
-
                 
             }
-            //else
-            //{
-            //    _mapper.Map(request, dbCategory);
-            //    _context.Categories.Update(dbCategory);
-            //    await _context.SaveChangesAsync();
-            //    return RedirectToAction(nameof(Index));
-
-            //}
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            
 
 
             if (existCategory is not null)

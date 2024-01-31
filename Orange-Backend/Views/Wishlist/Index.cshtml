@@ -38,10 +38,11 @@
                                     <a data-id="@item.Id" class="delete-product-from-wishlist" style="display: block;" href="#">Remove</a>
                                 </td>
 
-                                <td>$@item.Price</td>
+                                <td><span>$@item.Price</span></td>
 
                                 <td>
-                                    <a data-id="@item.Id" class="add-to-cart basket-icon item" href="#">Add To Cart</a>
+                                    <a data-id="@item.Id" class="add-to-cart basket-icon item wishlist" href="#">Add To Cart</a>
+                                    <a class="add-to-cart d-none" asp-controller="Cart" asp-action="Index">Go to Basket</a>
                                 </td>
 
                             </tr>

@@ -81,7 +81,7 @@
                 @foreach (var item in Model.Products)
                 {
                     <div class="col-sm-4">
-                        <div class="product" data-id="@item.Id">
+                        <div class="product item" data-id="@item.Id">
                             <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
                                 <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                                 <img class="d-none hover-img" src="~/assets/img/product/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="Slide 1">
@@ -124,9 +124,9 @@
             <div class="slider-nav" data-slick='{"slidesToShow": 2, "slidesToScroll": 1}'>
                 @foreach (var item in Model.Products)
                 {
-                    <div class="product">
+                    <div class="product item" data-id="@item.Id">
                         <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
-                            <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain)" alt="Slide 1">
+                            <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                         </a>
                         <div class="icons">
                             <i class="fa-regular fa-heart heart-icon"></i>
