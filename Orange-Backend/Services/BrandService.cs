@@ -24,15 +24,16 @@ namespace Orange_Backend.Services
             _env = env;
         }
         public async Task<List<BrandVM>> GetAllAsync()
-        {var data= _mapper.Map<List<BrandVM>>( await _context.Brands.Include(m => m.Products)
-									.Include(m => m.BrandCategories)
-									.ThenInclude(m => m.Category)
-									.ToListAsync());
+        {
+            var data = _mapper.Map<List<BrandVM>>(await _context.Brands.Include(m => m.Products)
+                                    .Include(m => m.BrandCategories)
+                                    .ThenInclude(m => m.Category)
+                                    .ToListAsync());
 
-			return data;
+            return data;
         }
 
-		public async Task<BrandVM> GetByNameAsync(string name)
+        public async Task<BrandVM> GetByNameAsync(string name)
 		{
 
 			return _mapper.Map<BrandVM>(await _context.Brands.FirstOrDefaultAsync(m => m.Name.Trim().ToLower() == name.Trim().ToLower()));
@@ -50,11 +51,11 @@ namespace Orange_Backend.Services
 			}).ToList();
 		}
 
-		public async Task<BrandVM> GetByIdAsync(int id)
-		{
-			return _mapper.Map<BrandVM>(await _context.Brands.Include(m => m.BrandCategories)
-									.ThenInclude(m => m.Category).FirstOrDefaultAsync(m=>m.Id==id));
-		}
+        public async Task<BrandVM> GetByIdAsync(int id)
+        {
+            return _mapper.Map<BrandVM>(await _context.Brands.Include(m => m.BrandCategories)
+                                    .ThenInclude(m => m.Category).FirstOrDefaultAsync(m => m.Id == id));
+        }
 
 
         public async Task CreateAsync(BrandCreateVM brand)
@@ -130,33 +131,19 @@ namespace Orange_Backend.Services
 
         public async Task DeleteAsync(int id)
         {
-            Brand dbBrand = await _context.Brands.Include(m => m.BrandCategories).FirstOrDefaultAsync(m => m.Id == id);
+            Brand dbBrand = await _context.Brands.Where(m => m.Id == id)
+                                                .Include(m => m.BrandCategories)
+                                                .ThenInclude(m => m.Category)
+                                                .FirstOrDefaultAsync();
 
 
-                 foreach (var brandCategory in dbBrand.BrandCategories.ToList())
-        {
-            dbBrand.BrandCategories.Remove(brandCategory);
-        }
+            _context.Brands.Remove(dbBrand);
+            await _context.SaveChangesAsync();
+            string path = _env.GetFilePath("assets/images", dbBrand.Image);
 
-            if (dbBrand != null)
+            if (File.Exists(path))
             {
-                
-                //var brandCategory = _context.BrandCategories
-                //    .Where(bc => bc.BrandId == id)
-                //    .ToList();
-
-                //_context.BrandCategories.RemoveRange(brandCategory);
-
-                
-                _context.Brands.Remove(dbBrand);
-
-                await _context.SaveChangesAsync();
-
-                string path = _env.GetFilePath("assets/img", dbBrand.Image);
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
+                File.Delete(path);
             }
         }
     }

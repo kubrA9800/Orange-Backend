@@ -25,14 +25,15 @@ namespace Orange_Backend.Services
             _mapper = mapper;
 			_env = env;
         }
-        public async Task<List<CategoryVM>> GetAllAsync()
-        {
-            return _mapper.Map<List<CategoryVM>>(await _context.Categories.Include(m=>m.Products).Include(m => m.BrandCategories).ThenInclude(m => m.Brand).ToListAsync());
-        }
+		public async Task<List<CategoryVM>> GetAllAsync()
+		{
+			return _mapper.Map<List<CategoryVM>>(await _context.Categories.Include(m => m.Products).Include(m => m.BrandCategories).ThenInclude(m => m.Brand).ToListAsync());
+		}
 
-        public async Task<CategoryVM> GetByIdAsync(int id)
+		public async Task<CategoryVM> GetByIdAsync(int id)
         {
-            return _mapper.Map<CategoryVM>(await _context.Categories.FirstOrDefaultAsync(m => m.Id == id));
+            return _mapper.Map<CategoryVM>(await _context.Categories.Include(m => m.BrandCategories)
+                                    .ThenInclude(m => m.Brand).FirstOrDefaultAsync(m => m.Id == id));
         }
 
 		public async Task<CategoryVM> GetByNameWithoutTrackingAsync(string name)
@@ -42,35 +43,35 @@ namespace Orange_Backend.Services
 			return _mapper.Map<CategoryVM>(category);
 		}
 
-		public async Task CreateAsync(CategoryCreateVM category)
-		{
+        public async Task CreateAsync(CategoryCreateVM category)
+        {
 
-			string fileName = $"{Guid.NewGuid()}-{category.Photo.FileName}";
+            string fileName = $"{Guid.NewGuid()}-{category.Photo.FileName}";
 
-			string path = _env.GetFilePath("assets/img", fileName);
+            string path = _env.GetFilePath("assets/img", fileName);
 
-			await category.Photo.SaveFileAsync(path);
+            await category.Photo.SaveFileAsync(path);
 
-			var selectedBrands = category.Brands.Where(m => m.Selected).Select(m => m.Value).ToList();
+            var selectedBrands = category.Brands.Where(m => m.Selected).Select(m => m.Value).ToList();
 
 
-			var dbCategory = new Category()
-			{
-				Name = category.Name,
-				Image=fileName
-		    };
+            var dbCategory = new Category()
+            {
+                Name = category.Name,
+                Image = fileName
+            };
 
-			foreach (var item in selectedBrands)
-			{
-				dbCategory.BrandCategories.Add(new BrandCategory()
-				{
-					BrandId = int.Parse(item)
-				});
-			}
+            foreach (var item in selectedBrands)
+            {
+                dbCategory.BrandCategories.Add(new BrandCategory()
+                {
+                    BrandId = int.Parse(item)
+                });
+            }
 
-			await _context.Categories.AddAsync(dbCategory);
-			await _context.SaveChangesAsync();
-		}
+            await _context.Categories.AddAsync(dbCategory);
+            await _context.SaveChangesAsync();
+        }
 
 
 
@@ -87,7 +88,7 @@ namespace Orange_Backend.Services
             var existingIds = categoryById.BrandCategories.Select(m => m.BrandId).ToList();
 
             var selectedIds = category.Brands.Where(m => m.Selected).Select(m => m.Value).Select(int.Parse).ToList();
-            
+
 
             var toAdd = selectedIds.Where(id => !existingIds.Contains(id)).ToList();
 
@@ -116,18 +117,23 @@ namespace Orange_Backend.Services
 
         public async Task DeleteAsync(int id)
         {
-            Category dbCategory = await _context.Categories.Include(m => m.BrandCategories).FirstOrDefaultAsync(m => m.Id == id);
+            Category dbCategory = await _context.Categories.Where(m => m.Id == id)
+                                                 .Include(m => m.BrandCategories)
+                                                 .ThenInclude(m => m.Brand)
+                                                 .FirstOrDefaultAsync();
+
 
 
             _context.Categories.Remove(dbCategory);
             await _context.SaveChangesAsync();
 
-            string path = _env.GetFilePath("assets/img", dbCategory.Image);
+            string path = _env.GetFilePath("assets/images", dbCategory.Image);
 
             if (File.Exists(path))
             {
                 File.Delete(path);
             }
+
         }
 
         public List<SelectListItem> GetAllSelectedAsync()

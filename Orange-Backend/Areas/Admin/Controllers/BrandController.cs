@@ -36,22 +36,22 @@ namespace Orange_Backend.Areas.Admin.Controllers
             var data = await _brandService.GetAllAsync();
 
 
-			return View(data);
+            return View(data);
         }
 
-		[HttpGet]
-		public async Task<IActionResult> Detail(int? id)
-		{
-			if (id is null) return BadRequest();
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id is null) return BadRequest();
 
-			BrandVM brand = await _brandService.GetByIdAsync((int)id);
+            BrandVM brand = await _brandService.GetByIdAsync((int)id);
 
-			if (brand is null) return NotFound();
+            if (brand is null) return NotFound();
 
-			return View(brand);
-		}
+            return View(brand);
+        }
 
-		public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create()
 		{
 
 			var categories = _categoryService.GetAllSelectedAsync();
@@ -74,6 +74,7 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
+                request.Categories = _categoryService.GetAllSelectedAsync();
                 return View(request);
             }
 
@@ -107,7 +108,6 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
 
         [HttpGet]
-
         public async Task<IActionResult> Edit(int? id)
         {
             if (id is null) return BadRequest();
@@ -187,7 +187,7 @@ namespace Orange_Backend.Areas.Admin.Controllers
             {
                 return RedirectToAction(nameof(Index));
             }
-           
+
 
 
             if (existBrand is not null)

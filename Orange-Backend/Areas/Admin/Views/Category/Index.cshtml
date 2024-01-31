@@ -17,10 +17,6 @@
 						Name
 					</th>
 					<th>
-						Brand
-					</th>
-					
-					<th>
 						Created Date
 					</th>
 
@@ -39,13 +35,6 @@
 						<td>
 							@category.Name
 						</td>
-						<td>
-							@foreach (var item in category.BrandCategories)
-							{
-								<span>@item.Brand.Name</span>
-							}
-						</td>
-						
 						<td>
 							@category.CreatedDate.ToString("dd/MM/yyyy")
 						</td>

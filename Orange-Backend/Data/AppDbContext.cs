@@ -30,7 +30,7 @@ namespace Orange_Backend.Data
         public DbSet<Wishlist> Wishlists { get; set; }
         public DbSet<WishlistProduct> WishlistProducts { get; set; }
         public DbSet<CartProduct> CartProducts { get; set; }
-        //public DbSet<BrandCategory> BrandCategories { get; set; }
+        public DbSet<BrandCategory> BrandCategories { get; set; }
 
 
 

@@ -69,81 +69,81 @@ namespace Orange_Backend.Areas.Admin.Controllers
             return View(product);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Create()
-        {
-            ViewBag.categories = await GetCategoriesAsync();
-            ViewBag.brands= await GetBrandsAsync();
-            return View();
-        }
-        private async Task<SelectList> GetCategoriesAsync()
-        {
-            return new SelectList(await _categoryService.GetAllAsync(), "Id", "Name");
-        }
-        private async Task<SelectList> GetBrandsAsync()
-        {
-            return new SelectList(await _brandService.GetAllAsync(), "Id", "Name");
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> Create()
+        //{
+        //    ViewBag.categories = await GetCategoriesAsync();
+        //    ViewBag.brands= await GetBrandsAsync();
+        //    return View();
+        //}
+        //private async Task<SelectList> GetCategoriesAsync()
+        //{
+        //    return new SelectList(await _categoryService.GetAllAsync(), "Id", "Name");
+        //}
+        //private async Task<SelectList> GetBrandsAsync()
+        //{
+        //    return new SelectList(await _brandService.GetAllAsync(), "Id", "Name");
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ProductCreateVM request)
-        {
-            ViewBag.categories = await GetCategoriesAsync();
-            ViewBag.brands = await GetBrandsAsync();
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create(ProductCreateVM request)
+        //{
+        //    ViewBag.categories = await GetCategoriesAsync();
+        //    ViewBag.brands = await GetBrandsAsync();
 
-            if (!ModelState.IsValid)
-            {
-                return View(request);
-            }
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(request);
+        //    }
 
-            foreach (var photo in request.Photos)
-            {
+        //    foreach (var photo in request.Photos)
+        //    {
 
-                if (!photo.CheckFileType("image/"))
-                {
-                    ModelState.AddModelError("Photos", "File can be only image format");
-                    return View(request);
-                }
+        //        if (!photo.CheckFileType("image/"))
+        //        {
+        //            ModelState.AddModelError("Photos", "File can be only image format");
+        //            return View(request);
+        //        }
 
-                if (!photo.CheckFilesize(200))
-                {
-                    ModelState.AddModelError("Photos", "File size can be max 200 kb");
-                    return View(request);
-                }
-            }
+        //        if (!photo.CheckFilesize(200))
+        //        {
+        //            ModelState.AddModelError("Photos", "File size can be max 200 kb");
+        //            return View(request);
+        //        }
+        //    }
 
-            List<ProductImage> newImages = new();
+        //    List<ProductImage> newImages = new();
 
-            foreach (var photo in request.Photos)
-            {
-                string fileName = $"{Guid.NewGuid()}-{photo.FileName}";
+        //    foreach (var photo in request.Photos)
+        //    {
+        //        string fileName = $"{Guid.NewGuid()}-{photo.FileName}";
 
-                string path = _env.GetFilePath("assets/img/product", fileName);
+        //        string path = _env.GetFilePath("assets/img/product", fileName);
 
-                await photo.SaveFileAsync(path);
+        //        await photo.SaveFileAsync(path);
 
-                newImages.Add(new ProductImage { Image = fileName });
-            }
+        //        newImages.Add(new ProductImage { Image = fileName });
+        //    }
 
-            newImages.FirstOrDefault().IsMain = true;
+        //    newImages.FirstOrDefault().IsMain = true;
 
-            await _context.ProductImages.AddRangeAsync(newImages);
+        //    await _context.ProductImages.AddRangeAsync(newImages);
 
-            await _context.Products.AddAsync(new Product
-            {
-                Name = request.Name,
-                Description = request.Description,
-                Price = request.Price,
-                CategoryId = request.CategoryId,
-                BrandId=request.BrandId,
-                Images = newImages
-            });
+        //    await _context.Products.AddAsync(new Product
+        //    {
+        //        Name = request.Name,
+        //        Description = request.Description,
+        //        Price = request.Price,
+        //        CategoryId = request.CategoryId,
+        //        BrandId=request.BrandId,
+        //        Images = newImages
+        //    });
 
-            await _context.SaveChangesAsync();
+        //    await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
-        }
+        //    return RedirectToAction(nameof(Index));
+        //}
 
 
         [HttpPost]
@@ -165,99 +165,99 @@ namespace Orange_Backend.Areas.Admin.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            ViewBag.categories = await GetCategoriesAsync();
-            ViewBag.brands = await GetBrandsAsync();
+        //[HttpGet]
+        //public async Task<IActionResult> Edit(int? id)
+        //{
+        //    ViewBag.categories = await GetCategoriesAsync();
+        //    ViewBag.brands = await GetBrandsAsync();
 
-            if (id is null) return BadRequest();
+        //    if (id is null) return BadRequest();
 
-            Product product = await _productService.GetByIdWithIncludesAsync((int)id);
+        //    Product product = await _productService.GetByIdWithIncludesAsync((int)id);
 
-            if (product is null) return NotFound();
+        //    if (product is null) return NotFound();
 
-            return View(new ProductEditVM
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
-                CategoryId = (int)product.CategoryId, 
-                //BrandId = (int)product.BrandId,
-                Price = product.Price,
-                Images = product.Images.ToList(),
-            });
-        }
+        //    return View(new ProductEditVM
+        //    {
+        //        Id = product.Id,
+        //        Name = product.Name,
+        //        Description = product.Description,
+        //        CategoryId = (int)product.CategoryId, 
+        //        //BrandId = (int)product.BrandId,
+        //        Price = product.Price,
+        //        Images = product.Images.ToList(),
+        //    });
+        //}
 
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, ProductEditVM request)
-        {
-            ViewBag.categories = await GetCategoriesAsync();
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int? id, ProductEditVM request)
+        //{
+        //    ViewBag.categories = await GetCategoriesAsync();
 
-            if (id is null) return BadRequest();
+        //    if (id is null) return BadRequest();
 
-            Product product = await _productService.GetByIdWithIncludesAsync((int)id);
+        //    Product product = await _productService.GetByIdWithIncludesAsync((int)id);
 
-            if (product is null) return NotFound();
+        //    if (product is null) return NotFound();
 
-            request.Images = product.Images.ToList();
+        //    request.Images = product.Images.ToList();
 
-            if (!ModelState.IsValid)
-            {
-                return View(request);
-            }
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(request);
+        //    }
 
-            List<ProductImage> newImages = new();
+        //    List<ProductImage> newImages = new();
 
-            if (request.Photos != null)
-            {
-                foreach (var photo in request.Photos)
-                {
+        //    if (request.Photos != null)
+        //    {
+        //        foreach (var photo in request.Photos)
+        //        {
 
-                    if (!photo.CheckFileType("image/"))
-                    {
-                        ModelState.AddModelError("Photos", "File can be only image format");
-                        return View(request);
-                    }
+        //            if (!photo.CheckFileType("image/"))
+        //            {
+        //                ModelState.AddModelError("Photos", "File can be only image format");
+        //                return View(request);
+        //            }
 
-                    if (!photo.CheckFilesize(200))
-                    {
-                        ModelState.AddModelError("Photos", "File size can be max 200 kb");
-                        return View(request);
-                    }
-                }
+        //            if (!photo.CheckFilesize(200))
+        //            {
+        //                ModelState.AddModelError("Photos", "File size can be max 200 kb");
+        //                return View(request);
+        //            }
+        //        }
 
-                foreach (var photo in request.Photos)
-                {
-                    string fileName = $"{Guid.NewGuid()}-{photo.FileName}";
+        //        foreach (var photo in request.Photos)
+        //        {
+        //            string fileName = $"{Guid.NewGuid()}-{photo.FileName}";
 
-                    string path = _env.GetFilePath("assets/img/product", fileName);
+        //            string path = _env.GetFilePath("assets/img/product", fileName);
 
-                    await photo.SaveFileAsync(path);
+        //            await photo.SaveFileAsync(path);
 
-                    newImages.Add(new ProductImage { Image = fileName });
-                }
+        //            newImages.Add(new ProductImage { Image = fileName });
+        //        }
 
-                await _context.ProductImages.AddRangeAsync(newImages);
-            }
+        //        await _context.ProductImages.AddRangeAsync(newImages);
+        //    }
 
-            newImages.AddRange(request.Images);
+        //    newImages.AddRange(request.Images);
 
-            product.Name = request.Name;
-            product.Description = request.Description;
-            product.Price = request.Price;
-            product.CategoryId = request.CategoryId;
-            product.BrandId = request.BrandId;
-            product.Images = newImages;
+        //    product.Name = request.Name;
+        //    product.Description = request.Description;
+        //    product.Price = request.Price;
+        //    product.CategoryId = request.CategoryId;
+        //    product.BrandId = request.BrandId;
+        //    product.Images = newImages;
 
             
-            await _context.SaveChangesAsync();
+        //    await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+        //    return RedirectToAction(nameof(Index));
 
-        }
+        //}
 
         [HttpPost]
         public async Task<IActionResult> DeleteAsync(int id)

@@ -32,10 +32,10 @@ namespace Orange_Backend.Areas.Admin.Controllers
             _categoryService= categoryService;
             _brandService = brandService;
         }
-        public async Task<IActionResult> Index()
-        {
-            return View(await _categoryService.GetAllAsync());
-        }
+		public async Task<IActionResult> Index()
+		{
+			return View(await _categoryService.GetAllAsync());
+		}
 
 		[HttpGet]
 		public async Task<IActionResult> Detail(int? id)
@@ -64,74 +64,74 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
 
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(CategoryCreateVM request)
+        {
 
-		public async Task<IActionResult> Create(CategoryCreateVM request)
-		{
+            if (!ModelState.IsValid)
+            {
+                request.Brands = _brandService.GetAllSelectedAsync();
+                return View(request);
+            }
 
-			if (!ModelState.IsValid)
-			{
-				return View(request);
-			}
+            CategoryVM existCategory = await _categoryService.GetByNameWithoutTrackingAsync(request.Name);
 
-			CategoryVM existCategory = await _categoryService.GetByNameWithoutTrackingAsync(request.Name);
+            if (existCategory is not null)
+            {
+                ModelState.AddModelError("Name", "This category already exists");
 
-			if (existCategory is not null)
-			{
-				ModelState.AddModelError("Name", "This category already exists");
-
-				return View(request);
-			}
-
-
-			if (!request.Photo.CheckFileType("image/"))
-			{
-				ModelState.AddModelError("Photo", "File can be only image format");
-				return View(request);
-			}
-
-			if (!request.Photo.CheckFilesize(200))
-			{
-				ModelState.AddModelError("Photo", "File size can be max 200 kb");
-				return View(request);
-			}
+                return View(request);
+            }
 
 
+            if (!request.Photo.CheckFileType("image/"))
+            {
+                ModelState.AddModelError("Photo", "File can be only image format");
+                return View(request);
+            }
 
-			await _categoryService.CreateAsync(request);
-			return RedirectToAction(nameof(Index));
-		}
-
-
-		[HttpGet]
-		public async Task<IActionResult> Edit(int? id)
-		{
-			if (id is null) return BadRequest();
-
-			Category dbCategory = await _context.Categories.AsNoTracking().Where(m => m.Id == id).Include(m => m.BrandCategories).FirstOrDefaultAsync();
-
-			if (dbCategory is null) return NotFound();
-
-			var selectedBrands = dbCategory.BrandCategories.Select(m => m.BrandId).ToList();
-
-			var brands = _context.Brands.Select(m => new SelectListItem()
-			{
-				Text = m.Name,
-				Value = m.Id.ToString(),
-				Selected = selectedBrands.Contains(m.Id)
-			}).ToList();
+            if (!request.Photo.CheckFilesize(200))
+            {
+                ModelState.AddModelError("Photo", "File size can be max 200 kb");
+                return View(request);
+            }
 
 
-			return View(new CategoryEditVM()
-			{
-				Name = dbCategory.Name,
-				Image=dbCategory.Image,
-				Brands = brands,
 
-			});
+            await _categoryService.CreateAsync(request);
+            return RedirectToAction(nameof(Index));
+        }
 
-		}
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Category dbCategory = await _context.Categories.AsNoTracking().Where(m => m.Id == id).Include(m => m.BrandCategories).FirstOrDefaultAsync();
+
+            if (dbCategory is null) return NotFound();
+
+            var selectedBrands = dbCategory.BrandCategories.Select(m => m.BrandId).ToList();
+
+            var brands = _context.Brands.Select(m => new SelectListItem()
+            {
+                Text = m.Name,
+                Value = m.Id.ToString(),
+                Selected = selectedBrands.Contains(m.Id)
+            }).ToList();
+
+
+            return View(new CategoryEditVM()
+            {
+                Name = dbCategory.Name,
+                Image = dbCategory.Image,
+                Brands = brands,
+
+            });
+
+        }
 
 
         [HttpPost]
@@ -140,7 +140,7 @@ namespace Orange_Backend.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            
+
 
             Category dbCategory = await _context.Categories.Where(m => m.Id == id)
                                             .Include(m => m.BrandCategories)
@@ -164,27 +164,27 @@ namespace Orange_Backend.Areas.Admin.Controllers
 
             if (request.Photo != null)
             {
-               
-                
-                    if (!request.Photo.CheckFileType("image/"))
-                    {
-                        ModelState.AddModelError("Photos", "File can only be in image format");
-                        return View(request);
 
-                    }
 
-                    if (!request.Photo.CheckFilesize(200))
-                    {
-                        ModelState.AddModelError("Photos", "File size can be max 200 kb");
-                        return View(request);
-                    }
-                
+                if (!request.Photo.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError("Photos", "File can only be in image format");
+                    return View(request);
+
+                }
+
+                if (!request.Photo.CheckFilesize(200))
+                {
+                    ModelState.AddModelError("Photos", "File size can be max 200 kb");
+                    return View(request);
+                }
+
             }
             else
             {
                 return RedirectToAction(nameof(Index));
             }
-            
+
 
 
             if (existCategory is not null)

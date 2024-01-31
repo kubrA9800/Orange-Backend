@@ -361,7 +361,7 @@ namespace Orange_Backend.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("BrandCategory");
+                    b.ToTable("BrandCategories");
                 });
 
             modelBuilder.Entity("Orange_Backend.Models.Cart", b =>
@@ -682,7 +682,7 @@ namespace Orange_Backend.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProductId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<bool>("SoftDeleted")
@@ -1019,7 +1019,9 @@ namespace Orange_Backend.Migrations
 
                     b.HasOne("Orange_Backend.Models.Product", "Product")
                         .WithMany("Reviews")
-                        .HasForeignKey("ProductId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AppUser");
 

@@ -1,8 +1,11 @@
 ﻿$(function () {
-
-
+    let sidebarText = $(".cart-products .empty-cart")
+    let totalText=$(".grand-total span").text()
+    console.log(totalText);
+    
+    updateCartSidebar()
     $(document).on("click", ".basket-icon", function (e) {
-
+        e.preventDefault();
         let id = parseInt($(this).closest(".item").attr("data-id"))
         let basketCount = $(".basket .count").text();
         let cartSidebar = $(".cart-products")
@@ -13,26 +16,43 @@
             success: function (res) {
                 basketCount++;
                 $(".basket .count").text(basketCount)
-
                
+               
+                updateCartSidebar();
 
-
-
+                
             }
         })
 
+        
+    })
+
+
+    function updateCartSidebar() {
+        
+        let cartSidebar = $(".cart-products .sidebar-products")
+        let sidebarText = $(".cart-products .empty-cart")
+        let totalText = $(".grand-total span")
+
+        console.log(sidebarText);
         $.ajax({
             url: "/cart/GetSidebarProducts",
             type: "POST",
             success: function (res) {
+                if (cartSidebar.html() != "") {
+                    $(sidebarText).addClass("d-none")
+                } else {
+                    $(sidebarText).removeClass("d-none")
+                }
+                //var cartSidebar = $('.cart-products');
+                res.reverse();
+                $(cartSidebar).empty();
+               
+                
+                    $.each(res, function (index, product) {
+                        let src = "/assets/img/product/" + product.image;
 
-                var $cartSidebar = $('.cart-products');
-
-                $cartSidebar.html("");
-                $.each(res, function (index,product) {
-                    let src = "/assets/img/product/" + product.image;
-                    
-                    $(cartSidebar).append(`
+                        $(cartSidebar).append(`
                 <div class="item">
                     <div class="content d-flex align-items-center">
                         <div class="img">
@@ -40,29 +60,30 @@
                         </div>
                         <div class="text">
                             <h1>${product.name}</h1>
-                            <h2>$ ${product.price}x <span>${product.count}</span></h2>
+                            <h2>$ ${product.price}x <span class="up-count">${product.count}</span></h2>
                             <div class="count">
-                                <i class="fa-solid fa-minus"></i>
+                                <i data-id="${product.id}" class="fa-solid fa-minus minus-icon"></i>
                                 <span>${product.count}</span>
-                                <i class="fa-solid fa-plus"></i>
+                                <i data-id="${product.id}" class="fa-solid fa-plus plus-icon"></i>
                             </div>
                         </div>
                     </div>
                     <div class="button">
-                        <a href="#" data-id="${product.id}" class="remove-product">Remove</a>
+                        <a href="#" data-id="${product.id}" class="delete-product">Remove</a>
                     </div>
                 </div>
             `);
-                      
-                });
-                $('#grand-total').text(res.total.toFixed(2));
+
+                    });
+                $(".grand-total span").text(res.total.toFixed(2));
+
+                
+                
 
             }
         });
-
-
-        
-    })
+    }
+    
 
 
     $(document).on("click", ".delete-product", function (e) {
