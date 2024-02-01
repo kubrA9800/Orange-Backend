@@ -120,7 +120,7 @@ a {
   position: relative;
   border: 1px solid #e7e7e7;
   padding: 10px;
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 #login-register .login-form .form .input span,
 #login-register .register-form .form .input span {
@@ -132,7 +132,7 @@ a {
   color: #6a6c6d;
   background-color: white;
   transition: all 0.5s;
-  padding: 4px;
+  padding:0 4px;
 }
 #login-register .login-form .form .input input,
 #login-register .register-form .form .input input {

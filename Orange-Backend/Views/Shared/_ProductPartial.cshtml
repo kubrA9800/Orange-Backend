@@ -47,7 +47,7 @@
             @if (User.Identity.IsAuthenticated)
             {
                 <div class="d-none icons">
-                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <i data-id="@product.Id" class="fa-regular fa-heart heart-icon"></i>
                     <i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i>
                     <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
                     <i class="fa-solid fa-bag-shopping basket-icon"></i>

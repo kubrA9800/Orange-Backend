@@ -1,11 +1,21 @@
 ﻿$(function () {
 
-    $(document).on("click", ".heart-icon", function () {
+    function updateIcons() {
+        var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-        let id = $(this).parent().parent().attr("data-id");;
+        wishlist.forEach(function (productId) {
+            var $icon = $('.heart-icon[data-id="' + productId + '"]');
+            $icon.addClass('fa-solid').removeClass('fa-regular');
+        });
+    }
+
+    $(document).on('click', ".heart-icon", function () {
+
+        //let id = $(this).parent().parent().attr("data-id");
+        var productId = $(this).data('id');
         let count = $(".wishlist .count").text();
         $.ajax({
-            url: `/shop/addtowishlist?id=${id}`,
+            url: `/shop/addtowishlist?id=${productId}`,
             type: "Post",
             success: function (res) {
 
@@ -14,11 +24,29 @@
             }
         })
 
+        var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        var index = wishlist.indexOf(productId);
+
+        if (index === -1) {
+
+            wishlist.push(productId);
+
+            $(this).addClass('fa-solid').removeClass('fa-regular');
+        } else
+        {
+            wishlist.splice(index, 1);
+
+            $(this).addClass('fa-regular').removeClass('fa-solid');
+        }
+
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
 
     })
 
+ 
 
-    $(document).on("click", ".delete-product-from-wishlist", function (e) {
+    $(document).on('click', ".delete-product-from-wishlist", function (e) {
 
         let id = parseInt($(this).attr("data-id"));
         console.log(id);
@@ -40,8 +68,24 @@
             }
         })
 
+        var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        var index = wishlist.indexOf(id);
+
+        if (index !== -1) {
+            wishlist.splice(index, 1);
+
+            // Обновить иконку на первую
+            $('.heart-icon[data-id="' + id + '"]').addClass('fa-regular').removeClass('fa-solid');
+
+            // Сохранить информацию в localStorage
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        }
+
 
     })
+
+
+    updateIcons();
 
 
     $(document).on("click", ".basket-icon.wishlist", function (e) {

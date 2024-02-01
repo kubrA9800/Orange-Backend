@@ -11,6 +11,7 @@ namespace Orange_Backend.Services.Interfaces
         void DeleteItem(int id);
         List<WishlistVM> GetDatasFromCookies();
         Task<Wishlist> GetByUserIdAsync(string userId);
+        Task<int> GetById(int id);
         Task<List<WishlistProduct>> GetAllByWishlistIdAsync(int? basketId);
 
         //void SetDatasToCookies(List<WishlistVM> wishlist, Product dbProduct, WishlistVM existProduct);

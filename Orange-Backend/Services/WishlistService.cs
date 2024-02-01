@@ -136,5 +136,10 @@ namespace Orange_Backend.Services
             return await _context.WishlistProducts.Where(m => m.WishlistId == basketId).ToListAsync();
         }
 
+        public async Task<int> GetById(int id)
+        {
+            Wishlist wishlist=await _context.Wishlists.FirstOrDefaultAsync(m => m.Id==id);
+            return wishlist.Id;
+        }
     }
 }

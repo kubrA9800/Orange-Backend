@@ -30,6 +30,7 @@ namespace Orange_Backend.Controllers
         private readonly IBlogService _blogService;
         private readonly IBrandService _brandService;
         private readonly ISubscribeService _subscribeService;
+        private readonly IWishlistService _wishlistService;
         public HomeController(AppDbContext context,
                               ISliderService sliderService,
                               IInfoService infoService,
@@ -39,7 +40,8 @@ namespace Orange_Backend.Controllers
                               IMagazineService magazineService,
                               IBlogService blogService,
                               IBrandService brandService,
-                              ISubscribeService subscribeService)
+                              ISubscribeService subscribeService,
+                              IWishlistService wishlistService)
         {
             _context = context;
             _sliderService = sliderService;
@@ -51,32 +53,35 @@ namespace Orange_Backend.Controllers
             _blogService= blogService; 
             _brandService= brandService;
             _subscribeService= subscribeService;
+            _wishlistService= wishlistService;
 
         }
         public async Task<IActionResult> Index()
         {
             List<SliderVM> sliders = await _sliderService.GetAllAsync();
-            InfoVM infos= await _infoService.GetAllAsync();
+            InfoVM infos = await _infoService.GetAllAsync();
             TreatmentVM treatments = await _treatmentService.GetAllAsync();
             List<ProductVM> products = await _productService.GetAllAsync();
 
-            List<CategoryVM> categories= await _categoryService.GetAllAsync();
+            List<CategoryVM> categories = await _categoryService.GetAllAsync();
             List<MagazineVM> magazines = await _magazineService.GetAllAsync();
             List<BlogVM> blogs = await _blogService.GetAllAsync();
             List<BrandVM> brands = await _brandService.GetAllAsync();
+            //int wishlistId = await _wishlistService.GetById();
             HomeVM model = new()
             {
                 Sliders = sliders,
                 Infos = infos,
-                Treatments=treatments,
-                Categories=categories,
+                Treatments = treatments,
+                Categories = categories,
                 Products = products,
-                Magazines=magazines,
-                Blogs=blogs,
-                Brands=brands
-                
-
+                Magazines = magazines,
+                Blogs = blogs,
+                Brands = brands,
+                //IsInWishlist = CheckIfProductInWishlist(wishlistId)
             };
+
+        
 
             return View(model);
         }
@@ -103,7 +108,14 @@ namespace Orange_Backend.Controllers
 
         }
 
-        
+
+        public bool CheckIfProductInWishlist(int wishlistId, int productId)
+        {
+            return _context.WishlistProducts
+                .Any(m => m.WishlistId == wishlistId && m.ProductId == productId);
+        }
+
+
 
 
     }

@@ -22,5 +22,6 @@ namespace Orange_Backend.ViewModels
         public List<BlogVM> Blogs { get; set; }
         public List<BrandVM> Brands { get; set; }
         public SubscribeCreateVM Subscribe { get; set; }
+        public bool IsInWishlist { get; set; }
     }
 }
