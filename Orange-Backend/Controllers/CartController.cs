@@ -62,7 +62,10 @@ namespace Orange_Backend.Controllers
                     Price = existProduct.Price,
                     Count = item.Count,
                     Total = existProduct.Price * item.Count,
-                    Image = existProduct.Images.FirstOrDefault().Image
+                    Image = existProduct.Images.FirstOrDefault().Image,
+                    
+
+                    
                 });
             }
             return Ok(basketDetailList);

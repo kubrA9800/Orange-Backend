@@ -1,10 +1,36 @@
 ﻿@model ShopVM
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Orange";
 }
 @section css {
     <link rel="stylesheet" href="~/assets/css/shop.css">
+
+
+    <style>
+        .search-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 120px;
+        }
+
+        .title {
+            text-align: center;
+            color: #bdbbc4;
+            font-weight: unset;
+            font-size: 20px;
+        }
+
+        .description {
+            text-align: center;
+            color: #bdbbc4;
+            font-weight: unset;
+            margin-top: 20px;
+        }
+    </style>
+
 }
 
 <main>
@@ -140,7 +166,17 @@
                         </div>
                         <div class="products ">
                             <div class="row product-list">
-                                <partial name="_ProductPartial" model="@Model.Product" />
+                                @if (Model.Product.Datas.Count() != 0){
+                                    <partial name="_ProductPartial" model="@Model.Product" />
+
+                                }
+                                else
+                                {
+                                    <div class="search-message">
+                                        <h1 class="title">No Results Found</h1>
+                                        <p class="description">We couldn't find any results for your search. Please try again with different keywords.</p>
+                                    </div>
+                                }
 
                             </div>
                         </div>

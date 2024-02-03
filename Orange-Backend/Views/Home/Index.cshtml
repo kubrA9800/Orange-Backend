@@ -1,7 +1,7 @@
 ﻿@model HomeVM
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Orange";
 }
 @section css{
     <link rel="stylesheet" href="~/assets/css/home.css">
@@ -138,7 +138,7 @@
                         <div class="product item" data-id="@product.Id">
                             <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
                                 <img src="~/assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
-                                <img class="d-none hover-img" src="./assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image" alt="Slide 1">
+                                <img class="d-none hover-img" src="~/assets/img/product/@product.Images.Where(m=>!m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                             </a>
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -157,7 +157,7 @@
                                     <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-regular fa-heart heart-icon"></i></a>
                                     <a  asp-controller="Account" asp-action="Login"><i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i></a>
                                     <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
-                                    <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping basket-icon"></i></a>
+                                    <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping"></i></a>
                                 </div>
                             }
 
@@ -181,18 +181,28 @@
                 @foreach (var product in Model.Products.Take(6))
                 {
                     <div class="product">
-                        <a asp-controller="Shop" asp-action="ProductDetail">
+                        <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
                             <img src="~/assets/img/product/@product.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                         </a>
-                        <div class="icons">
-                            <i data-id="@product.Id" class="fa-regular fa-heart heart-icon"></i>
-                            <i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i>
-                            <i class="fa-regular fa-eye open-modal" data-id="@product.Id"></i>
-                            <i class="fa-solid fa-bag-shopping basket-icon"></i>
-                        </div>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="icons">
+                                <i class="fa-regular fa-heart heart-icon"></i>
+                                <i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i>
+                                <i class="fa-solid fa-bag-shopping basket-icon"></i>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="icons">
+                                <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-regular fa-heart"></i></a>
+                                <a asp-controller="Account" asp-action="Login"><i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@product.Id"></i></a>
+                                <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        }
                         <div class="text">
                             <h6>@product.CategoryName</h6>
-                            <a asp-controller="Shop" asp-action="ProductDetail">
+                            <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
                                 <h4>@product.Name</h4>
                             </a>
                             <span>$@product.Price</span>
@@ -303,7 +313,7 @@
                                 <p>
                                     @blog.Head.Substring(0, (int)Math.Ceiling(blog.Text.Length * 0.09))...
                                 </p>
-                                <a asp-controller="Blog" asp-action="Detail">More Details</a>
+                                <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">More Details</a>
                             </div>
                         </div>
                     </div>

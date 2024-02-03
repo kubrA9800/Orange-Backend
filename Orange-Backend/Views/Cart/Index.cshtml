@@ -1,6 +1,6 @@
 ﻿@model CartPageVM
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Orange";
     decimal grandTotal = Model.CartDetails.Sum(m => m.Total);
 }
 @section css {
@@ -48,7 +48,7 @@
                                     <td>
                                         <i data-id="@product.Id" class="fa-solid fa-minus minus-icon"></i>
                                         <span class="count">@product.Count</span>
-                                    <i data-id="@product.Id" class="fa-solid fa-plus plus-icon"></i>
+                                        <i data-id="@product.Id" class="fa-solid fa-plus plus-icon"></i>
                                     </td>
                                     <td>$<span class="grand-total">@product.Total</span></td>
 
@@ -101,7 +101,7 @@
                                     <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-regular fa-heart heart-icon"></i></a>
                                     <a asp-controller="Account" asp-action="Login"><i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@item.Id"></i></a>
                                     <i class="fa-regular fa-eye open-modal" data-id="@item.Id"></i>
-                                    <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping basket-icon"></i></a>
+                                    <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping"></i></a>
                                 </div>
                             }
                             <div class="text">
@@ -128,12 +128,22 @@
                         <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">
                             <img src="~/assets/img/product/@item.Images.Where(m=>m.IsMain).FirstOrDefault().Image" alt="Slide 1">
                         </a>
-                        <div class="icons">
-                            <i class="fa-regular fa-heart heart-icon"></i>
-                            <i class="d-none fa-solid fa-heart "></i>
-                            <i class="fa-regular fa-eye"></i>
-                            <i class="fa-solid fa-bag-shopping basket-icon"></i>
-                        </div>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="icons">
+                                <i class="fa-regular fa-heart heart-icon"></i>
+                                <i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@item.Id"></i>
+                                <i class="fa-solid fa-bag-shopping basket-icon"></i>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="icons">
+                                <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-regular fa-heart"></i></a>
+                                <a asp-controller="Account" asp-action="Login"><i class="d-none fa-solid fa-heart delete-product-from-wishlist" data-id="@item.Id"></i></a>
+                                <a style="color:black" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        }
                         <div class="text">
                             <h6>@item.CategoryName</h6>
                             <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@item.Id">

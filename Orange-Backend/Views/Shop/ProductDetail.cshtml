@@ -73,20 +73,45 @@
                         <span>$@Model.Product.Price</span>
                         <hr>
 
+                        @if (User.Identity.IsAuthenticated)
+                        {
                         <a href="#">
                             <div data-id="@Model.Product.Id" class="add wishlist heart-icon">
                                 <i class="fa-regular fa-heart"></i>
                                 <h6>Add To Wishlist</h6>
                             </div>
                         </a>
-                        <a asp-controller="Wishlist" asp-action="Index">
-                            <div class="goto wishlist d-none">
-                                <i class="fa-solid fa-heart"></i>
-                                <h6>Go To Wishlist</h6>
-                            </div>
-                        </a>
+                       
+                            <a asp-controller="Wishlist" asp-action="Index">
+                                <div class="goto wishlist d-none">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <h6>Go To Wishlist</h6>
+                                </div>
+                            </a>
 
-                        <a data-id="@Model.Product.Id" class="basket-icon" href="#">Add to Cart</a>
+                            <a data-id="@Model.Product.Id" class="basket-icon" href="#">Add to Cart</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Account" asp-action="Login">
+                                <div data-id="@Model.Product.Id" class="add wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <h6>Add To Wishlist</h6>
+                                </div>
+                            </a>
+                            <a asp-controller="Wishlist" asp-action="Index">
+                                <div class="goto wishlist d-none">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <h6>Go To Wishlist</h6>
+                                </div>
+                            </a>
+                           
+
+                            <a data-id="@Model.Product.Id" class="" asp-controller="Account" asp-action="Login">Add to Cart</a>
+                            
+                            }
+
+
                         <hr>
                         <div class="info">
                             <h1>Type:<span>@Model.Product.Category.Name</span></h1>
@@ -175,7 +200,7 @@
                         }
                          @if (User.Identity.IsAuthenticated)
                         {
-                            <form method="post" asp-controller="Shop" asp-action="CreateReview" asp-route-id="@Model.Id" asp-route-userId="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).Id">
+                            <form method="post" asp-controller="Shop" asp-action="CreateReview" asp-route-id="@Model.ProductId" asp-route-userId="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).Id">
                                 <div class="inputs d-flex">
                                     <input asp-for="@Model.NewReview.Name" placeholder="Name" required type="text" name="name">
                                     <input asp-for="@Model.NewReview.Email" placeholder="Your email" required type="email" name="email">

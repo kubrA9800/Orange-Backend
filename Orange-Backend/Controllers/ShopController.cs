@@ -93,7 +93,7 @@ namespace Orange_Backend.Controllers
             ProductDetailPageVM model = new()
             {
                 Product = product,
-                Id=product.Id,
+                ProductId=product.Id,
                 Reviews = reviews
             };
 
@@ -341,6 +341,7 @@ namespace Orange_Backend.Controllers
 
             int pageCount = await GetPageCountByFilterAsync(value1, value2, take);
             int count = await _productService.FilterCountAsync(value1,value2);
+            int allProductsCount = await _productService.GetCountAsync();
 
 
             Paginate<ProductVM> paginatedDatas = new(dbPaginatedDatasBySearch, page, pageCount);
@@ -352,7 +353,8 @@ namespace Orange_Backend.Controllers
                 Product = paginatedDatas,
                 ProductCount = count,
                 Value1 = value1,
-                Value2 = value2
+                Value2 = value2,
+                AllProductsCount=allProductsCount
 
             };
 

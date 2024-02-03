@@ -42,10 +42,7 @@ namespace Orange_Backend.Controllers
         }
 
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+       
 
         [HttpGet]
         public IActionResult Login()

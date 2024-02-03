@@ -1,0 +1,293 @@
+@font-face {
+  font-family: Karla500;
+  src: url(../fonts/Karla-Medium.ttf);
+}
+@font-face {
+  font-family: Karla400;
+  src: url(../fonts/Karla-Regular.ttf);
+}
+@font-face {
+  font-family: Montaga400;
+  src: url(../fonts/Montaga-Regular.ttf);
+}
+@media only screen and (max-width: 768px) {
+  header .header-all .logo {
+    width: 70%;
+  }
+  header .header-all .logo img {
+    width: 60% !important;
+  }
+  header .header-all .icon {
+    margin-top: -40px;
+    flex: auto;
+  }
+  header .sidebar {
+    width: 40% !important;
+  }
+  header .search-sidebar {
+    width: 40% !important;
+  }
+  header nav {
+    display: none;
+  }
+  header .icons .search-icon img {
+    margin-bottom: 6px;
+  }
+  header .icons .user-icon,
+  header .icons .wishlist,
+  header .icons .basket {
+    display: none;
+  }
+  header .hamburger-icon {
+    display: inline;
+  }
+  #contact-form .content {
+    width: 60% !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  header .header-all .logo {
+    width: 70%;
+  }
+  header .header-all .logo img {
+    width: 60% !important;
+  }
+  header .header-all .icon {
+    margin-top: -40px;
+    flex: auto;
+  }
+  header .sidebar {
+    width: 30% !important;
+  }
+  header .search-sidebar {
+    width: 30% !important;
+  }
+  header nav {
+    display: none;
+  }
+  header .icons .search-icon img {
+    margin-bottom: 7px;
+  }
+  header .icons .user-icon,
+  header .icons .wishlist,
+  header .icons .basket {
+    display: none;
+  }
+  header .hamburger-icon {
+    display: inline;
+  }
+  #contact-form .content {
+    width: 60% !important;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  header .hamburger-icon {
+    display: none;
+  }
+  header nav {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header .hamburger-icon {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+
+#contact-top .img {
+  width: 100%;
+}
+#contact-top .img img {
+  width: 90%;
+}
+#contact-top .text h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: Karla400;
+  color: #999;
+}
+#contact-top .text h1 {
+  font-size: 36px;
+  font-family: Karla500;
+}
+#contact-top .text h6 {
+  font-size: 16px;
+  font-family: Karla400;
+}
+
+#contact-form {
+  padding: 4rem 0;
+}
+#contact-form .content {
+  width: 40%;
+  margin: auto;
+}
+#contact-form .content h1 {
+  font-size: 36px;
+  font-family: Karla500;
+  text-align: center;
+}
+#contact-form .content h6 {
+  font-size: 14px;
+  font-family: Karla400;
+  text-align: center;
+}
+#contact-form h4 {
+  font-family: Karla400;
+  font-size: 14px;
+}
+#contact-form .input {
+  margin-top: 20px;
+}
+#contact-form .inputs-top {
+  margin-top: 30px;
+}
+#contact-form .inputs {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #DDDDDD;
+  outline: none;
+  border-radius: 3px;
+}
+#contact-form .inputs:focus {
+  border: 1px solid #949393;
+}
+#contact-form textarea {
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  outline: none;
+  border-radius: 3px;
+}
+#contact-form textarea:focus {
+  border: 1px solid #949393;
+}
+#contact-form .button button {
+  font-family: Karla400;
+  font-size: 15px;
+  border: none;
+  background-color: black;
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+  color: white;
+  margin: 20px 0;
+  padding: 10px;
+  transition: all 0.5s;
+}
+#contact-form .button button:hover {
+  background-color: #ff6f2e;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  padding: 4rem 2rem;
+}
+footer .footer-all h1 {
+  color: white;
+  font-family: Karla400;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+footer .footer-all h2 {
+  color: white;
+  font-family: Karla400;
+  font-size: 16px;
+}
+footer .footer-all hr {
+  color: #e7e7e7;
+  width: 100%;
+}
+footer .footer-all .footer-top {
+  margin-bottom: 30px;
+}
+footer .footer-all .footer-top .footer-left .input {
+  position: relative;
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  margin: 20px 0;
+  width: 50%;
+}
+footer .footer-all .footer-top .footer-left .input span {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  transition: 0.5s;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  border-radius: 20%;
+}
+footer .footer-all .footer-top .footer-left .input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: black;
+}
+footer .footer-all .footer-top .footer-left .input input:focus {
+  color: white;
+}
+footer .footer-all .footer-top .footer-left button {
+  padding: 12px 30px;
+  color: black;
+  background-color: white;
+  font-family: Karla500;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+footer .footer-all .footer-top .footer-left .icons a {
+  color: white;
+  margin-right: 25px;
+}
+footer .footer-all .footer-top .footer-right span {
+  font-family: Montaga400;
+  font-size: 22px;
+  color: white;
+}
+footer .footer-all .footer-top .footer-right a,
+footer .footer-all .footer-top .footer-right p {
+  color: white;
+  margin: 15px 0;
+}
+footer .footer-all .footer-top .footer-right a {
+  position: relative;
+  z-index: 1;
+  display: block;
+  transition: all 0.5s;
+}
+footer .footer-all .footer-top .footer-right a::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #ff6f2e;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+footer .footer-all .footer-top .footer-right a:hover {
+  color: #ff6f2e;
+}
+footer .footer-all .footer-top .footer-right a:hover::after {
+  content: " ";
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background-color: #ff6f2e;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+footer .footer-all .footer-bottom {
+  margin-top: 20px;
+}
+footer .footer-all .footer-bottom .rights {
+  text-align: center;
+  margin: auto;
+  color: #6a6c6d;
+}/*# sourceMappingURL=contact.css.map */

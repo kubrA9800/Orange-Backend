@@ -6,7 +6,6 @@ using Orange_Backend.Services.Interfaces;
 
 namespace Orange_Backend.Areas.Admin.Controllers
 {
-    [Area("Admin")]
     public class ReviewController : MainController
     {
         private readonly IReviewService _reviewService;

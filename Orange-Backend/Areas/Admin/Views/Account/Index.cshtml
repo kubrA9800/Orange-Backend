@@ -10,6 +10,7 @@
     @if (User.IsInRole("SuperAdmin"))
     {
         <a class="btn btn-success" asp-action="AddRoleToUser">Add Role</a>
+        <a class="btn btn-info" asp-action="RemoveRoleFromUser">Remove Role</a>
 
     }
     <div class="table-responsive">
@@ -60,7 +61,7 @@
                             @if (User.IsInRole("SuperAdmin"))
                             {
 
-                                bool hasNonSuperAdminRole = user.RoleName.Any(name => name != "SuperAdmin");
+                                bool hasNonSuperAdminRole = !user.RoleName.Any(role => role.Contains("SuperAdmin"));
 
                                 if (hasNonSuperAdminRole)
                                 {

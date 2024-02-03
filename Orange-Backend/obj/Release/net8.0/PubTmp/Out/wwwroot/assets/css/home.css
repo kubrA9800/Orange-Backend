@@ -1,0 +1,784 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Karla500;
+  src: url(../fonts/Karla-Medium.ttf);
+}
+@font-face {
+  font-family: Karla400;
+  src: url(../fonts/Karla-Regular.ttf);
+}
+@font-face {
+  font-family: Montaga400;
+  src: url(../fonts/Montaga-Regular.ttf);
+}
+@media only screen and (max-width: 576px) {
+  #slider .carousel-inner {
+    height: 260px !important;
+  }
+  #slider .text {
+    top: 50px !important;
+    left: 50px !important;
+    width: 100% !important;
+  }
+  #slider .text h6 {
+    font-size: 12px !important;
+  }
+  #slider .text h1 {
+    font-size: 32px !important;
+    margin-bottom: 10px !important;
+  }
+  #slider .text p {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    width: 80%;
+  }
+  #slider .text a {
+    padding: 7px 10px !important;
+    font-size: 10px !important;
+  }
+  #beauty-store .text p {
+    width: 80% !important;
+  }
+  #beauty-store .content-bottom .img {
+    width: 100%;
+  }
+  #beauty-store .content-bottom .img .img-left {
+    width: 90%;
+    margin-left: 1rem !important;
+  }
+  #beauty-store .content-bottom .img .img-right {
+    width: 70%;
+  }
+  #products .slider-products {
+    display: none !important;
+  }
+  #products .mobile-products .icons {
+    left: 30% !important;
+  }
+  #products .mobile-products .icons i {
+    font-size: 14px !important;
+  }
+  #products .mobile-products .icons i:nth-of-type(3) {
+    display: none;
+  }
+  #subscribe input {
+    width: 50% !important;
+  }
+  #brands .img {
+    margin-bottom: 60px !important;
+  }
+  #brands .img img {
+    width: 45% !important;
+  }
+}
+@media all and (min-width: 576px) and (max-width: 768px) {
+  #slider .carousel-inner {
+    height: 400px !important;
+  }
+  #slider .text {
+    top: 70px !important;
+    left: 70px !important;
+    width: 100% !important;
+  }
+  #slider .text h6 {
+    font-size: 14px !important;
+  }
+  #slider .text h1 {
+    font-size: 36px !important;
+    margin-bottom: 10px !important;
+  }
+  #slider .text p {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+  }
+  #slider .text a {
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+  }
+  #beauty-store .content-top .text p {
+    width: 90% !important;
+    font-size: 34px !important;
+  }
+  #beauty-store .content-bottom .left .img img {
+    margin-left: 20px !important;
+  }
+  #products .text h6 {
+    font-size: 12px !important;
+  }
+  #products .text h4 {
+    font-size: 16px !important;
+  }
+  #products .text span {
+    font-size: 14px !important;
+  }
+  #products .hover-img {
+    width: 80% !important;
+    bottom: 133px !important;
+  }
+  #products .icons {
+    left: 80% !important;
+    width: 80% !important;
+    transform: translateX(-50%);
+  }
+  #products .icons i {
+    font-size: 14px !important;
+  }
+  #products .icons i:nth-of-type(3) {
+    display: none;
+  }
+  #products .slider-products {
+    display: none !important;
+  }
+  #magazines .item {
+    margin-bottom: 50px !important;
+  }
+  #magazines .item .img img {
+    width: 30% !important;
+  }
+  .modals {
+    left: 105px !important;
+    overflow-y: scroll;
+  }
+  .modals .text {
+    margin-top: 30px;
+  }
+  .modals::-webkit-scrollbar {
+    width: 5px;
+  }
+  .modals::-webkit-scrollbar-thumb {
+    background-color: #ff6f2e;
+  }
+  #subscribe input {
+    width: 60% !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .mobile-alert {
+    display: none;
+  }
+  #slider .carousel-inner {
+    height: 400px !important;
+  }
+  #slider .text {
+    top: 110px !important;
+    left: 110px !important;
+    width: 100% !important;
+  }
+  #slider .text h6 {
+    font-size: 16px !important;
+  }
+  #slider .text h1 {
+    font-size: 46px !important;
+    margin-bottom: 10px !important;
+  }
+  #slider .text p {
+    font-size: 14px !important;
+    margin-bottom: 30px !important;
+  }
+  #slider .text a {
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+  }
+  #beauty-store .content-top .text p {
+    width: 80% !important;
+  }
+  #beauty-store .content-bottom .right .text {
+    margin-left: 6rem !important;
+  }
+  #beauty-store .content-bottom .left .img img {
+    margin-left: 30px !important;
+  }
+  #products .product .hover-img {
+    width: 82% !important;
+    bottom: 141px !important;
+  }
+  #products .product .icons {
+    left: 33px !important;
+    width: 80% !important;
+  }
+  #products .product .icons i {
+    font-size: 10px !important;
+  }
+  #products .mobile-products {
+    display: none;
+  }
+  .modals {
+    left: 125px !important;
+    overflow-y: scroll;
+  }
+  .modals .text {
+    margin-top: 30px;
+  }
+  .modals::-webkit-scrollbar {
+    width: 5px;
+  }
+  .modals::-webkit-scrollbar-thumb {
+    background-color: #ff6f2e;
+  }
+  #magazines .item {
+    margin-bottom: 50px !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #products .mobile-products {
+    display: none;
+  }
+  #subscribe input {
+    width: 70% !important;
+  }
+  .mobile-alert {
+    display: none;
+  }
+}
+#slider .carousel-inner {
+  height: 700px;
+}
+#slider .slide-image {
+  position: relative;
+}
+#slider .slide-image img {
+  width: 60%;
+}
+#slider .slide-image .text {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 50%;
+}
+#slider .slide-image .text h6 {
+  color: white;
+  font-size: 16px;
+  font-family: Karla400;
+  text-transform: uppercase;
+}
+#slider .slide-image .text h1 {
+  margin-bottom: 20px;
+  font-size: 64px;
+  font-family: Montaga400;
+  color: white;
+}
+#slider .slide-image .text p {
+  font-size: 18px;
+  font-family: Karla400;
+  color: white;
+  margin-bottom: 60px;
+}
+#slider .slide-image .text a {
+  padding: 15px 30px;
+  background-color: #ddf3b6;
+  color: rgb(16, 43, 38);
+  font-size: 16px;
+  font-family: Karla400;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+#slider .slide-image .text a:hover {
+  color: white;
+  background-color: #ff6f2e;
+}
+
+#beauty-store {
+  padding: 2rem 0;
+}
+#beauty-store .content-top {
+  text-align: center;
+}
+#beauty-store .content-top .img {
+  width: 100%;
+}
+#beauty-store .content-top .img img {
+  width: 6%;
+}
+#beauty-store .content-top .text h5 {
+  font-family: Karla400;
+  font-size: 14px;
+  color: rgba(93, 93, 93, 0.6);
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+#beauty-store .content-top .text p {
+  font-family: Montaga400;
+  font-size: 36px;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+#beauty-store .content-top .text a {
+  font-family: Karla500;
+  font-size: 15px;
+  color: black;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-bottom-color: black;
+  padding: 3px;
+  transition: all 0.3s;
+}
+#beauty-store .content-top .text a:hover {
+  color: #ff6f2e;
+  border-bottom-color: #ff6f2e;
+}
+#beauty-store .content-bottom {
+  margin-top: 5rem;
+}
+#beauty-store .content-bottom .img {
+  width: 100%;
+}
+#beauty-store .content-bottom .img .img-left {
+  width: 90%;
+  margin-left: 4rem;
+}
+#beauty-store .content-bottom .img .img-right {
+  width: 70%;
+}
+#beauty-store .content-bottom .right {
+  text-align: center;
+  margin-top: 5rem;
+}
+#beauty-store .content-bottom .right .text {
+  margin: 50px 0 0 76px;
+  text-align: start;
+}
+#beauty-store .content-bottom .right .text h5 {
+  font-family: Karla400;
+  font-size: 14px;
+  color: rgba(93, 93, 93, 0.6);
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+#beauty-store .content-bottom .right .text h4 {
+  font-family: Montaga400;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+#beauty-store .content-bottom .right .text p {
+  font-family: Karla400;
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+#beauty-store .content-bottom .right .text a {
+  font-family: Karla400;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #102b26;
+  color: #ddf3b6;
+  padding: 15px 30px;
+  transition: all 0.5s;
+}
+#beauty-store .content-bottom .right .text a:hover {
+  background-color: #ff6f2e;
+  color: white;
+}
+
+#categories {
+  padding: 4rem 0;
+}
+#categories .img {
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+#categories .img img {
+  width: 85%;
+  border-radius: 50%;
+  padding: 0 20px;
+}
+#categories .text {
+  text-align: center;
+  margin: 20px 0 60px 0;
+}
+#categories .text h4 {
+  font-family: Montaga400;
+  font-size: 24px;
+}
+#categories .text h6 {
+  font-family: Karla400;
+  font-size: 16px;
+  color: #6a6c6d;
+}
+
+#products h1 {
+  font-family: Montaga400;
+  font-size: 34px;
+  text-align: center;
+}
+#products p {
+  font-family: Karla400;
+  font-size: 16px;
+  text-align: center;
+  color: #919090;
+}
+#products .slider-nav {
+  position: relative;
+}
+#products .slider-nav button {
+  display: none !important;
+}
+#products .slider-nav .slick-next {
+  position: absolute;
+  right: 50px;
+  z-index: 10;
+}
+#products .slider-nav .slick-next::before {
+  content: "→";
+  color: gray;
+  font-size: 45px;
+}
+#products .slider-nav .slick-prev {
+  position: absolute;
+  left: 50px;
+  z-index: 10;
+  height: 44px !important;
+  width: 44px !important;
+  background: #fbf7f5;
+  box-shadow: 0 2px 10px rgba(54, 54, 54, 0.1490196078);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+#products .slider-nav .slick-prev::before {
+  content: "prev";
+  color: red;
+  font-size: 45px;
+  z-index: 100;
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+}
+#products .slider-nav .product {
+  padding: 0 15px 40px 15px;
+  position: relative;
+  overflow: hidden;
+}
+#products .slider-nav .product img {
+  width: 96%;
+}
+#products .slider-nav .product .hover-img {
+  position: absolute;
+  bottom: 143px;
+  left: 15px;
+  width: 87%;
+  transition: all 0.7s;
+}
+#products .slider-nav .product .hover-img:hover {
+  transform: scale(1.1);
+}
+#products .slider-nav .product .icons {
+  position: absolute;
+  left: 64px;
+  bottom: 161px;
+  transition: all 0.7s;
+}
+#products .slider-nav .product .icons i {
+  margin: 0 2px;
+  font-size: 18px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+#products .slider-nav .product .icons i:nth-child(2) {
+  position: absolute;
+  left: 0;
+}
+#products .slider-nav .product .icons i:hover {
+  color: white;
+  background-color: #ff6f2e;
+}
+#products .text {
+  text-align: center;
+  margin-top: 20px;
+}
+#products .text h6 {
+  font-size: 14px;
+  font-family: Karla400;
+  color: #c7c4c4;
+}
+#products .text h4 {
+  font-size: 20px;
+  font-family: Mantaga400;
+  color: black;
+  transition: all 0.5s;
+}
+#products .text h4:hover {
+  color: #ff6f2e;
+}
+#products .text span {
+  font-size: 16px;
+  font-family: Karla400;
+}
+
+.overlay {
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+  cursor: pointer;
+}
+
+.overlay-cart {
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+  cursor: pointer;
+}
+
+.modals {
+  position: fixed;
+  z-index: 102;
+  left: 240px;
+  top: 40px;
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  background-color: white;
+  padding: 3rem 0;
+}
+.modals .img {
+  width: 70%;
+  margin-left: 60px;
+  height: 100%;
+}
+.modals .img img {
+  width: 100%;
+  height: 100%;
+}
+.modals .text {
+  padding: 0 50px;
+  height: 100%;
+  width: 100%;
+  margin-left: -50px;
+}
+.modals .text .info {
+  margin-bottom: 20px;
+}
+.modals .text .info a {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #999;
+}
+.modals .text .info h1 {
+  font-family: Karla400;
+  font-size: 13px;
+  color: #aeaeae;
+}
+.modals .text .info h1 span {
+  color: #6a6c6d;
+  margin-left: 30px;
+  font-family: Karla400;
+  font-size: 13px;
+}
+.modals .text h1 {
+  font-family: Montaga400;
+  font-size: 36px;
+}
+.modals .text span {
+  font-family: Karla400;
+  font-size: 26px;
+}
+.modals .text .wishlist {
+  display: flex;
+  margin: 30px 0;
+  color: black;
+  transition: all 0.3s;
+}
+.modals .text .wishlist:hover {
+  color: #ff6f2e;
+}
+.modals .text .wishlist h6 {
+  margin-top: -2px;
+}
+.modals .text .wishlist i {
+  margin-right: 5px;
+}
+.modals .text hr {
+  margin: 30px 0;
+}
+.modals .text a:nth-of-type(3) {
+  color: #ddf3b6;
+  background-color: #102b26;
+  padding: 15px 40px;
+  font-family: Karla500;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.modals .text a:nth-of-type(3):hover {
+  color: white;
+  background-color: #ff6f2e;
+}
+.modals .close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+  padding: 5px 7px;
+  border: 1px solid #c7c4c4;
+  border-radius: 50%;
+}
+
+#magazines {
+  background-color: #ddf3b6;
+  padding: 3rem 0;
+  margin: 4rem 0;
+}
+#magazines .item {
+  text-align: center;
+}
+#magazines .item .text h4 {
+  font-size: 16px;
+  font-family: Karla400;
+  color: #102b26;
+}
+#magazines .item .img {
+  margin-top: 20px;
+  width: 100%;
+}
+#magazines .item .img img {
+  width: 50%;
+}
+
+#blogs h1 {
+  font-family: Montaga400;
+  font-size: 34px;
+  text-align: center;
+}
+#blogs h2 {
+  font-family: Karla400;
+  font-size: 16px;
+  color: #919090;
+  text-align: center;
+  margin-top: 20px;
+}
+#blogs .blog {
+  padding: 3rem 0;
+  position: relative;
+}
+#blogs .blog h1 {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: white;
+  padding: 5px 7px;
+  font-size: 14px;
+  font-family: Karla400;
+}
+#blogs .blog .img {
+  width: 100%;
+}
+#blogs .blog .img img {
+  width: 95%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#blogs .blog .text {
+  width: 95%;
+  margin-top: 20px;
+}
+#blogs .blog .text hr {
+  width: 20%;
+}
+#blogs .blog .text p {
+  font-family: Karla400;
+  font-size: 16px;
+  color: #919090;
+}
+#blogs .blog .text a:nth-of-type(1) {
+  font-family: Montaga400;
+  font-size: 24px;
+  margin: 30px 0;
+  color: black;
+}
+#blogs .blog .text a:nth-of-type(2) {
+  color: #ddf3b6;
+  background-color: #102b26;
+  font-family: Karla500;
+  font-size: 15px;
+  padding: 10px 20px;
+  transition: all 0.5s;
+}
+#blogs .blog .text a:nth-of-type(2):hover {
+  color: white;
+  background-color: #ff6f2e;
+}
+
+#subscribe {
+  padding-top: 5rem;
+}
+#subscribe .content {
+  height: 300px;
+  background-position: bottom;
+  background-size: cover;
+}
+#subscribe .content .text h1 {
+  color: white;
+  font-family: Montaga400;
+  font-size: 25px;
+  text-align: center;
+}
+#subscribe .content .input {
+  margin: auto;
+  width: 70%;
+  border: 1px solid white;
+  padding: 15px;
+}
+#subscribe .content .input i {
+  color: white;
+  font-size: 20px;
+}
+#subscribe .content .input input {
+  background: transparent;
+  width: 80%;
+  margin: 0 15px;
+  color: white;
+  outline: none;
+  border: none;
+}
+#subscribe .content .input input::-moz-placeholder {
+  color: white;
+}
+#subscribe .content .input input::placeholder {
+  color: white;
+}
+
+#brands {
+  background-color: #f0efe6;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
+}
+#brands h1 {
+  font-size: 14px;
+  font-family: Karla400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#brands .img {
+  width: 100%;
+  text-align: center;
+}
+#brands .img img {
+  width: 60%;
+}/*# sourceMappingURL=home.css.map */

@@ -19,7 +19,7 @@ using Orange_Backend.Models;
 
 namespace Orange_Backend.Helpers.Mappings
 {
-    public class MappingProfile:Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {
@@ -29,10 +29,12 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<Info, InfoVM>();
             CreateMap<Info, InfoEditVM>().ReverseMap();
             CreateMap<Treatment, TreatmentVM>();
+            CreateMap<TreatmentEditVM, Treatment>().ReverseMap();
+
             CreateMap<Category, CategoryVM>();
             CreateMap<CategoryEditVM, CategoryVM>().ReverseMap();
 
-			//CreateMap<BrandCategory, BrandVM>();
+            //CreateMap<BrandCategory, BrandVM>();
             CreateMap<CategoryCreateVM, Category>();
             CreateMap<CategoryEditVM, Category>();
             CreateMap<ProductCreateVM, ProductVM>();
@@ -54,8 +56,8 @@ namespace Orange_Backend.Helpers.Mappings
             CreateMap<BrandEditVM, Brand>();
             CreateMap<BrandEditVM, BrandVM>().ReverseMap();
 
-            CreateMap<BrandCreateVM, Brand>(); 
-			CreateMap<Setting, SettingEditVM>().ReverseMap();
+            CreateMap<BrandCreateVM, Brand>();
+            CreateMap<Setting, SettingEditVM>().ReverseMap();
             CreateMap<Banner, BannerVM>();
             CreateMap<Banner, BannerEditVM>().ReverseMap();
 

@@ -5,7 +5,7 @@ namespace Orange_Backend.ViewModels
 {
     public class ProductDetailPageVM
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public Product Product { get; set; }
         public ReviewCreateVM NewReview { get; set; }
         public  List<ReviewVM> Reviews { get; set; }

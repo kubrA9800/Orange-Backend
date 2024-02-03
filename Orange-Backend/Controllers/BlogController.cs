@@ -23,14 +23,14 @@ namespace Orange_Backend.Controllers
         {
             if (id is null)
             {
-                return BadRequest();
+                return RedirectToAction("Index", "Error");
             }
 
             BlogVM existBlog = await _blogService.GetByIdAsync((int)id);
 
             if (existBlog == null)
             {
-                return NotFound();
+               return RedirectToAction("Index", "Error");
             }
             BlogVM blog = await _blogService.GetByIdAsync((int)id);
 

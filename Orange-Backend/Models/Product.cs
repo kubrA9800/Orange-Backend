@@ -12,6 +12,7 @@
         public Brand Brand { get; set; }
         public List<Review> Reviews  { get; set; }
         public List<WishlistProduct> WishlistProducts { get; set; }
+        public List<CartProduct> CartProducts { get; set; }
 
     }
 }

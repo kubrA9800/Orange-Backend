@@ -2,9 +2,9 @@
 
 namespace Orange_Backend.Areas.Admin.Controllers
 {
-    public class DashboardController : Controller
+    public class DashboardController : MainController
     {
-        [Area("Admin")]
+        
         public IActionResult Index()
         {
             return View();
