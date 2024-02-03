@@ -42,7 +42,7 @@
     display: none;
   }
   header .hamburger-icon {
-    display: inline;
+    display: inline-block;
   }
   #categories .item {
     margin-bottom: 30px;
@@ -56,6 +56,15 @@
   #products-all .products {
     /*display: none;*/
   }
+    #products-all .products .icons {
+        left: 40% !important;
+    }
+        #products-all .products .icons i {
+            font-size: 20px !important;
+        }
+    #products-all .products .icons .open-modal {
+        display: none;
+    }
   #products-all .mobile-products .icons {
     left: 30% !important;
   }
@@ -109,6 +118,9 @@
   #products-all .products {
     /*display: none;*/
   }
+    #products-all .products .icons .open-modal {
+       display:none;
+    }
   #products-all .mobile-products .icons {
     left: 30% !important;
   }
