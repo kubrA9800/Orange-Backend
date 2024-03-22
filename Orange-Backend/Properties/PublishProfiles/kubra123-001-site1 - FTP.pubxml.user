@@ -7,5 +7,8 @@
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
+    <_PublishTargetUrl>ftp://win8037.site4now.net:21/orange-web</_PublishTargetUrl>
+    <History>False|2024-03-22T09:06:52.5750884Z;</History>
+    <LastFailureDetails />
   </PropertyGroup>
 </Project>

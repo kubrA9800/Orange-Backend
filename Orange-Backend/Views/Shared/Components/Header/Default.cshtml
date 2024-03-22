@@ -171,7 +171,14 @@
                                     <h4>@item.Name</h4>
                                 </a>
                                 <span>$@item.Price</span>
-                                <a class="basket-icon" href="#">Add to Cart</a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a class="basket-icon" href="#">Add to Cart</a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="Account" asp-action="Login">Add to Cart</a>
+                                }
 
                             </div>
                         </div>

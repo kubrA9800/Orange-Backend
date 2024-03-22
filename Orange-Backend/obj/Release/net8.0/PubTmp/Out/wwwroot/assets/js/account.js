@@ -1,4 +1,6 @@
 "use strict"
+
+
 let placeholders = document.querySelectorAll(".form .input span")
 
 placeholders.forEach(placeholder =>
@@ -30,6 +32,8 @@ inputs.forEach(input => {
 
 
 
+
+
 let links = document.querySelectorAll("#login-register .link a")
 links.forEach(link =>
 
@@ -47,3 +51,4 @@ links.forEach(link =>
             }
         }
     })
+

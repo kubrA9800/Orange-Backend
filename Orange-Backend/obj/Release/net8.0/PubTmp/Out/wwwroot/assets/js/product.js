@@ -27,6 +27,7 @@ $(function () {
                 $(".modals .img img").attr("src", src);
                 $(".text").attr("data-id", res.id);
                 $(".item").attr("data-id", res.id);
+                $(".heart-icon").attr("data-id", res.id);
                 $(".info a").attr("href", `/Shop/ProductDetail/${res.id}`);
 
 

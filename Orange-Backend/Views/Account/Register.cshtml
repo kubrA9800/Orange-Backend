@@ -16,32 +16,32 @@
                 <div style="color:red" ; asp-validation-summary="All"></div>
                     <form method="post" asp-controller="Account" asp-action="Register">
                     <div class="input">
-                        <span>Full Name</span>
-                        <input asp-for="FullName" type="text">
+                        @* <span>Full Name</span> *@
+                        <input placeholder="Full Name" asp-for="FullName" type="text">
                     </div>
                     <span style="color:red; margin-bottom:10px" asp-validation-for="FullName"></span>
 
                     <div class="input">
-                        <span>UserName</span>
-                        <input asp-for="UserName" type="text">
+                        @* <span>UserName</span> *@
+                        <input placeholder="Username" asp-for="UserName" type="text">
                     </div>
                     <span style="color:red; margin-bottom:10px" asp-validation-for="UserName"></span>
 
                     <div class="input">
-                        <span>Email</span>
-                        <input asp-for ="Email" type="email">
+                        @* <span>Email</span> *@
+                        <input placeholder="Email" asp-for ="Email" type="email">
                     </div>
                     <span style="color:red; margin-bottom:10px" asp-validation-for="Email"></span>
 
                     <div class="input">
-                        <span>Password</span>
-                        <input asp-for="Password" type="password">
+                        @* <span>Password</span> *@
+                        <input placeholder="Password" asp-for="Password" type="password">
                     </div>
                     <span style="color:red; margin-bottom:10px" asp-validation-for="Password"></span>
 
                     <div class="input">
-                        <span>Confirm Password</span>
-                        <input asp-for="ConfirmPassword" type="password">
+                        @* <span>Confirm Password</span> *@
+                        <input placeholder="Confirm Password" asp-for="ConfirmPassword" type="password">
                     </div>
                     <span style="color:red; margin-bottom:10px" asp-validation-for="ConfirmPassword"></span>
 

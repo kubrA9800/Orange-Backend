@@ -203,27 +203,55 @@
                             Glossier Super Bounce, Super Bounce, serum, hydrating serum, hyaluronic acid serum,
                             pro-vitamin b5 serum, hyaluronic...
                         </p>
-                        <a href="#">
-                            <div class="add wishlist heart-icon">
-                                <i class="fa-regular fa-heart"></i>
-                                <h6>Add To Wishlist</h6>
-                            </div>
-                        </a>
-                        <a asp-controller="Wishlist" asp-action="Index">
-                            <div class="goto wishlist d-none">
-                                <i class="fa-solid fa-heart"></i>
-                                <h6>Go To Wishlist</h6>
-                            </div>
-                        </a>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="#">
+                                <div data-id="" class="add wishlist heart-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <h6>Add To Wishlist</h6>
+                                </div>
+                            </a>
+                            <a asp-controller="Wishlist" asp-action="Index">
+                                <div class="goto wishlist d-none">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <h6>Go To Wishlist</h6>
+                                </div>
+                            </a>
 
-                        <a data-id="" class="basket-icon item" href="#">Add to Cart</a>
-                        <hr>
-                        <div class="info">
-                            <h1>Type:<span class="product-category">Skincare</span></h1>
-                            <h1>Sku:<span>CLE-000-00-00</span></h1>
-                            <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="">View Details</a>
+                            <a data-id="" class="basket-icon item" href="#">Add to Cart</a>
+                            <hr>
+                            <div class="info">
+                                <h1>Type:<span class="product-category">Skincare</span></h1>
+                                <h1>Sku:<span>CLE-000-00-00</span></h1>
+                                <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="">View Details</a>
 
-                        </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <a asp-controller="Account" asp-action="Login">
+                                <div data-id="" class="add wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <h6>Add To Wishlist</h6>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="goto wishlist d-none">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <h6>Go To Wishlist</h6>
+                                </div>
+                            </a>
+
+                            <a asp-controller="Account" asp-action="Login"  class="item">Add to Cart</a>
+                            <hr>
+                            <div class="info">
+                                <h1>Type:<span class="product-category">Skincare</span></h1>
+                                <h1>Sku:<span>CLE-000-00-00</span></h1>
+                                <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="">View Details</a>
+
+                            </div>
+                        }
+
 
 
 

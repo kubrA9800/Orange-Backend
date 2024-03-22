@@ -62,4 +62,12 @@ $(function () {
     this.previousElementSibling.style.top = "0px"
     this.previousElementSibling.style.fontSize = "16px"
   })
+
+    $('#topbtn').click(function () {
+        $('html').animate({
+            scrollTop: 0
+        }, 100)
+
+    })
+
 })

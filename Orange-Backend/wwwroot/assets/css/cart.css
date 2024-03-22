@@ -21,9 +21,9 @@
   #products .mobile-products .icons i {
     font-size: 14px !important;
   }
-  #products .mobile-products .icons i:nth-of-type(3) {
+ /* #products .mobile-products .icons i:nth-of-type(3) {
     display: none;
-  }
+  }*/
   #cart .full-cart tbody tr:nth-child(1) img {
     width: 80px !important;
     height: 100px !important;

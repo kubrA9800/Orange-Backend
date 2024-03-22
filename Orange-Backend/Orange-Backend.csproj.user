@@ -14,7 +14,7 @@
     <_SelectedScaffolderID>AreaScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Common</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_DependencyDialogWidth>650,4</WebStackScaffolding_DependencyDialogWidth>
-    <NameOfLastUsedPublishProfile>C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\Properties\PublishProfiles\kubra123-001-site1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\user\Desktop\Orange\Orange-Backend\Orange-Backend\Properties\PublishProfiles\kubra123-001-site1 - FTP.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
